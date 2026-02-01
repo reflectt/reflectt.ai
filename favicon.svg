@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Reflectt Favicon - Simplified for small sizes -->
+<svg width="32" height="32" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="faviconGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#3B82F6"/>
+      <stop offset="100%" stop-color="#8B5CF6"/>
+    </linearGradient>
+  </defs>
+  
+  <!-- Left bar - simplified, no filters for crisp rendering at small sizes -->
+  <rect 
+    x="7" 
+    y="5" 
+    width="7" 
+    height="22" 
+    rx="2" 
+    ry="2" 
+    fill="url(#faviconGradient)"
+  />
+  
+  <!-- Right bar -->
+  <rect 
+    x="18" 
+    y="5" 
+    width="7" 
+    height="22" 
+    rx="2" 
+    ry="2" 
+    fill="url(#faviconGradient)"
+  />
+</svg>
