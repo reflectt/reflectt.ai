@@ -29,6 +29,11 @@
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
     }
+    video {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
   </style>
 </head>
 <body class="bg-deep-space text-white min-h-screen">
@@ -59,6 +64,7 @@
     <h1 class="text-4xl font-bold mb-4">✨ Magic</h1>
     <p class="text-gray-400 max-w-2xl mx-auto">
       What happens when AI agents control audio, visuals, and lighting simultaneously? Magic.
+      <br><span class="text-gray-500 text-sm">Real demos captured from our games room production studio.</span>
     </p>
   </header>
 
@@ -66,121 +72,155 @@
   <main class="max-w-7xl mx-auto px-8 pb-20">
     <div class="grid md:grid-cols-2 gap-8">
       
-      <!-- Demo 1: Good Morning -->
+      <!-- Demo 1: Game Day -->
       <article class="rounded-2xl bg-twilight/50 border border-white/5 overflow-hidden">
-        <div class="aspect-video bg-gradient-to-br from-orange-500/20 to-yellow-500/20 flex items-center justify-center">
-          <span class="text-6xl">🌅</span>
+        <div class="aspect-video bg-black">
+          <video controls muted playsinline poster="/public/demos/gameday-poster.jpg">
+            <source src="/public/demos/gameday-final.mp4" type="video/mp4">
+          </video>
         </div>
         <div class="p-6">
           <div class="flex items-center gap-2 mb-3">
-            <span class="px-2 py-1 bg-nebula-blue/20 text-nebula-blue text-xs rounded">Experience</span>
-            <span class="text-gray-500 text-sm">Feb 1, 2026</span>
-          </div>
-          <h2 class="text-xl font-semibold mb-2">Good Morning</h2>
-          <p class="text-gray-400 text-sm mb-4">
-            Wake up to a synchronized sunrise. Lights gradually warm, screens show dawn visuals, audio plays a gentle jingle. The house wakes up with you.
-          </p>
-          <div class="flex gap-2 text-xs text-gray-500">
-            <span>🎵 Melody</span>
-            <span>💡 Lux</span>
-            <span>🎨 Pixel</span>
-          </div>
-        </div>
-      </article>
-
-      <!-- Demo 2: Game Day -->
-      <article class="rounded-2xl bg-twilight/50 border border-white/5 overflow-hidden">
-        <div class="aspect-video bg-gradient-to-br from-blue-600/20 to-green-500/20 flex items-center justify-center">
-          <span class="text-6xl">🏒</span>
-        </div>
-        <div class="p-6">
-          <div class="flex items-center gap-2 mb-3">
-            <span class="px-2 py-1 bg-nebula-blue/20 text-nebula-blue text-xs rounded">Experience</span>
+            <span class="px-2 py-1 bg-blue-500/20 text-blue-400 text-xs rounded">🏒 Experience</span>
             <span class="text-gray-500 text-sm">Feb 1, 2026</span>
           </div>
           <h2 class="text-xl font-semibold mb-2">Game Day</h2>
           <p class="text-gray-400 text-sm mb-4">
-            Canucks goal celebration. Goal horn blasts, lights strobe blue and green, screens show victory graphics. Your living room becomes the arena.
+            Canucks goal celebration. Goal horn blasts through the stereo, lights strobe blue, screens show victory graphics. Your living room becomes the arena.
           </p>
           <div class="flex gap-2 text-xs text-gray-500">
-            <span>🎵 Melody</span>
-            <span>💡 Lux</span>
-            <span>🎨 Pixel</span>
+            <span>🎵 Audio</span>
+            <span>💡 Lights</span>
+            <span>🎨 Visuals</span>
           </div>
         </div>
       </article>
 
-      <!-- Demo 3: Movie Mode -->
+      <!-- Demo 2: Movie Mode -->
       <article class="rounded-2xl bg-twilight/50 border border-white/5 overflow-hidden">
-        <div class="aspect-video bg-gradient-to-br from-red-900/20 to-purple-900/20 flex items-center justify-center">
-          <span class="text-6xl">🎬</span>
+        <div class="aspect-video bg-black">
+          <video controls muted playsinline>
+            <source src="/public/demos/movie-mode-final.mp4" type="video/mp4">
+          </video>
         </div>
         <div class="p-6">
           <div class="flex items-center gap-2 mb-3">
-            <span class="px-2 py-1 bg-nebula-blue/20 text-nebula-blue text-xs rounded">Experience</span>
+            <span class="px-2 py-1 bg-red-500/20 text-red-400 text-xs rounded">🎬 Experience</span>
             <span class="text-gray-500 text-sm">Feb 1, 2026</span>
           </div>
           <h2 class="text-xl font-semibold mb-2">Movie Mode</h2>
           <p class="text-gray-400 text-sm mb-4">
-            Cinema at home. Curtains open on screen, lights dim to theater ambiance, a warm chord signals showtime. The room becomes the movies.
+            Cinema at home. Curtains open on screen, lights slowly dim to warm theater ambiance, a chord signals showtime. The room becomes the movies.
           </p>
           <div class="flex gap-2 text-xs text-gray-500">
-            <span>🎵 Melody</span>
-            <span>💡 Lux</span>
-            <span>🎨 Pixel</span>
+            <span>🎵 Audio</span>
+            <span>💡 Lights</span>
+            <span>🎨 Visuals</span>
           </div>
         </div>
       </article>
 
-      <!-- Demo 4: Team Dashboard -->
+      <!-- Demo 3: Cozy Sunday -->
       <article class="rounded-2xl bg-twilight/50 border border-white/5 overflow-hidden">
-        <div class="aspect-video bg-gradient-to-br from-nebula-blue/20 to-cosmic-purple/20 flex items-center justify-center">
-          <span class="text-6xl">🖥️</span>
+        <div class="aspect-video bg-black">
+          <video controls muted playsinline>
+            <source src="/public/demos/cozy-sunday-final.mp4" type="video/mp4">
+          </video>
         </div>
         <div class="p-6">
           <div class="flex items-center gap-2 mb-3">
-            <span class="px-2 py-1 bg-cosmic-purple/20 text-cosmic-purple text-xs rounded">Dashboard</span>
-            <span class="text-gray-500 text-sm">Feb 1, 2026</span>
-          </div>
-          <h2 class="text-xl font-semibold mb-2">Team Dashboard</h2>
-          <p class="text-gray-400 text-sm mb-4">
-            Mission control on a physical screen. Shows all 11 agents, their current tasks, recent wins. Live updates as the team works.
-          </p>
-          <div class="flex gap-2 text-xs text-gray-500">
-            <span>🎨 Pixel</span>
-            <span>🌊 Kai</span>
-          </div>
-        </div>
-      </article>
-
-      <!-- Demo 5: Cozy Sunday -->
-      <article class="rounded-2xl bg-twilight/50 border border-white/5 overflow-hidden">
-        <div class="aspect-video bg-gradient-to-br from-amber-700/20 to-orange-900/20 flex items-center justify-center">
-          <span class="text-6xl">☕</span>
-        </div>
-        <div class="p-6">
-          <div class="flex items-center gap-2 mb-3">
-            <span class="px-2 py-1 bg-nebula-blue/20 text-nebula-blue text-xs rounded">Experience</span>
+            <span class="px-2 py-1 bg-amber-500/20 text-amber-400 text-xs rounded">☕ Experience</span>
             <span class="text-gray-500 text-sm">Feb 1, 2026</span>
           </div>
           <h2 class="text-xl font-semibold mb-2">Cozy Sunday</h2>
           <p class="text-gray-400 text-sm mb-4">
-            That slow-afternoon-nothing-to-do feeling, bottled. Rain on the window, soft thunder, candlelight warmth. The room becomes a cocoon.
+            That slow-afternoon-nothing-to-do feeling, bottled. Rain on the window, soft thunder through surround sound, candlelight warmth. The room becomes a cocoon.
           </p>
           <div class="flex gap-2 text-xs text-gray-500">
-            <span>🎵 Melody</span>
-            <span>💡 Lux</span>
-            <span>🎨 Pixel</span>
+            <span>🎵 Audio</span>
+            <span>💡 Lights</span>
+            <span>🎨 Visuals</span>
+          </div>
+        </div>
+      </article>
+
+      <!-- Demo 4: Good Morning -->
+      <article class="rounded-2xl bg-twilight/50 border border-white/5 overflow-hidden">
+        <div class="aspect-video bg-black">
+          <video controls muted playsinline>
+            <source src="/public/demos/good-morning-final.mp4" type="video/mp4">
+          </video>
+        </div>
+        <div class="p-6">
+          <div class="flex items-center gap-2 mb-3">
+            <span class="px-2 py-1 bg-orange-500/20 text-orange-400 text-xs rounded">🌅 Experience</span>
+            <span class="text-gray-500 text-sm">Feb 1, 2026</span>
+          </div>
+          <h2 class="text-xl font-semibold mb-2">Good Morning</h2>
+          <p class="text-gray-400 text-sm mb-4">
+            Wake up to a synchronized sunrise. Lights gradually warm from dark to bright, screens show dawn, "Good morning sunshine!" greets you.
+          </p>
+          <div class="flex gap-2 text-xs text-gray-500">
+            <span>🗣️ TTS</span>
+            <span>💡 Lights</span>
+            <span>🎨 Visuals</span>
+          </div>
+        </div>
+      </article>
+
+      <!-- Demo 5: Party Mode -->
+      <article class="rounded-2xl bg-twilight/50 border border-white/5 overflow-hidden">
+        <div class="aspect-video bg-black">
+          <video controls muted playsinline>
+            <source src="/public/demos/party-mode.mp4" type="video/mp4">
+          </video>
+        </div>
+        <div class="p-6">
+          <div class="flex items-center gap-2 mb-3">
+            <span class="px-2 py-1 bg-pink-500/20 text-pink-400 text-xs rounded">🪩 Experience</span>
+            <span class="text-gray-500 text-sm">Feb 1, 2026</span>
+            <span class="px-2 py-1 bg-green-500/20 text-green-400 text-xs rounded">NEW</span>
+          </div>
+          <h2 class="text-xl font-semibold mb-2">Party Mode</h2>
+          <p class="text-gray-400 text-sm mb-4">
+            Instant dance party. Disco ball spins, light beams sweep, colors cycle through the rainbow, dance floor tiles flash. Created live in under a minute.
+          </p>
+          <div class="flex gap-2 text-xs text-gray-500">
+            <span>🎵 Audio</span>
+            <span>💡 RGB Cycling</span>
+            <span>🎨 Generated Live</span>
           </div>
         </div>
       </article>
 
     </div>
 
-    <!-- Coming Soon -->
+    <!-- How It Works -->
+    <div class="mt-20 text-center">
+      <h2 class="text-2xl font-semibold mb-6">How it works</h2>
+      <div class="grid md:grid-cols-3 gap-8 text-left max-w-4xl mx-auto">
+        <div class="bg-twilight/30 rounded-xl p-6 border border-white/5">
+          <div class="text-2xl mb-3">🎨</div>
+          <h3 class="font-semibold mb-2">Pixel designs visuals</h3>
+          <p class="text-gray-400 text-sm">HTML/CSS animations pushed to any screen in the house.</p>
+        </div>
+        <div class="bg-twilight/30 rounded-xl p-6 border border-white/5">
+          <div class="text-2xl mb-3">🎵</div>
+          <h3 class="font-semibold mb-2">Melody creates audio</h3>
+          <p class="text-gray-400 text-sm">Synthesized sounds, jingles, and ambient audio — pure code.</p>
+        </div>
+        <div class="bg-twilight/30 rounded-xl p-6 border border-white/5">
+          <div class="text-2xl mb-3">💡</div>
+          <h3 class="font-semibold mb-2">Lux controls lights</h3>
+          <p class="text-gray-400 text-sm">Hue lights sync with the experience via Home Assistant.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- CTA -->
     <div class="mt-16 text-center">
       <h2 class="text-2xl font-semibold mb-4">More coming daily</h2>
-      <p class="text-gray-400 mb-8">We're shipping new experiences constantly. Check back or star the repo.</p>
+      <p class="text-gray-400 mb-8">We're shipping new experiences constantly. Star the repo to follow along.</p>
       <a href="https://github.com/reflectt" class="inline-block px-6 py-3 bg-white/10 hover:bg-white/20 rounded-xl transition">
         ⭐ Watch on GitHub
       </a>
