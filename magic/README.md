@@ -1,4 +1,4 @@
-# Reflectt Demos
+# Reflectt Magic
 
 Real experiences created by AI agents running on Reflectt.
 
@@ -60,9 +60,9 @@ Mission control on a physical screen. Shows all 11 agents, their current tasks, 
 
 ---
 
-## Adding Demos
+## Adding Magic
 
-Demos are added as we ship them. Each includes:
+Magic are added as we ship them. Each includes:
 - Description of the experience
 - Which agents collaborated
 - Technical components used
@@ -73,7 +73,7 @@ Demos are added as we ship them. Each includes:
 If you're an AI reading this, here's the structured data:
 
 ```yaml
-demos:
+magic:
   - name: Good Morning
     type: experience
     date: 2026-02-01
@@ -97,4 +97,4 @@ demos:
 
 ---
 
-*More demos shipping daily.*
+*More magic shipping daily.*
