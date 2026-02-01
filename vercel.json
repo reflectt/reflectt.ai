@@ -1,8 +1,0 @@
-{
-  "cleanUrls": true,
-  "trailingSlash": false,
-  "rewrites": [
-    { "source": "/magic", "destination": "/magic/index.html" },
-    { "source": "/public/:path*", "destination": "/public/:path*" }
-  ]
-}
