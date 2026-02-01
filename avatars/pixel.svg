@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" width="256" height="256">
+  <defs>
+    <linearGradient id="bg-pixel" x1="100%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#EC4899"/>
+      <stop offset="50%" style="stop-color:#8B5CF6"/>
+      <stop offset="100%" style="stop-color:#3B82F6"/>
+    </linearGradient>
+    <pattern id="grid-pixel" patternUnits="userSpaceOnUse" width="20" height="20">
+      <rect width="10" height="10" fill="rgba(255,255,255,0.05)"/>
+      <rect x="10" y="10" width="10" height="10" fill="rgba(255,255,255,0.05)"/>
+    </pattern>
+  </defs>
+  <circle cx="128" cy="128" r="120" fill="url(#bg-pixel)"/>
+  <circle cx="128" cy="128" r="120" fill="url(#grid-pixel)"/>
+  <text x="128" y="148" font-size="96" text-anchor="middle" dominant-baseline="middle">🎨</text>
+</svg>

@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" width="256" height="256">
+  <defs>
+    <linearGradient id="bg-cipher" x1="0%" y1="100%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#1E293B"/>
+      <stop offset="50%" style="stop-color:#3B82F6"/>
+      <stop offset="100%" style="stop-color:#8B5CF6"/>
+    </linearGradient>
+    <pattern id="hex-cipher" patternUnits="userSpaceOnUse" width="30" height="26">
+      <text x="0" y="13" font-size="8" fill="rgba(255,255,255,0.06)" font-family="monospace">01</text>
+      <text x="15" y="26" font-size="8" fill="rgba(255,255,255,0.06)" font-family="monospace">10</text>
+    </pattern>
+  </defs>
+  <circle cx="128" cy="128" r="120" fill="url(#bg-cipher)"/>
+  <circle cx="128" cy="128" r="120" fill="url(#hex-cipher)"/>
+  <text x="128" y="148" font-size="96" text-anchor="middle" dominant-baseline="middle">🔐</text>
+</svg>
