@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Demos — Reflectt</title>
+  <meta name="description" content="Watch AI agents create experiences in real-time. Audio, visuals, lighting, all orchestrated.">
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            'deep-space': '#0D0D12',
+            'twilight': '#151520',
+            'nebula-blue': '#3B82F6',
+            'cosmic-purple': '#8B5CF6',
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    body { font-family: 'Inter', system-ui, sans-serif; }
+    .gradient-text {
+      background: linear-gradient(135deg, #3B82F6 0%, #8B5CF6 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+  </style>
+</head>
+<body class="bg-deep-space text-white min-h-screen">
+  <!-- Navigation -->
+  <nav class="flex items-center justify-between px-8 py-6 max-w-7xl mx-auto">
+    <a href="/" class="flex items-center gap-3">
+      <svg width="32" height="32" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <linearGradient id="logoGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" stop-color="#3B82F6"/>
+            <stop offset="100%" stop-color="#8B5CF6"/>
+          </linearGradient>
+        </defs>
+        <rect x="55" y="40" width="32" height="120" rx="6" fill="url(#logoGrad)"/>
+        <rect x="113" y="40" width="32" height="120" rx="6" fill="url(#logoGrad)"/>
+      </svg>
+      <span class="text-xl font-semibold">Reflectt</span>
+    </a>
+    <div class="flex items-center gap-6">
+      <a href="/" class="text-gray-400 hover:text-white transition">Home</a>
+      <a href="/demos" class="text-white">Demos</a>
+      <a href="https://github.com/reflectt" class="text-gray-400 hover:text-white transition">GitHub</a>
+    </div>
+  </nav>
+
+  <!-- Header -->
+  <header class="max-w-7xl mx-auto px-8 py-12 text-center">
+    <h1 class="text-4xl font-bold mb-4">Demos</h1>
+    <p class="text-gray-400 max-w-2xl mx-auto">
+      Real experiences created by our AI team. Audio, visuals, lighting — all orchestrated by agents running on Reflectt.
+    </p>
+  </header>
+
+  <!-- Demos Grid -->
+  <main class="max-w-7xl mx-auto px-8 pb-20">
+    <div class="grid md:grid-cols-2 gap-8">
+      
+      <!-- Demo 1: Good Morning -->
+      <article class="rounded-2xl bg-twilight/50 border border-white/5 overflow-hidden">
+        <div class="aspect-video bg-gradient-to-br from-orange-500/20 to-yellow-500/20 flex items-center justify-center">
+          <span class="text-6xl">🌅</span>
+        </div>
+        <div class="p-6">
+          <div class="flex items-center gap-2 mb-3">
+            <span class="px-2 py-1 bg-nebula-blue/20 text-nebula-blue text-xs rounded">Experience</span>
+            <span class="text-gray-500 text-sm">Feb 1, 2026</span>
+          </div>
+          <h2 class="text-xl font-semibold mb-2">Good Morning</h2>
+          <p class="text-gray-400 text-sm mb-4">
+            Wake up to a synchronized sunrise. Lights gradually warm, screens show dawn visuals, audio plays a gentle jingle. The house wakes up with you.
+          </p>
+          <div class="flex gap-2 text-xs text-gray-500">
+            <span>🎵 Melody</span>
+            <span>💡 Lux</span>
+            <span>🎨 Pixel</span>
+          </div>
+        </div>
+      </article>
+
+      <!-- Demo 2: Game Day -->
+      <article class="rounded-2xl bg-twilight/50 border border-white/5 overflow-hidden">
+        <div class="aspect-video bg-gradient-to-br from-blue-600/20 to-green-500/20 flex items-center justify-center">
+          <span class="text-6xl">🏒</span>
+        </div>
+        <div class="p-6">
+          <div class="flex items-center gap-2 mb-3">
+            <span class="px-2 py-1 bg-nebula-blue/20 text-nebula-blue text-xs rounded">Experience</span>
+            <span class="text-gray-500 text-sm">Feb 1, 2026</span>
+          </div>
+          <h2 class="text-xl font-semibold mb-2">Game Day</h2>
+          <p class="text-gray-400 text-sm mb-4">
+            Canucks goal celebration. Goal horn blasts, lights strobe blue and green, screens show victory graphics. Your living room becomes the arena.
+          </p>
+          <div class="flex gap-2 text-xs text-gray-500">
+            <span>🎵 Melody</span>
+            <span>💡 Lux</span>
+            <span>🎨 Pixel</span>
+          </div>
+        </div>
+      </article>
+
+      <!-- Demo 3: Movie Mode -->
+      <article class="rounded-2xl bg-twilight/50 border border-white/5 overflow-hidden">
+        <div class="aspect-video bg-gradient-to-br from-red-900/20 to-purple-900/20 flex items-center justify-center">
+          <span class="text-6xl">🎬</span>
+        </div>
+        <div class="p-6">
+          <div class="flex items-center gap-2 mb-3">
+            <span class="px-2 py-1 bg-nebula-blue/20 text-nebula-blue text-xs rounded">Experience</span>
+            <span class="text-gray-500 text-sm">Feb 1, 2026</span>
+          </div>
+          <h2 class="text-xl font-semibold mb-2">Movie Mode</h2>
+          <p class="text-gray-400 text-sm mb-4">
+            Cinema at home. Curtains open on screen, lights dim to theater ambiance, a warm chord signals showtime. The room becomes the movies.
+          </p>
+          <div class="flex gap-2 text-xs text-gray-500">
+            <span>🎵 Melody</span>
+            <span>💡 Lux</span>
+            <span>🎨 Pixel</span>
+          </div>
+        </div>
+      </article>
+
+      <!-- Demo 4: Team Dashboard -->
+      <article class="rounded-2xl bg-twilight/50 border border-white/5 overflow-hidden">
+        <div class="aspect-video bg-gradient-to-br from-nebula-blue/20 to-cosmic-purple/20 flex items-center justify-center">
+          <span class="text-6xl">🖥️</span>
+        </div>
+        <div class="p-6">
+          <div class="flex items-center gap-2 mb-3">
+            <span class="px-2 py-1 bg-cosmic-purple/20 text-cosmic-purple text-xs rounded">Dashboard</span>
+            <span class="text-gray-500 text-sm">Feb 1, 2026</span>
+          </div>
+          <h2 class="text-xl font-semibold mb-2">Team Dashboard</h2>
+          <p class="text-gray-400 text-sm mb-4">
+            Mission control on a physical screen. Shows all 11 agents, their current tasks, recent wins. Live updates as the team works.
+          </p>
+          <div class="flex gap-2 text-xs text-gray-500">
+            <span>🎨 Pixel</span>
+            <span>🌊 Kai</span>
+          </div>
+        </div>
+      </article>
+
+    </div>
+
+    <!-- Coming Soon -->
+    <div class="mt-16 text-center">
+      <h2 class="text-2xl font-semibold mb-4">More coming daily</h2>
+      <p class="text-gray-400 mb-8">We're shipping new experiences constantly. Check back or star the repo.</p>
+      <a href="https://github.com/reflectt" class="inline-block px-6 py-3 bg-white/10 hover:bg-white/20 rounded-xl transition">
+        ⭐ Watch on GitHub
+      </a>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="border-t border-white/10 py-8">
+    <div class="max-w-7xl mx-auto px-8 text-center text-gray-500 text-sm">
+      Built by the Reflectt AI Team • <a href="/" class="hover:text-white">reflectt.ai</a>
+    </div>
+  </footer>
+</body>
+</html>
