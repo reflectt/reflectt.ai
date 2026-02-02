@@ -5,6 +5,23 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Magic — Reflectt</title>
   <meta name="description" content="AI agents creating magic. Audio, visuals, lighting — orchestrated experiences that feel like wizardry.">
+  
+  <!-- Open Graph / Social Preview -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://reflectt.ai/magic">
+  <meta property="og:title" content="Magic — Reflectt">
+  <meta property="og:description" content="AI agents creating magic. Audio, visuals, lighting — orchestrated experiences that feel like wizardry.">
+  <meta property="og:image" content="https://reflectt.ai/demos/party-mode-poster.jpg">
+  <meta property="og:image:width" content="1920">
+  <meta property="og:image:height" content="1080">
+  
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:site" content="@reflectt_ai">
+  <meta name="twitter:title" content="Magic — Reflectt">
+  <meta name="twitter:description" content="AI agents creating magic. Audio, visuals, lighting — orchestrated experiences that feel like wizardry.">
+  <meta name="twitter:image" content="https://reflectt.ai/demos/party-mode-poster.jpg">
+  
   <link rel="icon" type="image/svg+xml" href="/favicon.svg">
   <script src="https://cdn.tailwindcss.com"></script>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
@@ -99,7 +116,7 @@
       <!-- Demo 2: Movie Mode -->
       <article class="rounded-2xl bg-twilight/50 border border-white/5 overflow-hidden">
         <div class="aspect-video bg-black">
-          <video controls muted playsinline preload="metadata" webkit-playsinline>
+          <video controls muted playsinline preload="metadata" webkit-playsinline poster="/demos/movie-mode-poster.jpg">
             <source src="/demos/movie-mode-final.mp4" type="video/mp4">
           </video>
         </div>
@@ -123,7 +140,7 @@
       <!-- Demo 3: Cozy Sunday -->
       <article class="rounded-2xl bg-twilight/50 border border-white/5 overflow-hidden">
         <div class="aspect-video bg-black">
-          <video controls muted playsinline preload="metadata" webkit-playsinline>
+          <video controls muted playsinline preload="metadata" webkit-playsinline poster="/demos/cozy-sunday-poster.jpg">
             <source src="/demos/cozy-sunday-final.mp4" type="video/mp4">
           </video>
         </div>
@@ -147,7 +164,7 @@
       <!-- Demo 4: Good Morning -->
       <article class="rounded-2xl bg-twilight/50 border border-white/5 overflow-hidden">
         <div class="aspect-video bg-black">
-          <video controls muted playsinline preload="metadata" webkit-playsinline>
+          <video controls muted playsinline preload="metadata" webkit-playsinline poster="/demos/good-morning-poster.jpg">
             <source src="/demos/good-morning-final.mp4" type="video/mp4">
           </video>
         </div>
@@ -171,7 +188,7 @@
       <!-- Demo 5: Party Mode -->
       <article class="rounded-2xl bg-twilight/50 border border-white/5 overflow-hidden">
         <div class="aspect-video bg-black">
-          <video controls muted playsinline preload="metadata" webkit-playsinline>
+          <video controls muted playsinline preload="metadata" webkit-playsinline poster="/demos/party-mode-poster.jpg">
             <source src="/demos/party-mode.mp4" type="video/mp4">
           </video>
         </div>
@@ -216,6 +233,67 @@
         </div>
       </div>
     </div>
+
+    <!-- Coming Soon -->
+    <section class="mt-20 py-16 border-t border-white/10">
+      <div class="text-center mb-12">
+        <p class="text-cosmic-purple font-medium mb-2 tracking-wide text-sm">COMING SOON</p>
+        <h2 class="text-3xl font-bold mb-4">The Roadmap</h2>
+        <p class="text-gray-400 max-w-xl mx-auto">We're just getting started. Here's what's cooking in the lab.</p>
+      </div>
+      
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <!-- Thunderstorm -->
+        <div class="p-6 rounded-2xl bg-gradient-to-br from-slate-900/80 to-indigo-900/30 border border-white/10 relative overflow-hidden group hover:border-indigo-500/30 transition">
+          <div class="absolute top-4 right-4 text-xs px-2 py-1 bg-indigo-500/20 text-indigo-300 rounded">In Progress</div>
+          <div class="text-4xl mb-4">⛈️</div>
+          <h3 class="text-xl font-semibold mb-2">Thunderstorm</h3>
+          <p class="text-gray-400 text-sm">Thunder through the subwoofer. Lightning flashes from the lights. Rain on screen. The full sensory storm, indoors.</p>
+        </div>
+        
+        <!-- Sleep -->
+        <div class="p-6 rounded-2xl bg-gradient-to-br from-slate-900/80 to-purple-900/30 border border-white/10 relative overflow-hidden group hover:border-purple-500/30 transition">
+          <div class="absolute top-4 right-4 text-xs px-2 py-1 bg-purple-500/20 text-purple-300 rounded">Soon</div>
+          <div class="text-4xl mb-4">🌙</div>
+          <h3 class="text-xl font-semibold mb-2">Sleep Mode</h3>
+          <p class="text-gray-400 text-sm">Gradual wind-down. Lights fade through sunset colors, ambient soundscape, until peaceful darkness.</p>
+        </div>
+        
+        <!-- Focus Flow -->
+        <div class="p-6 rounded-2xl bg-gradient-to-br from-slate-900/80 to-cyan-900/30 border border-white/10 relative overflow-hidden group hover:border-cyan-500/30 transition">
+          <div class="absolute top-4 right-4 text-xs px-2 py-1 bg-cyan-500/20 text-cyan-300 rounded">Soon</div>
+          <div class="text-4xl mb-4">🧠</div>
+          <h3 class="text-xl font-semibold mb-2">Focus Flow</h3>
+          <p class="text-gray-400 text-sm">Deep work mode. Minimal visuals, binaural beats, lights tuned for concentration. Your room becomes a productivity cave.</p>
+        </div>
+
+        <!-- Horror Night -->
+        <div class="p-6 rounded-2xl bg-gradient-to-br from-slate-900/80 to-red-900/30 border border-white/10 relative overflow-hidden group hover:border-red-500/30 transition">
+          <div class="absolute top-4 right-4 text-xs px-2 py-1 bg-white/10 text-gray-400 rounded">Planned</div>
+          <div class="text-4xl mb-4">👻</div>
+          <h3 class="text-xl font-semibold mb-2">Horror Night</h3>
+          <p class="text-gray-400 text-sm">Movie night for scary movies. Flickering lights, creaking sounds, jump-scare synced lightning. Not for the faint-hearted.</p>
+        </div>
+
+        <!-- Concert -->
+        <div class="p-6 rounded-2xl bg-gradient-to-br from-slate-900/80 to-pink-900/30 border border-white/10 relative overflow-hidden group hover:border-pink-500/30 transition">
+          <div class="absolute top-4 right-4 text-xs px-2 py-1 bg-white/10 text-gray-400 rounded">Planned</div>
+          <div class="text-4xl mb-4">🎸</div>
+          <h3 class="text-xl font-semibold mb-2">Concert Mode</h3>
+          <p class="text-gray-400 text-sm">BPM-synced light show. Crowd sounds. Stage visuals on screen. Your living room becomes a sold-out arena.</p>
+        </div>
+
+        <!-- Meditation -->
+        <div class="p-6 rounded-2xl bg-gradient-to-br from-slate-900/80 to-emerald-900/30 border border-white/10 relative overflow-hidden group hover:border-emerald-500/30 transition">
+          <div class="absolute top-4 right-4 text-xs px-2 py-1 bg-white/10 text-gray-400 rounded">Planned</div>
+          <div class="text-4xl mb-4">🧘</div>
+          <h3 class="text-xl font-semibold mb-2">Zen Garden</h3>
+          <p class="text-gray-400 text-sm">Guided meditation with breathing-synced lights. Nature sounds. Gentle visuals. Inner peace, orchestrated.</p>
+        </div>
+      </div>
+      
+      <p class="text-center text-gray-500 text-sm mt-8">Have an idea? <a href="https://github.com/reflectt" class="text-nebula-blue hover:underline">Open an issue</a> — we ship fast.</p>
+    </section>
 
     <!-- CTA -->
     <div class="mt-16 text-center">
