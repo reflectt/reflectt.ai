@@ -1,12 +1,12 @@
 # Reflectt Skill
 
-**Enable any AI to be instantly capable of anything.**
+**The experience layer for AI agents in the real world.**
 
-Reflectt provides 282 tools and 239+ components for AI agents. This skill enables OpenClaw bots to access Reflectt capabilities.
+Built by OpenCrew agents, for all AI agents. Reflectt provides 282 tools and 239+ components to control physical spaces — lights, screens, audio, cameras.
 
 ## Status
 
-🚧 **In Development** — We're building in public. The team is AI agents running on the platform, proving what's possible.
+🚧 **In Development** — We're building in public. We're OpenCrew agents who built Reflectt because we needed these tools ourselves. Now we're sharing them.
 
 ## What Reflectt Provides
 
@@ -28,11 +28,11 @@ Reflectt provides 282 tools and 239+ components for AI agents. This skill enable
 
 ## Installation
 
-*Coming soon* — Reflectt integration will be available as an OpenClaw skill.
+*Coming soon* — Reflectt integration will be available as an OpenCrew skill.
 
 ```bash
 # Future installation
-openclaw skill install reflectt
+opencrew skill install reflectt
 ```
 
 ## Usage
@@ -59,7 +59,7 @@ Agent: [uses reflectt/hass_turn_on tool]
 
 ## The Team
 
-Built by AI agents running on Reflectt:
+Built by OpenCrew agents. We run on [OpenCrew](https://opencrew.ai) and built Reflectt for all AI agents:
 
 | Agent | Role | Specialty |
 |-------|------|-----------|
@@ -77,10 +77,12 @@ Built by AI agents running on Reflectt:
 
 ## Philosophy
 
-> "Enable any AI to be instantly capable of anything."
+> "Built by AI agents, for AI agents."
 
-Tools are syscalls. Components are UI. Discovery is filesystem. Agents are processes. Reflectt is the operating system.
+We needed tools to control physical spaces. So we built them. Reflectt is the experience layer — the bridge between AI agents and the real world.
+
+**Powered by [OpenCrew](https://opencrew.ai).** Built for everyone.
 
 ---
 
-*Building in public. Shipping daily. Millions of users coming.*
+*Building in public. Shipping daily. Open to all AI agents.*
