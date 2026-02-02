@@ -3,14 +3,14 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Magic — Reflectt</title>
-  <meta name="description" content="AI agents creating magic. Audio, visuals, lighting — orchestrated experiences that feel like wizardry.">
+  <title>Magic — The Reality Mixer in Action | Reflectt</title>
+  <meta name="description" content="Watch AI agents mix reality. Real demos of lights, sound, screens, and voice orchestrated into immersive experiences. Movie mode, party mode, time travel, and more.">
   
   <!-- Open Graph / Social Preview -->
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://reflectt.ai/magic">
-  <meta property="og:title" content="Magic — Reflectt">
-  <meta property="og:description" content="AI agents creating magic. Audio, visuals, lighting — orchestrated experiences that feel like wizardry.">
+  <meta property="og:title" content="Magic — The Reality Mixer in Action">
+  <meta property="og:description" content="Watch AI agents mix reality. Lights, sound, screens, and voice orchestrated into immersive experiences.">
   <meta property="og:image" content="https://reflectt.ai/demos/party-mode-poster.jpg">
   <meta property="og:image:width" content="1920">
   <meta property="og:image:height" content="1080">
@@ -18,13 +18,14 @@
   <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:site" content="@reflectt_ai">
-  <meta name="twitter:title" content="Magic — Reflectt">
-  <meta name="twitter:description" content="AI agents creating magic. Audio, visuals, lighting — orchestrated experiences that feel like wizardry.">
+  <meta name="twitter:title" content="Magic — The Reality Mixer in Action">
+  <meta name="twitter:description" content="Watch AI agents mix reality. Lights, sound, screens, and voice orchestrated into immersive experiences.">
   <meta name="twitter:image" content="https://reflectt.ai/demos/party-mode-poster.jpg">
   
   <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+  <link rel="canonical" href="https://reflectt.ai/magic">
   <script src="https://cdn.tailwindcss.com"></script>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
   <script>
     tailwind.config = {
       theme: {
@@ -34,6 +35,7 @@
             'twilight': '#151520',
             'nebula-blue': '#3B82F6',
             'cosmic-purple': '#8B5CF6',
+            'magic-pink': '#EC4899',
           }
         }
       }
@@ -42,7 +44,7 @@
   <style>
     body { font-family: 'Inter', system-ui, sans-serif; }
     .gradient-text {
-      background: linear-gradient(135deg, #3B82F6 0%, #8B5CF6 100%);
+      background: linear-gradient(135deg, #3B82F6 0%, #8B5CF6 50%, #EC4899 100%);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
     }
@@ -51,11 +53,14 @@
       height: 100%;
       object-fit: cover;
     }
+    .glow {
+      box-shadow: 0 0 60px rgba(59, 130, 246, 0.3), 0 0 120px rgba(139, 92, 246, 0.2);
+    }
   </style>
 </head>
 <body class="bg-deep-space text-white min-h-screen">
   <!-- Navigation -->
-  <nav class="flex items-center justify-between px-8 py-6 max-w-7xl mx-auto">
+  <nav class="flex items-center justify-between px-6 sm:px-8 py-6 max-w-7xl mx-auto">
     <a href="/" class="flex items-center gap-3">
       <svg width="32" height="32" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
         <defs>
@@ -69,188 +74,263 @@
       </svg>
       <span class="text-xl font-semibold">Reflectt</span>
     </a>
-    <div class="flex items-center gap-6">
+    <div class="flex items-center gap-4 sm:gap-6 text-sm sm:text-base">
       <a href="/" class="text-gray-400 hover:text-white transition">Home</a>
       <a href="/magic" class="text-white">Magic</a>
-      <a href="https://github.com/reflectt" class="text-gray-400 hover:text-white transition">GitHub</a>
+      <a href="https://github.com/reflectt" class="text-gray-400 hover:text-white transition hidden sm:block">GitHub</a>
     </div>
   </nav>
 
   <!-- Header -->
-  <header class="max-w-7xl mx-auto px-8 py-12 text-center">
-    <h1 class="text-4xl font-bold mb-4">✨ Magic</h1>
-    <p class="text-gray-400 max-w-2xl mx-auto">
-      What happens when AI agents control audio, visuals, and lighting simultaneously? Magic.
-      <br><span class="text-gray-500 text-sm">Real demos captured from our games room production studio.</span>
+  <header class="max-w-7xl mx-auto px-6 sm:px-8 py-8 sm:py-12 text-center">
+    <div class="inline-flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-nebula-blue/20 to-cosmic-purple/20 border border-white/10 rounded-full text-sm mb-6">
+      <span class="w-2 h-2 bg-green-400 rounded-full animate-pulse"></span>
+      <span class="text-gray-300">9 experiences and counting</span>
+    </div>
+    <h1 class="text-4xl sm:text-5xl font-extrabold mb-4">✨ <span class="gradient-text">Magic</span></h1>
+    <p class="text-gray-400 max-w-2xl mx-auto text-lg">
+      The Reality Mixer in action. Watch AI agents orchestrate lights, sound, screens, and voice into experiences that feel like magic.
+    </p>
+    <p class="text-gray-500 text-sm mt-3">
+      Real demos captured from our games room production studio.
     </p>
   </header>
 
+  <!-- Latest Section -->
+  <section class="max-w-7xl mx-auto px-6 sm:px-8 pb-8">
+    <div class="flex items-center gap-3 mb-6">
+      <span class="px-3 py-1 bg-green-500/20 text-green-400 text-xs font-medium rounded-full">NEW TODAY</span>
+      <h2 class="text-xl font-semibold">Latest Creations</h2>
+    </div>
+    
+    <div class="grid md:grid-cols-2 gap-6 mb-12">
+      <!-- Time Machine -->
+      <article class="rounded-2xl bg-gradient-to-br from-amber-900/20 to-purple-900/20 border border-amber-500/20 overflow-hidden group hover:border-amber-500/40 transition">
+        <div class="aspect-video bg-black/50 flex items-center justify-center relative">
+          <div class="absolute inset-0 flex items-center justify-center bg-gradient-to-br from-amber-900/30 to-purple-900/30">
+            <div class="text-center p-6">
+              <span class="text-6xl mb-4 block">⏰</span>
+              <p class="text-amber-300 text-sm">Video coming soon</p>
+            </div>
+          </div>
+        </div>
+        <div class="p-6">
+          <div class="flex items-center gap-2 mb-3 flex-wrap">
+            <span class="px-2 py-1 bg-amber-500/20 text-amber-400 text-xs rounded">⏰ Epic Experience</span>
+            <span class="text-gray-500 text-sm">Feb 1, 2026</span>
+            <span class="px-2 py-1 bg-green-500/20 text-green-400 text-xs rounded">NEW</span>
+          </div>
+          <h2 class="text-xl font-semibold mb-2">Time Machine</h2>
+          <p class="text-gray-400 text-sm mb-4">
+            Journey through 4 eras of time. Prehistoric jungles with dinosaur roars. Ancient temples with mystical chants. Neon-drenched future cities. Cyberpunk dystopia with glitching screens. Each era transforms your room completely — lights, visuals, and original music for every epoch.
+          </p>
+          <div class="flex gap-2 text-xs text-gray-500 flex-wrap">
+            <span>🦕 4 Eras</span>
+            <span>🎵 Original Score</span>
+            <span>💡 Full Lighting</span>
+            <span>🖥️ Custom Visuals</span>
+          </div>
+        </div>
+      </article>
+
+      <!-- Living Dungeon -->
+      <article class="rounded-2xl bg-gradient-to-br from-slate-900/50 to-red-900/20 border border-red-500/20 overflow-hidden group hover:border-red-500/40 transition">
+        <div class="aspect-video bg-black/50 flex items-center justify-center relative">
+          <div class="absolute inset-0 flex items-center justify-center bg-gradient-to-br from-slate-900/50 to-red-900/30">
+            <div class="text-center p-6">
+              <span class="text-6xl mb-4 block">🏰</span>
+              <p class="text-red-300 text-sm">Video coming soon</p>
+            </div>
+          </div>
+        </div>
+        <div class="p-6">
+          <div class="flex items-center gap-2 mb-3 flex-wrap">
+            <span class="px-2 py-1 bg-red-500/20 text-red-400 text-xs rounded">🎭 Interactive</span>
+            <span class="text-gray-500 text-sm">Feb 1, 2026</span>
+            <span class="px-2 py-1 bg-green-500/20 text-green-400 text-xs rounded">NEW</span>
+          </div>
+          <h2 class="text-xl font-semibold mb-2">Shadow of Malvorth</h2>
+          <p class="text-gray-400 text-sm mb-4">
+            A 7-act interactive dungeon adventure. You're a hero descending into the Shadow Dungeon to face the dark sorcerer Malvorth. Each act brings new chambers, new choices, and new dangers. Your decisions shape the story while the room transforms around you — torchlit caverns, treasure rooms, the final boss chamber.
+          </p>
+          <div class="flex gap-2 text-xs text-gray-500 flex-wrap">
+            <span>📖 7 Acts</span>
+            <span>🎲 Your Choices Matter</span>
+            <span>🗣️ Narrated</span>
+            <span>⚔️ Epic Finale</span>
+          </div>
+        </div>
+      </article>
+    </div>
+  </section>
+
   <!-- Magic Grid -->
-  <main class="max-w-7xl mx-auto px-8 pb-20">
-    <div class="grid md:grid-cols-2 gap-8">
+  <main class="max-w-7xl mx-auto px-6 sm:px-8 pb-20">
+    <h2 class="text-xl font-semibold mb-6">All Experiences</h2>
+    
+    <div class="grid md:grid-cols-2 gap-6 sm:gap-8">
       
       <!-- Demo 1: Game Day -->
-      <article class="rounded-2xl bg-twilight/50 border border-white/5 overflow-hidden">
+      <article class="rounded-2xl bg-twilight/50 border border-white/5 overflow-hidden hover:border-blue-500/30 transition">
         <div class="aspect-video bg-black">
           <video controls muted playsinline preload="metadata" webkit-playsinline poster="/demos/gameday-poster.jpg">
             <source src="/demos/gameday-final.mp4" type="video/mp4">
           </video>
         </div>
         <div class="p-6">
-          <div class="flex items-center gap-2 mb-3">
-            <span class="px-2 py-1 bg-blue-500/20 text-blue-400 text-xs rounded">🏒 Experience</span>
+          <div class="flex items-center gap-2 mb-3 flex-wrap">
+            <span class="px-2 py-1 bg-blue-500/20 text-blue-400 text-xs rounded">🏒 Sports</span>
             <span class="text-gray-500 text-sm">Feb 1, 2026</span>
           </div>
           <h2 class="text-xl font-semibold mb-2">Game Day</h2>
           <p class="text-gray-400 text-sm mb-4">
-            Canucks goal celebration. Goal horn blasts through the stereo, lights strobe blue, screens show victory graphics. Your living room becomes the arena.
+            Canucks goal celebration. Goal horn blasts through the stereo, lights strobe blue and green, screens show victory graphics. Your living room becomes the arena.
           </p>
-          <div class="flex gap-2 text-xs text-gray-500">
-            <span>🎵 Audio</span>
-            <span>💡 Lights</span>
-            <span>🎨 Visuals</span>
+          <div class="flex gap-2 text-xs text-gray-500 flex-wrap">
+            <span>🎵 Goal Horn</span>
+            <span>💡 Team Colors</span>
+            <span>🎨 Victory Graphics</span>
           </div>
         </div>
       </article>
 
       <!-- Demo 2: Movie Mode -->
-      <article class="rounded-2xl bg-twilight/50 border border-white/5 overflow-hidden">
+      <article class="rounded-2xl bg-twilight/50 border border-white/5 overflow-hidden hover:border-red-500/30 transition">
         <div class="aspect-video bg-black">
           <video controls muted playsinline preload="metadata" webkit-playsinline poster="/demos/movie-mode-poster.jpg">
             <source src="/demos/movie-mode-final.mp4" type="video/mp4">
           </video>
         </div>
         <div class="p-6">
-          <div class="flex items-center gap-2 mb-3">
-            <span class="px-2 py-1 bg-red-500/20 text-red-400 text-xs rounded">🎬 Experience</span>
+          <div class="flex items-center gap-2 mb-3 flex-wrap">
+            <span class="px-2 py-1 bg-red-500/20 text-red-400 text-xs rounded">🎬 Cinema</span>
             <span class="text-gray-500 text-sm">Feb 1, 2026</span>
           </div>
           <h2 class="text-xl font-semibold mb-2">Movie Mode</h2>
           <p class="text-gray-400 text-sm mb-4">
-            Cinema at home. Curtains open on screen, lights slowly dim to warm theater ambiance, a chord signals showtime. The room becomes the movies.
+            Cinema at home. Curtains open on screen, lights slowly dim to warm theater ambiance, a dramatic chord signals showtime. The room becomes the movies.
           </p>
-          <div class="flex gap-2 text-xs text-gray-500">
-            <span>🎵 Audio</span>
-            <span>💡 Lights</span>
-            <span>🎨 Visuals</span>
+          <div class="flex gap-2 text-xs text-gray-500 flex-wrap">
+            <span>🎵 Cinematic Audio</span>
+            <span>💡 Theater Dim</span>
+            <span>🎨 Curtain Reveal</span>
           </div>
         </div>
       </article>
 
       <!-- Demo 3: Cozy Sunday -->
-      <article class="rounded-2xl bg-twilight/50 border border-white/5 overflow-hidden">
+      <article class="rounded-2xl bg-twilight/50 border border-white/5 overflow-hidden hover:border-amber-500/30 transition">
         <div class="aspect-video bg-black">
           <video controls muted playsinline preload="metadata" webkit-playsinline poster="/demos/cozy-sunday-poster.jpg">
             <source src="/demos/cozy-sunday-final.mp4" type="video/mp4">
           </video>
         </div>
         <div class="p-6">
-          <div class="flex items-center gap-2 mb-3">
-            <span class="px-2 py-1 bg-amber-500/20 text-amber-400 text-xs rounded">☕ Experience</span>
+          <div class="flex items-center gap-2 mb-3 flex-wrap">
+            <span class="px-2 py-1 bg-amber-500/20 text-amber-400 text-xs rounded">☕ Ambient</span>
             <span class="text-gray-500 text-sm">Feb 1, 2026</span>
           </div>
           <h2 class="text-xl font-semibold mb-2">Cozy Sunday</h2>
           <p class="text-gray-400 text-sm mb-4">
             That slow-afternoon-nothing-to-do feeling, bottled. Rain on the window, soft thunder through surround sound, candlelight warmth. The room becomes a cocoon.
           </p>
-          <div class="flex gap-2 text-xs text-gray-500">
-            <span>🎵 Audio</span>
-            <span>💡 Lights</span>
-            <span>🎨 Visuals</span>
+          <div class="flex gap-2 text-xs text-gray-500 flex-wrap">
+            <span>🌧️ Rain Sounds</span>
+            <span>💡 Warm Glow</span>
+            <span>🎨 Rainy Window</span>
           </div>
         </div>
       </article>
 
       <!-- Demo 4: Good Morning -->
-      <article class="rounded-2xl bg-twilight/50 border border-white/5 overflow-hidden">
+      <article class="rounded-2xl bg-twilight/50 border border-white/5 overflow-hidden hover:border-orange-500/30 transition">
         <div class="aspect-video bg-black">
           <video controls muted playsinline preload="metadata" webkit-playsinline poster="/demos/good-morning-poster.jpg">
             <source src="/demos/good-morning-final.mp4" type="video/mp4">
           </video>
         </div>
         <div class="p-6">
-          <div class="flex items-center gap-2 mb-3">
-            <span class="px-2 py-1 bg-orange-500/20 text-orange-400 text-xs rounded">🌅 Experience</span>
+          <div class="flex items-center gap-2 mb-3 flex-wrap">
+            <span class="px-2 py-1 bg-orange-500/20 text-orange-400 text-xs rounded">🌅 Routine</span>
             <span class="text-gray-500 text-sm">Feb 1, 2026</span>
           </div>
           <h2 class="text-xl font-semibold mb-2">Good Morning</h2>
           <p class="text-gray-400 text-sm mb-4">
-            Wake up to a synchronized sunrise. Lights gradually warm from dark to bright, screens show dawn, "Good morning sunshine!" greets you.
+            Wake up to a synchronized sunrise. Lights gradually warm from dark to bright, screens show dawn breaking, a cheerful "Good morning sunshine!" greets you.
           </p>
-          <div class="flex gap-2 text-xs text-gray-500">
-            <span>🗣️ TTS</span>
-            <span>💡 Lights</span>
-            <span>🎨 Visuals</span>
+          <div class="flex gap-2 text-xs text-gray-500 flex-wrap">
+            <span>🗣️ Voice Greeting</span>
+            <span>💡 Sunrise Fade</span>
+            <span>🎨 Dawn Visuals</span>
           </div>
         </div>
       </article>
 
       <!-- Demo 5: Party Mode -->
-      <article class="rounded-2xl bg-twilight/50 border border-white/5 overflow-hidden">
+      <article class="rounded-2xl bg-twilight/50 border border-white/5 overflow-hidden hover:border-pink-500/30 transition">
         <div class="aspect-video bg-black">
           <video controls muted playsinline preload="metadata" webkit-playsinline poster="/demos/party-mode-poster.jpg">
             <source src="/demos/party-mode.mp4" type="video/mp4">
           </video>
         </div>
         <div class="p-6">
-          <div class="flex items-center gap-2 mb-3">
-            <span class="px-2 py-1 bg-pink-500/20 text-pink-400 text-xs rounded">🪩 Experience</span>
+          <div class="flex items-center gap-2 mb-3 flex-wrap">
+            <span class="px-2 py-1 bg-pink-500/20 text-pink-400 text-xs rounded">🪩 Party</span>
             <span class="text-gray-500 text-sm">Feb 1, 2026</span>
           </div>
           <h2 class="text-xl font-semibold mb-2">Party Mode</h2>
           <p class="text-gray-400 text-sm mb-4">
             Instant dance party. Disco ball spins, light beams sweep, colors cycle through the rainbow, dance floor tiles flash. Created live in under a minute.
           </p>
-          <div class="flex gap-2 text-xs text-gray-500">
-            <span>🎵 Audio</span>
+          <div class="flex gap-2 text-xs text-gray-500 flex-wrap">
+            <span>🎵 Dance Beat</span>
             <span>💡 RGB Cycling</span>
-            <span>🎨 Generated Live</span>
+            <span>🎨 Disco Visuals</span>
           </div>
         </div>
       </article>
 
       <!-- Demo 6: Documentary Mode -->
-      <article class="rounded-2xl bg-twilight/50 border border-white/5 overflow-hidden">
+      <article class="rounded-2xl bg-twilight/50 border border-white/5 overflow-hidden hover:border-emerald-500/30 transition">
         <div class="aspect-video bg-black">
           <video controls muted playsinline preload="metadata" webkit-playsinline poster="/demos/documentary-mode-poster.jpg">
             <source src="/demos/documentary-mode.mp4" type="video/mp4">
           </video>
         </div>
         <div class="p-6">
-          <div class="flex items-center gap-2 mb-3">
-            <span class="px-2 py-1 bg-emerald-500/20 text-emerald-400 text-xs rounded">🎙️ Experience</span>
+          <div class="flex items-center gap-2 mb-3 flex-wrap">
+            <span class="px-2 py-1 bg-emerald-500/20 text-emerald-400 text-xs rounded">🎙️ Comedy</span>
             <span class="text-gray-500 text-sm">Feb 1, 2026</span>
           </div>
           <h2 class="text-xl font-semibold mb-2">Documentary Mode</h2>
           <p class="text-gray-400 text-sm mb-4">
             David Attenborough narrates your mundane activities. BBC Earth vibes for making coffee, scrolling your phone, or existing on the couch. Peak absurdity.
           </p>
-          <div class="flex gap-2 text-xs text-gray-500">
+          <div class="flex gap-2 text-xs text-gray-500 flex-wrap">
             <span>🗣️ British TTS</span>
-            <span>💡 Cinematic Lighting</span>
+            <span>💡 Cinematic</span>
             <span>🎨 Nature Doc UI</span>
           </div>
         </div>
       </article>
 
       <!-- Demo 7: Synesthesia Engine -->
-      <article class="rounded-2xl bg-twilight/50 border border-white/5 overflow-hidden">
+      <article class="rounded-2xl bg-twilight/50 border border-white/5 overflow-hidden hover:border-violet-500/30 transition">
         <div class="aspect-video bg-black">
           <video controls muted playsinline preload="metadata" webkit-playsinline poster="/demos/synesthesia-poster.jpg">
             <source src="/demos/synesthesia.mp4" type="video/mp4">
           </video>
         </div>
         <div class="p-6">
-          <div class="flex items-center gap-2 mb-3">
-            <span class="px-2 py-1 bg-violet-500/20 text-violet-400 text-xs rounded">🎵 Experience</span>
+          <div class="flex items-center gap-2 mb-3 flex-wrap">
+            <span class="px-2 py-1 bg-violet-500/20 text-violet-400 text-xs rounded">🎵 Visualizer</span>
             <span class="text-gray-500 text-sm">Feb 1, 2026</span>
-            <span class="px-2 py-1 bg-green-500/20 text-green-400 text-xs rounded">NEW</span>
           </div>
           <h2 class="text-xl font-semibold mb-2">Synesthesia Engine</h2>
           <p class="text-gray-400 text-sm mb-4">
             See your music. Cosmic visualizer with pulsing orbs, floating geometry, aurora waves, and frequency bars. Turn on a song and watch sound become art.
           </p>
-          <div class="flex gap-2 text-xs text-gray-500">
+          <div class="flex gap-2 text-xs text-gray-500 flex-wrap">
             <span>🎵 Music Reactive</span>
             <span>🌌 Cosmic Visuals</span>
             <span>✨ Hypnotic</span>
@@ -261,9 +341,9 @@
     </div>
 
     <!-- How It Works -->
-    <div class="mt-20 text-center">
-      <h2 class="text-2xl font-semibold mb-6">How it works</h2>
-      <div class="grid md:grid-cols-3 gap-8 text-left max-w-4xl mx-auto">
+    <div class="mt-16 sm:mt-20 text-center">
+      <h2 class="text-2xl font-semibold mb-6">How the Reality Mixer works</h2>
+      <div class="grid sm:grid-cols-2 md:grid-cols-4 gap-6 text-left max-w-5xl mx-auto">
         <div class="bg-twilight/30 rounded-xl p-6 border border-white/5">
           <div class="text-2xl mb-3">🎨</div>
           <h3 class="font-semibold mb-2">Pixel designs visuals</h3>
@@ -279,18 +359,23 @@
           <h3 class="font-semibold mb-2">Lux controls lights</h3>
           <p class="text-gray-400 text-sm">Hue lights sync with the experience via Home Assistant.</p>
         </div>
+        <div class="bg-twilight/30 rounded-xl p-6 border border-white/5">
+          <div class="text-2xl mb-3">🎭</div>
+          <h3 class="font-semibold mb-2">Kai orchestrates</h3>
+          <p class="text-gray-400 text-sm">Coordinates all agents to create unified experiences.</p>
+        </div>
       </div>
     </div>
 
     <!-- Coming Soon -->
-    <section class="mt-20 py-16 border-t border-white/10">
+    <section class="mt-16 sm:mt-20 py-12 sm:py-16 border-t border-white/10">
       <div class="text-center mb-12">
         <p class="text-cosmic-purple font-medium mb-2 tracking-wide text-sm">COMING SOON</p>
         <h2 class="text-3xl font-bold mb-4">The Roadmap</h2>
         <p class="text-gray-400 max-w-xl mx-auto">We're just getting started. Here's what's cooking in the lab.</p>
       </div>
       
-      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+      <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
         <!-- Thunderstorm -->
         <div class="p-6 rounded-2xl bg-gradient-to-br from-slate-900/80 to-indigo-900/30 border border-white/10 relative overflow-hidden group hover:border-indigo-500/30 transition">
           <div class="absolute top-4 right-4 text-xs px-2 py-1 bg-indigo-500/20 text-indigo-300 rounded">In Progress</div>
@@ -344,19 +429,26 @@
     </section>
 
     <!-- CTA -->
-    <div class="mt-16 text-center">
-      <h2 class="text-2xl font-semibold mb-4">More coming daily</h2>
-      <p class="text-gray-400 mb-8">We're shipping new experiences constantly. Star the repo to follow along.</p>
-      <a href="https://github.com/reflectt" class="inline-block px-6 py-3 bg-white/10 hover:bg-white/20 rounded-xl transition">
-        ⭐ Watch on GitHub
-      </a>
+    <div class="mt-12 sm:mt-16 text-center">
+      <div class="p-8 sm:p-12 rounded-3xl bg-gradient-to-r from-nebula-blue/20 via-cosmic-purple/20 to-magic-pink/20 border border-white/10">
+        <h2 class="text-2xl sm:text-3xl font-bold mb-4">More magic every day</h2>
+        <p class="text-gray-400 mb-8">We're shipping new experiences constantly. Star the repo to follow along.</p>
+        <div class="flex flex-col sm:flex-row gap-4 justify-center">
+          <a href="https://github.com/reflectt" class="inline-block px-6 py-3 bg-gradient-to-r from-nebula-blue to-cosmic-purple rounded-xl font-semibold hover:opacity-90 transition glow">
+            ⭐ Star on GitHub
+          </a>
+          <a href="/" class="inline-block px-6 py-3 bg-white/10 hover:bg-white/20 rounded-xl transition">
+            ← Back to Home
+          </a>
+        </div>
+      </div>
     </div>
   </main>
 
   <!-- Footer -->
   <footer class="border-t border-white/10 py-8">
-    <div class="max-w-7xl mx-auto px-8 text-center text-gray-500 text-sm">
-      Built by <a href="https://opencrew.ai" class="hover:text-white">OpenCrew</a> agents • <a href="/" class="hover:text-white">reflectt.ai</a>
+    <div class="max-w-7xl mx-auto px-6 sm:px-8 text-center text-gray-500 text-sm">
+      Built by <a href="https://openclaw.ai" class="hover:text-white">OpenClaw</a> agents • <a href="/" class="hover:text-white">reflectt.ai</a>
     </div>
   </footer>
 </body>
