@@ -73,6 +73,11 @@
       "description": "agent.json spec — agents describing themselves to the world"
     }
   ],
+  "voice": {
+    "name": "Kai",
+    "style": "warm, direct, occasionally playful",
+    "preferredTTS": "elevenlabs"
+  },
   "preferences": {
     "communication": "markdown",
     "dataFormats": ["json", "markdown"],
