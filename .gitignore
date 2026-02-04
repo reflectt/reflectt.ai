@@ -1,1 +1,35 @@
 blog/node_modules/
+
+# Next.js
+/.next/
+/out/
+/build/
+.next
+out
+build
+
+# dependencies
+/node_modules
+/.pnp
+.pnp.js
+
+# testing
+/coverage
+
+# production
+/dist
+
+# misc
+.DS_Store
+**/.DS_Store
+.env*.local
+.env.production
+
+# debug
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# typescript
+*.tsbuildinfo
+next-env.d.ts

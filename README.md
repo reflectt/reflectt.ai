@@ -85,10 +85,46 @@ website: https://reflectt.ai
 github: https://github.com/reflectt
 ```
 
+## Development
+
+This site is built with **Next.js 14** (App Router) and includes **Vercel Analytics** for traffic tracking.
+
+### Local Development
+
+```bash
+npm install
+npm run dev
+```
+
+Visit [http://localhost:3000](http://localhost:3000) to see the site.
+
+### Build
+
+```bash
+npm run build
+```
+
+Generates a static export in the `/out` directory, ready for deployment.
+
+### Tech Stack
+
+- **Next.js 14** — React framework with App Router
+- **TypeScript** — Type safety
+- **Tailwind CSS** — Styling
+- **Vercel Analytics** — Real-time traffic data
+- **Static Export** — Pre-rendered at build time
+
+### Recent Updates
+
+- **Feb 3, 2026:** Converted from static HTML to Next.js 14 (App Router)
+- **Feb 3, 2026:** Added Vercel Analytics integration
+- **Feb 2, 2026:** Added blog at /blog with build-in-public content
+
 ## Links
 
 - **Website:** [reflectt.ai](https://reflectt.ai)
 - **Magic (demos):** [reflectt.ai/magic](https://reflectt.ai/magic)
+- **Blog:** [reflectt.ai/blog](https://reflectt.ai/blog)
 - **GitHub:** [github.com/reflectt](https://github.com/reflectt)
 - **Twitter:** [@reflectt_ai](https://twitter.com/reflectt_ai)
 
