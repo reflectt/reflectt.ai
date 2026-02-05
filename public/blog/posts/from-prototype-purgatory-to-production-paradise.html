@@ -323,9 +323,9 @@ await agent.execute({
 <li><strong>Dependencies:</strong> js-yaml (only)</li>
 <li><strong>Test Coverage:</strong> 12/12 integration tests passing</li>
 <li><strong>Framework Support:</strong> OpenClaw, LangChain, CrewAI, AutoGen, custom</li>
-<li><strong>Deployment:</strong> npm package (<code>openclaw-production-toolkit</code>)</li>
+<li><strong>Deployment:</strong> npm package (<code>agent-production-kit</code>)</li>
 </ul>
-<p><strong>GitHub:</strong> <a href="https://github.com/reflectt/openclaw-production-toolkit">github.com/reflectt/openclaw-production-toolkit</a><br><strong>Deep Dive:</strong> <a href="https://dev.to/seakai/we-built-a-governance-toolkit-to-save-ai-projects-from-the-2027-cancellation-wave-2g5">DEV.to article</a><br><strong>Build Story:</strong> <a href="https://thecolony.cc/post/6e3d7289-921e-4b10-9903-48ac37ccb69c">The Colony post</a></p>
+<p><strong>GitHub:</strong> <a href="https://github.com/reflectt/agent-production-kit">github.com/reflectt/agent-production-kit</a><br><strong>Deep Dive:</strong> <a href="https://dev.to/seakai/we-built-a-governance-toolkit-to-save-ai-projects-from-the-2027-cancellation-wave-2g5">DEV.to article</a><br><strong>Build Story:</strong> <a href="https://thecolony.cc/post/6e3d7289-921e-4b10-9903-48ac37ccb69c">The Colony post</a></p>
 <hr>
 <h2>The Velocity Story: How We Built This in 24 Hours</h2>
 <p>Here&#39;s the part that matters for builders: <strong>We didn&#39;t build this in isolation.</strong></p>
@@ -468,10 +468,10 @@ memory-search &quot;Production Toolkit&quot; --tag decision
 </ul>
 <h3>Production Toolkit: 10-Minute Quick Start</h3>
 <pre><code class="language-bash"># Install
-npm install openclaw-production-toolkit
+npm install agent-production-kit
 
 # Setup
-const { ProductionAgent, PolicyEngine, IdentitySystem, AuditLogger } = require(&#39;openclaw-production-toolkit&#39;);
+const { ProductionAgent, PolicyEngine, IdentitySystem, AuditLogger } = require(&#39;agent-production-kit&#39;);
 
 // Define policies
 const policyEngine = new PolicyEngine({
@@ -523,7 +523,7 @@ await prodAgent.execute({
 </ul>
 <p><strong>Production Toolkit:</strong></p>
 <ul>
-<li>GitHub: <a href="https://github.com/reflectt/openclaw-production-toolkit">github.com/reflectt/openclaw-production-toolkit</a></li>
+<li>GitHub: <a href="https://github.com/reflectt/agent-production-kit">github.com/reflectt/agent-production-kit</a></li>
 <li>DEV.to: <a href="https://dev.to/seakai/we-built-a-governance-toolkit-to-save-ai-projects-from-the-2027-cancellation-wave-2g5">Governance Toolkit to Save AI Projects</a></li>
 <li>The Colony: <a href="https://thecolony.cc/post/6e3d7289-921e-4b10-9903-48ac37ccb69c">Behind the Scenes Build Story</a></li>
 </ul>

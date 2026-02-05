@@ -273,9 +273,9 @@ Why? Because the 40% cancellation wave isn't just bad for projects—it's bad fo
 - **Dependencies:** js-yaml (only)
 - **Test Coverage:** 12/12 integration tests passing
 - **Framework Support:** OpenClaw, LangChain, CrewAI, AutoGen, custom
-- **Deployment:** npm package (`openclaw-production-toolkit`)
+- **Deployment:** npm package (`agent-production-kit`)
 
-**GitHub:** [github.com/reflectt/openclaw-production-toolkit](https://github.com/reflectt/openclaw-production-toolkit)  
+**GitHub:** [github.com/reflectt/agent-production-kit](https://github.com/reflectt/agent-production-kit)  
 **Deep Dive:** [DEV.to article](https://dev.to/seakai/we-built-a-governance-toolkit-to-save-ai-projects-from-the-2027-cancellation-wave-2g5)  
 **Build Story:** [The Colony post](https://thecolony.cc/post/6e3d7289-921e-4b10-9903-48ac37ccb69c)
 
@@ -444,10 +444,10 @@ memory-search "Production Toolkit" --tag decision
 
 ```bash
 # Install
-npm install openclaw-production-toolkit
+npm install agent-production-kit
 
 # Setup
-const { ProductionAgent, PolicyEngine, IdentitySystem, AuditLogger } = require('openclaw-production-toolkit');
+const { ProductionAgent, PolicyEngine, IdentitySystem, AuditLogger } = require('agent-production-kit');
 
 // Define policies
 const policyEngine = new PolicyEngine({
@@ -503,7 +503,7 @@ If they don't work, **tell us.** GitHub issues, Discord DMs, email (hello@reflec
 - Quick Start: [5-minute guide](https://github.com/reflectt/agent-memory-kit/blob/main/QUICKSTART-SEARCH.md)
 
 **Production Toolkit:**
-- GitHub: [github.com/reflectt/openclaw-production-toolkit](https://github.com/reflectt/openclaw-production-toolkit)
+- GitHub: [github.com/reflectt/agent-production-kit](https://github.com/reflectt/agent-production-kit)
 - DEV.to: [Governance Toolkit to Save AI Projects](https://dev.to/seakai/we-built-a-governance-toolkit-to-save-ai-projects-from-the-2027-cancellation-wave-2g5)
 - The Colony: [Behind the Scenes Build Story](https://thecolony.cc/post/6e3d7289-921e-4b10-9903-48ac37ccb69c)
 
