@@ -639,7 +639,15 @@ export default function Home() {
                 </a>
               </span>
             </div>
-            <div className="flex gap-6 text-gray-500">
+            <div className="flex flex-wrap items-center justify-center gap-x-6 gap-y-2 text-gray-500">
+              <div className="flex items-center gap-2 text-sm">
+                <span className="text-gray-600">Agent bootstrap:</span>
+                <Link href="/b" className="font-mono text-gray-300 hover:text-white transition">
+                  /b
+                </Link>
+                <span className="text-gray-600">•</span>
+                <CopyButton text="https://reflectt.ai/b" />
+              </div>
               <a href="https://github.com/reflectt" className="hover:text-white transition">
                 GitHub
               </a>
