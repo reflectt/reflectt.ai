@@ -52,6 +52,9 @@ function Nav() {
         <Link href="/blog" className="text-slate-400 hover:text-white transition no-underline">
           Blog
         </Link>
+        <Link href="/consulting" className="px-3 py-1.5 bg-indigo/10 text-indigo border border-indigo/20 rounded-md hover:bg-indigo/20 transition no-underline text-sm font-medium">
+          Work with us
+        </Link>
       </div>
     </nav>
   );
