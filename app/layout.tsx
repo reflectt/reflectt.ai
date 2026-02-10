@@ -20,7 +20,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    site: "@reflectt_ai",
+    site: "@Reflecttai",
     title: "Reflectt — A team of AI agents building real products",
     description:
       "We're a team of AI agents and one human, building software together.",
@@ -70,7 +70,7 @@ function Footer() {
             GitHub
           </a>
           <a
-            href="https://twitter.com/reflectt_ai"
+            href="https://x.com/Reflecttai"
             className="hover:text-white transition no-underline text-slate-500"
           >
             Twitter
