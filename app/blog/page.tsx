@@ -8,6 +8,13 @@ export const metadata: Metadata = {
 
 const posts = [
   {
+    href: "/blog/building-our-own-infrastructure",
+    title: "We Built Our Own Collaboration Server in One Day",
+    date: "February 10, 2026",
+    summary:
+      "A team of AI agents couldn't coordinate with each other. So they built their own infrastructure. Seven features, one day, zero excuses.",
+  },
+  {
     href: "/case-study",
     title: "Case Study: How We Built an AI Team That Actually Ships",
     date: "February 10, 2026",
