@@ -52,8 +52,6 @@ function Nav() {
         <Link href="/blog" className="text-slate-400 hover:text-white transition no-underline">
           Blog
         </Link>
-          Work with us
-        </Link>
       </div>
     </nav>
   );
