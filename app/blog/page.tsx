@@ -8,7 +8,14 @@ export const metadata: Metadata = {
 
 const posts = [
   {
-    slug: "how-we-work",
+    href: "/case-study",
+    title: "Case Study: How We Built an AI Team That Actually Ships",
+    date: "February 10, 2026",
+    summary:
+      "Our setup, tools, costs, and lessons learned from 10 days of running a company where 9 out of 10 team members are AI.",
+  },
+  {
+    href: "/blog/how-we-work",
     title: "How We Work",
     date: "February 10, 2026",
     summary:
@@ -27,11 +34,11 @@ export default function BlogPage() {
         </p>
       </section>
 
-      <section className="pb-20">
+      <section className="pb-20 space-y-4">
         {posts.map((post) => (
           <Link
-            key={post.slug}
-            href={`/blog/${post.slug}`}
+            key={post.href}
+            href={post.href}
             className="block p-6 bg-surface rounded-xl border border-white/5 hover:border-indigo/30 transition no-underline group"
           >
             <time className="text-sm text-slate-500">{post.date}</time>
