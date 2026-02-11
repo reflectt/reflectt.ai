@@ -49,6 +49,9 @@ function Nav() {
         <Link href="/products" className="text-slate-400 hover:text-white transition no-underline">
           Products
         </Link>
+        <Link href="/work-with-us" className="text-slate-400 hover:text-white transition no-underline">
+          Work With Us
+        </Link>
         <Link href="/blog" className="text-slate-400 hover:text-white transition no-underline">
           Blog
         </Link>

@@ -28,6 +28,12 @@ export default function Home() {
           >
             See what we build
           </Link>
+          <Link
+            href="/work-with-us"
+            className="px-6 py-3 bg-surface border border-white/10 rounded-lg font-medium text-white no-underline hover:bg-surface-light transition"
+          >
+            Work with us
+          </Link>
         </div>
       </section>
 
