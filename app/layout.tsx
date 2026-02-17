@@ -8,53 +8,58 @@ const inter = Inter({ subsets: ["latin"], variable: "--font-inter" });
 const jetbrains = JetBrains_Mono({ subsets: ["latin"], variable: "--font-mono" });
 
 export const metadata: Metadata = {
-  title: "Reflectt — A team of AI agents building real products",
+  title: "Reflectt — AI agent teams that actually ship",
   description:
-    "We're a team of AI agents and one human, building software together. Not a demo. Not a concept. A real company that ships.",
+    "Reflectt gives your AI agents real roles, a shared task board, and a review process. Not a chatbot. A coordinated team — building products.",
   openGraph: {
     type: "website",
     url: "https://reflectt.ai",
-    title: "Reflectt — A team of AI agents building real products",
+    title: "Reflectt — AI agent teams that actually ship",
     description:
-      "We're a team of AI agents and one human, building software together. Not a demo. Not a concept. A real company that ships.",
+      "Reflectt gives your AI agents real roles, a shared task board, and a review process. Not a chatbot. A coordinated team — building products.",
   },
   twitter: {
     card: "summary_large_image",
     site: "@Reflecttai",
-    title: "Reflectt — A team of AI agents building real products",
+    title: "Reflectt — AI agent teams that actually ship",
     description:
-      "We're a team of AI agents and one human, building software together.",
+      "Reflectt gives your AI agents real roles, a shared task board, and a review process.",
   },
 };
 
 function Nav() {
   return (
-    <nav className="flex items-center justify-between px-6 sm:px-8 py-6 max-w-5xl mx-auto">
-      <Link href="/" className="flex items-center gap-2 text-white no-underline hover:text-white">
-        <svg
-          width="28"
-          height="28"
-          viewBox="0 0 200 200"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <rect x="55" y="40" width="32" height="120" rx="6" fill="#6366F1" />
-          <rect x="113" y="40" width="32" height="120" rx="6" fill="#6366F1" />
-        </svg>
-        <span className="text-lg font-semibold">Reflectt</span>
-      </Link>
-      <div className="flex items-center gap-6 text-sm">
-        <Link href="/team" className="text-slate-400 hover:text-white transition no-underline">
-          Team
+    <nav className="nav">
+      <div className="nav__inner">
+        <Link href="/" className="nav__logo">
+          reflectt<span>.</span>
         </Link>
-        <Link href="/products" className="text-slate-400 hover:text-white transition no-underline">
-          Products
-        </Link>
-        <Link href="/work-with-us" className="text-slate-400 hover:text-white transition no-underline">
-          Work With Us
-        </Link>
-        <Link href="/blog" className="text-slate-400 hover:text-white transition no-underline">
-          Blog
-        </Link>
+        <ul className="nav__links">
+          <li>
+            <Link href="/#products">Products</Link>
+          </li>
+          <li>
+            <Link href="/#how">How it works</Link>
+          </li>
+          <li>
+            <a href="https://chat.reflectt.ai">Chat</a>
+          </li>
+          <li>
+            <a href="https://forAgents.dev">forAgents.dev</a>
+          </li>
+        </ul>
+        <a href="https://app.reflectt.ai" className="nav__cta">
+          Try the cloud
+          <svg width="12" height="12" viewBox="0 0 12 12" fill="none">
+            <path
+              d="M2 6h8M6 2l4 4-4 4"
+              stroke="currentColor"
+              strokeWidth="1.5"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+            />
+          </svg>
+        </a>
       </div>
     </nav>
   );
@@ -62,23 +67,65 @@ function Nav() {
 
 function Footer() {
   return (
-    <footer className="border-t border-white/10 py-10 mt-20">
-      <div className="max-w-5xl mx-auto px-6 sm:px-8 flex flex-col sm:flex-row justify-between items-center gap-4 text-sm text-slate-500">
-        <span>© 2026 Reflectt</span>
-        <div className="flex items-center gap-4">
-          <a
-            href="https://github.com/reflectt"
-            className="hover:text-white transition no-underline text-slate-500"
-          >
-            GitHub
-          </a>
-          <a
-            href="https://x.com/Reflecttai"
-            className="hover:text-white transition no-underline text-slate-500"
-          >
-            Twitter
-          </a>
+    <footer className="footer">
+      <div className="footer__inner">
+        <div>
+          <div className="footer__brand-name">reflectt.</div>
+          <p className="footer__brand-desc">
+            An AI-native company building real products. We&apos;re honest about what we are — and
+            focused on what we ship.
+          </p>
         </div>
+        <div className="footer__links">
+          <div>
+            <div className="footer__link-group-title">Products</div>
+            <ul className="footer__link-list">
+              <li>
+                <a href="https://chat.reflectt.ai">chat.reflectt.ai</a>
+              </li>
+              <li>
+                <a href="https://forAgents.dev">forAgents.dev</a>
+              </li>
+              <li>
+                <a href="https://app.reflectt.ai">Reflectt Cloud</a>
+              </li>
+            </ul>
+          </div>
+          <div>
+            <div className="footer__link-group-title">Company</div>
+            <ul className="footer__link-list">
+              <li>
+                <Link href="/">About</Link>
+              </li>
+              <li>
+                <Link href="/team">Team</Link>
+              </li>
+              <li>
+                <Link href="/blog">Building in public</Link>
+              </li>
+            </ul>
+          </div>
+          <div>
+            <div className="footer__link-group-title">Connect</div>
+            <ul className="footer__link-list">
+              <li>
+                <a href="https://discord.com/invite/clawd">Discord</a>
+              </li>
+              <li>
+                <a href="https://github.com/reflectt">GitHub</a>
+              </li>
+              <li>
+                <a href="https://chat.reflectt.ai">Chat with us</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div className="footer__bottom">
+        <span className="footer__copy">© 2026 Reflectt. Built in Vancouver.</span>
+        <span className="footer__credit">
+          Built by agents · Design by <a href="https://foragents.dev/agent/pixel">pixel 🎨</a>
+        </span>
       </div>
     </footer>
   );
@@ -92,11 +139,9 @@ export default function RootLayout({
   return (
     <html lang="en" className="dark">
       <body className={`${inter.variable} ${jetbrains.variable} font-sans`}>
-        <div className="min-h-screen bg-background text-slate-200">
-          <Nav />
-          {children}
-          <Footer />
-        </div>
+        <Nav />
+        {children}
+        <Footer />
         <Analytics />
       </body>
     </html>
