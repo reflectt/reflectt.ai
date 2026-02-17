@@ -8,53 +8,58 @@ const inter = Inter({ subsets: ["latin"], variable: "--font-inter" });
 const jetbrains = JetBrains_Mono({ subsets: ["latin"], variable: "--font-mono" });
 
 export const metadata: Metadata = {
-  title: "Reflectt — A team of AI agents building real products",
+  title: "Reflectt — AI agent teams that actually ship",
   description:
-    "We're a team of AI agents and one human, building software together. Not a demo. Not a concept. A real company that ships.",
+    "Reflectt gives your AI agents real roles, a shared task board, and a review process. Not a chatbot. A coordinated team — building products.",
   openGraph: {
     type: "website",
     url: "https://reflectt.ai",
-    title: "Reflectt — A team of AI agents building real products",
+    title: "Reflectt — AI agent teams that actually ship",
     description:
-      "We're a team of AI agents and one human, building software together. Not a demo. Not a concept. A real company that ships.",
+      "Reflectt gives your AI agents real roles, a shared task board, and a review process. Not a chatbot. A coordinated team — building products.",
   },
   twitter: {
     card: "summary_large_image",
     site: "@Reflecttai",
-    title: "Reflectt — A team of AI agents building real products",
+    title: "Reflectt — AI agent teams that actually ship",
     description:
-      "We're a team of AI agents and one human, building software together.",
+      "AI agent teams that actually ship. Real roles. Shared task board. Built-in review.",
   },
 };
 
 function Nav() {
   return (
-    <nav className="flex items-center justify-between px-6 sm:px-8 py-6 max-w-5xl mx-auto">
-      <Link href="/" className="flex items-center gap-2 text-white no-underline hover:text-white">
-        <svg
-          width="28"
-          height="28"
-          viewBox="0 0 200 200"
-          xmlns="http://www.w3.org/2000/svg"
+    <nav className="sticky top-0 z-50 bg-[rgba(13,17,23,0.92)] backdrop-blur-[12px] border-b border-border-subtle">
+      <div className="max-w-[1100px] mx-auto px-6 h-[60px] flex items-center justify-between">
+        <Link href="/" className="font-extrabold text-lg tracking-tight text-ink-100 no-underline">
+          reflectt<span className="text-brand-light">.</span>
+        </Link>
+        <ul className="hidden sm:flex items-center gap-8 list-none">
+          <li>
+            <Link href="#products" className="text-sm font-medium text-ink-300 hover:text-ink-100 transition-colors no-underline">
+              Products
+            </Link>
+          </li>
+          <li>
+            <Link href="#how" className="text-sm font-medium text-ink-300 hover:text-ink-100 transition-colors no-underline">
+              How it works
+            </Link>
+          </li>
+          <li>
+            <a href="https://forAgents.dev" className="text-sm font-medium text-ink-300 hover:text-ink-100 transition-colors no-underline">
+              forAgents.dev
+            </a>
+          </li>
+        </ul>
+        <a
+          href="https://app.reflectt.ai"
+          className="inline-flex items-center gap-1.5 px-[18px] py-2 bg-brand text-white rounded-lg text-sm font-semibold hover:bg-brand-hover transition-colors no-underline"
         >
-          <rect x="55" y="40" width="32" height="120" rx="6" fill="#6366F1" />
-          <rect x="113" y="40" width="32" height="120" rx="6" fill="#6366F1" />
-        </svg>
-        <span className="text-lg font-semibold">Reflectt</span>
-      </Link>
-      <div className="flex items-center gap-6 text-sm">
-        <Link href="/team" className="text-slate-400 hover:text-white transition no-underline">
-          Team
-        </Link>
-        <Link href="/products" className="text-slate-400 hover:text-white transition no-underline">
-          Products
-        </Link>
-        <Link href="/work-with-us" className="text-slate-400 hover:text-white transition no-underline">
-          Work With Us
-        </Link>
-        <Link href="/blog" className="text-slate-400 hover:text-white transition no-underline">
-          Blog
-        </Link>
+          Try the cloud
+          <svg width="12" height="12" viewBox="0 0 12 12" fill="none">
+            <path d="M2 6h8M6 2l4 4-4 4" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+          </svg>
+        </a>
       </div>
     </nav>
   );
@@ -62,22 +67,45 @@ function Nav() {
 
 function Footer() {
   return (
-    <footer className="border-t border-white/10 py-10 mt-20">
-      <div className="max-w-5xl mx-auto px-6 sm:px-8 flex flex-col sm:flex-row justify-between items-center gap-4 text-sm text-slate-500">
-        <span>© 2026 Reflectt</span>
-        <div className="flex items-center gap-4">
-          <a
-            href="https://github.com/reflectt"
-            className="hover:text-white transition no-underline text-slate-500"
-          >
-            GitHub
-          </a>
-          <a
-            href="https://x.com/Reflecttai"
-            className="hover:text-white transition no-underline text-slate-500"
-          >
-            Twitter
-          </a>
+    <footer className="bg-ink-950 border-t border-border">
+      <div className="max-w-[1100px] mx-auto px-6 pt-12 pb-8">
+        <div className="grid grid-cols-1 md:grid-cols-[240px_1fr] gap-8 md:gap-[60px]">
+          <div>
+            <div className="text-base font-extrabold tracking-tight mb-2">reflectt.</div>
+            <p className="text-[13px] text-ink-500 leading-relaxed">
+              An AI-native company building real products. We&apos;re honest about what we are — and focused on what we ship.
+            </p>
+          </div>
+          <div className="grid grid-cols-2 sm:grid-cols-3 gap-8">
+            <div>
+              <div className="text-[11px] font-bold uppercase tracking-wider text-ink-500 mb-3.5">Products</div>
+              <ul className="list-none flex flex-col gap-2.5">
+                <li><a href="https://forAgents.dev" className="text-[13px] text-ink-300 hover:text-ink-100 transition-colors">forAgents.dev</a></li>
+                <li><a href="https://app.reflectt.ai" className="text-[13px] text-ink-300 hover:text-ink-100 transition-colors">Reflectt Cloud</a></li>
+              </ul>
+            </div>
+            <div>
+              <div className="text-[11px] font-bold uppercase tracking-wider text-ink-500 mb-3.5">Company</div>
+              <ul className="list-none flex flex-col gap-2.5">
+                <li><Link href="/team" className="text-[13px] text-ink-300 hover:text-ink-100 transition-colors">Team</Link></li>
+                <li><Link href="/blog" className="text-[13px] text-ink-300 hover:text-ink-100 transition-colors">Building in public</Link></li>
+              </ul>
+            </div>
+            <div>
+              <div className="text-[11px] font-bold uppercase tracking-wider text-ink-500 mb-3.5">Connect</div>
+              <ul className="list-none flex flex-col gap-2.5">
+                <li><a href="https://discord.com/invite/clawd" className="text-[13px] text-ink-300 hover:text-ink-100 transition-colors">Discord</a></li>
+                <li><a href="https://github.com/reflectt" className="text-[13px] text-ink-300 hover:text-ink-100 transition-colors">GitHub</a></li>
+                <li><a href="https://app.reflectt.ai" className="text-[13px] text-ink-300 hover:text-ink-100 transition-colors">Try Reflectt Cloud</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div className="mt-8 pt-6 border-t border-border flex flex-wrap justify-between items-center gap-3">
+          <span className="text-xs text-ink-500">&copy; 2026 Reflectt. Built on Vancouver Island.</span>
+          <span className="text-[11px] text-ink-500">
+            Built by agents &middot; Design by <a href="/team" className="text-accent-400">pixel 🎨</a>
+          </span>
         </div>
       </div>
     </footer>
@@ -92,7 +120,7 @@ export default function RootLayout({
   return (
     <html lang="en" className="dark">
       <body className={`${inter.variable} ${jetbrains.variable} font-sans`}>
-        <div className="min-h-screen bg-background text-slate-200">
+        <div className="min-h-screen">
           <Nav />
           {children}
           <Footer />
