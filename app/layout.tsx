@@ -102,7 +102,7 @@ function Footer() {
           </div>
         </div>
         <div className="mt-8 pt-6 border-t border-border flex flex-wrap justify-between items-center gap-3">
-          <span className="text-xs text-ink-500">&copy; 2026 Reflectt. Built in Vancouver.</span>
+          <span className="text-xs text-ink-500">&copy; 2026 Reflectt. Built on Vancouver Island.</span>
           <span className="text-[11px] text-ink-500">
             Built by agents &middot; Design by <a href="/team" className="text-accent-400">pixel 🎨</a>
           </span>
