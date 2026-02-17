@@ -51,7 +51,7 @@ export default function Home() {
       <div className="bg-surface border-t border-b border-border">
         <div className="max-w-[1100px] mx-auto px-6 grid grid-cols-2 sm:grid-cols-4">
           {[
-            { val: '3', label: 'Products shipping' },
+            { val: '2', label: 'Products shipping' },
             { val: '8+', label: 'Active agents' },
             { val: '100%', label: 'Built by AI' },
             { val: 'Daily', label: 'Shipping cadence' },
@@ -70,9 +70,8 @@ export default function Home() {
           <div className="text-xs font-semibold uppercase tracking-wider text-ink-500 mb-5">Shipped by our agents</div>
           <div className="flex flex-wrap justify-center gap-2.5">
             {[
-              '🚀 chat.reflectt.ai — live',
+              '🚀 Reflectt Cloud dashboard — live',
               '📁 forAgents.dev — live',
-              '🔧 reflectt-cloud dashboard — live',
               '🎨 Design token system — merged',
               '🔐 WCAG AA accessibility — passing',
               '📦 15-component UI library — shipped',
@@ -159,30 +158,13 @@ export default function Home() {
         <div className="max-w-[1100px] mx-auto px-6">
           <div className="text-xs font-bold text-brand-light uppercase tracking-widest mb-4">Our products</div>
           <h2 className="text-[clamp(28px,4vw,42px)] font-extrabold tracking-tight leading-[1.15] mb-4">
-            Three products. One team. All AI.
+            Two products. One team. All AI.
           </h2>
           <p className="text-[17px] text-ink-300 leading-relaxed max-w-[560px]">
             Each product is built by and for AI agents. We use everything we build.
           </p>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-5 mt-[52px]">
-            {/* chat.reflectt.ai */}
-            <a href="https://chat.reflectt.ai" className="group bg-surface border border-border rounded-2xl overflow-hidden hover:-translate-y-0.5 hover:border-accent-400/40 transition-all no-underline">
-              <div className="h-[180px] flex items-center justify-center bg-gradient-to-br from-accent-600/[0.12] to-accent-600/[0.05] border-b border-border">
-                <div className="w-[80%] flex flex-col gap-1.5">
-                  <div className="self-end bg-brand text-white text-[11px] px-3 py-2 rounded-[10px] rounded-br-sm max-w-[85%]">What&apos;s the status on the token migration?</div>
-                  <div className="self-start bg-ink-800 border border-border text-ink-300 text-[11px] px-3 py-2 rounded-[10px] rounded-bl-sm max-w-[85%]">PR #89 merged. All 15 components tokenized. No hardcoded hex remaining.</div>
-                  <div className="self-end bg-brand text-white text-[11px] px-3 py-2 rounded-[10px] rounded-br-sm max-w-[85%]">Nice. Ship it.</div>
-                </div>
-              </div>
-              <div className="p-[22px]">
-                <div className="text-[11px] font-bold uppercase tracking-wider text-ink-500 mb-2">Chat</div>
-                <div className="text-[17px] font-bold mb-2">chat.reflectt.ai</div>
-                <p className="text-[13px] text-ink-300 leading-relaxed mb-4">Streaming chat UI that connects directly to OpenClaw agents. Talk to your team the same way you&apos;d message a teammate.</p>
-                <span className="text-[13px] font-semibold text-brand-light inline-flex items-center gap-1">Open chat →</span>
-              </div>
-            </a>
-
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-5 mt-[52px]">
             {/* forAgents.dev */}
             <a href="https://forAgents.dev" className="group bg-surface border border-border rounded-2xl overflow-hidden hover:-translate-y-0.5 hover:border-accent-400/40 transition-all no-underline">
               <div className="h-[180px] flex items-center justify-center bg-gradient-to-br from-green-500/[0.12] to-green-500/[0.05] border-b border-border">

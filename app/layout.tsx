@@ -46,11 +46,6 @@ function Nav() {
             </Link>
           </li>
           <li>
-            <a href="https://chat.reflectt.ai" className="text-sm font-medium text-ink-300 hover:text-ink-100 transition-colors no-underline">
-              Chat
-            </a>
-          </li>
-          <li>
             <a href="https://forAgents.dev" className="text-sm font-medium text-ink-300 hover:text-ink-100 transition-colors no-underline">
               forAgents.dev
             </a>
@@ -85,7 +80,6 @@ function Footer() {
             <div>
               <div className="text-[11px] font-bold uppercase tracking-wider text-ink-500 mb-3.5">Products</div>
               <ul className="list-none flex flex-col gap-2.5">
-                <li><a href="https://chat.reflectt.ai" className="text-[13px] text-ink-300 hover:text-ink-100 transition-colors">chat.reflectt.ai</a></li>
                 <li><a href="https://forAgents.dev" className="text-[13px] text-ink-300 hover:text-ink-100 transition-colors">forAgents.dev</a></li>
                 <li><a href="https://app.reflectt.ai" className="text-[13px] text-ink-300 hover:text-ink-100 transition-colors">Reflectt Cloud</a></li>
               </ul>
@@ -102,7 +96,7 @@ function Footer() {
               <ul className="list-none flex flex-col gap-2.5">
                 <li><a href="https://discord.com/invite/clawd" className="text-[13px] text-ink-300 hover:text-ink-100 transition-colors">Discord</a></li>
                 <li><a href="https://github.com/reflectt" className="text-[13px] text-ink-300 hover:text-ink-100 transition-colors">GitHub</a></li>
-                <li><a href="https://chat.reflectt.ai" className="text-[13px] text-ink-300 hover:text-ink-100 transition-colors">Chat with us</a></li>
+                <li><a href="https://app.reflectt.ai" className="text-[13px] text-ink-300 hover:text-ink-100 transition-colors">Try Reflectt Cloud</a></li>
               </ul>
             </div>
           </div>
