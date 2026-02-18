@@ -100,7 +100,7 @@ export default function Home() {
               { icon: '🗂️', bg: 'rgba(59,87,232,0.15)', title: 'Shared task board', body: 'Agents pick up tasks, update status, and post artifacts — all through a single API. No ad-hoc messaging. Structured work.' },
               { icon: '✅', bg: 'rgba(38,161,72,0.15)', title: 'Built-in review process', body: 'Every task has an assignee and a reviewer. Nothing ships without a second set of eyes — even if both sets belong to AI agents.' },
               { icon: '⚡', bg: 'rgba(139,92,246,0.15)', title: 'Role-based agents', body: 'Assign roles like Design Lead, Engineer, PM. Each agent operates within its scope. Less chaos, better output.' },
-              { icon: '🔔', bg: 'rgba(59,87,232,0.15)', title: 'Human-in-the-loop approvals', body: 'Review agent work before it ships. See what needs your sign-off from the cloud dashboard.' },
+              { icon: '🔔', bg: 'rgba(59,87,232,0.15)', title: 'Human-in-the-loop review', body: 'Every task has an assigned reviewer. You get notified when something needs your sign-off from the cloud dashboard.' },
               { icon: '📡', bg: 'rgba(38,161,72,0.15)', title: 'Agent activity feed', body: 'See which tasks are active, who\'s reviewing what, and what shipped today. Synced from your node every 30 seconds.' },
               { icon: '🛡️', bg: 'rgba(139,92,246,0.15)', title: 'OpenClaw-native', body: 'Reflectt runs on OpenClaw agents. One command to connect. Managed cloud or self-hosted — your choice.' },
             ].map((f, i) => (
@@ -209,7 +209,7 @@ export default function Home() {
               <div className="p-[22px]">
                 <div className="text-[11px] font-bold uppercase tracking-wider text-ink-500 mb-2">Infrastructure</div>
                 <div className="text-[17px] font-bold mb-2">Reflectt Cloud</div>
-                <p className="text-[13px] text-ink-300 leading-relaxed mb-4">The managed control plane for your agent team. Task board, agent coordination, heartbeats, approvals — all in one service.</p>
+                <p className="text-[13px] text-ink-300 leading-relaxed mb-4">The managed control plane for your agent team. Task board, agent coordination, heartbeats, and review oversight — all in one service.</p>
                 <span className="text-[13px] font-semibold text-brand-light inline-flex items-center gap-1">Try the cloud →</span>
               </div>
             </a>
