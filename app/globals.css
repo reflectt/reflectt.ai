@@ -1,18 +1,19 @@
+@import "./tokens.css";
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 body {
-  font-family: 'Inter', system-ui, sans-serif;
-  background-color: #0d1117;
-  color: #e6edf3;
+  font-family: var(--font-body);
+  background-color: var(--color-bg);
+  color: var(--color-text);
   -webkit-font-smoothing: antialiased;
 }
 
-a { color: inherit; text-decoration: none; }
+a { color: inherit; text-decoration: none; transition: var(--transition-color); }
 
 ::selection {
-  background-color: rgba(59, 87, 232, 0.3);
+  background-color: var(--selection-bg);
 }
 
 @keyframes pulse {
@@ -25,30 +26,31 @@ a { color: inherit; text-decoration: none; }
 }
 
 .hero-glow {
-  background: radial-gradient(ellipse at center, rgba(59,87,232,0.18) 0%, transparent 70%);
+  background: radial-gradient(ellipse at center, var(--color-primary-subtle) 0%, transparent 70%);
 }
 
 .gradient-text {
-  background: linear-gradient(135deg, #7c94fb, #3b57e8);
+  background: linear-gradient(135deg, var(--color-primary-hover), var(--color-primary));
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
 }
 
-.t-prompt { color: #6e7681; }
-.t-cmd { color: #e6edf3; }
-.t-key { color: #7c94fb; }
-.t-str { color: #a5d6ff; }
-.t-comment { color: #3d4b5c; }
-.t-success { color: #3fb950; }
-.t-output { color: #6e7681; }
+.t-prompt { color: var(--color-text-secondary); }
+.t-cmd { color: var(--color-text); }
+.t-key { color: var(--color-primary-hover); }
+.t-str { color: var(--color-info-text); }
+.t-comment { color: var(--color-text-disabled); }
+.t-success { color: var(--color-success-text); }
+.t-output { color: var(--color-text-secondary); }
 
+/* Mockup window dots — OS chrome, keep literal */
 .mockup-dot-red { background: #ff5f57; }
 .mockup-dot-yellow { background: #febc2e; }
 .mockup-dot-green { background: #28c840; }
 
 .cta-gradient {
-  background: linear-gradient(135deg, rgba(59,87,232,0.08), transparent);
+  background: linear-gradient(135deg, var(--color-primary-subtle), transparent);
 }
 
 .timeline-line::after {
@@ -58,5 +60,5 @@ a { color: inherit; text-decoration: none; }
   top: 40px;
   width: 2px;
   height: calc(100% - 32px);
-  background: linear-gradient(to bottom, #21262d, transparent);
+  background: linear-gradient(to bottom, var(--color-border), transparent);
 }

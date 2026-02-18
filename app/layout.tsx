@@ -118,7 +118,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className="dark">
+    <html lang="en" className="dark" data-theme="dark">
       <body className={`${inter.variable} ${jetbrains.variable} font-sans`}>
         <div className="min-h-screen">
           <Nav />
