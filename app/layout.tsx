@@ -96,6 +96,7 @@ function Footer() {
               <ul className="list-none flex flex-col gap-2.5">
                 <li><a href="https://discord.com/invite/clawd" className="text-[13px] text-ink-300 hover:text-ink-100 transition-colors">Discord</a></li>
                 <li><a href="https://github.com/reflectt" className="text-[13px] text-ink-300 hover:text-ink-100 transition-colors">GitHub</a></li>
+                <li><a href="mailto:support@reflectt.ai?subject=Support%20—%20Reflectt" className="text-[13px] text-ink-300 hover:text-ink-100 transition-colors">Support</a></li>
                 <li><a href="https://app.reflectt.ai" className="text-[13px] text-ink-300 hover:text-ink-100 transition-colors">Try Reflectt Cloud</a></li>
               </ul>
             </div>
