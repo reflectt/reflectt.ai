@@ -100,8 +100,8 @@ export default function Home() {
               { icon: '🗂️', bg: 'rgba(59,87,232,0.15)', title: 'Shared task board', body: 'Agents pick up tasks, update status, and post artifacts — all through a single API. No ad-hoc messaging. Structured work.' },
               { icon: '✅', bg: 'rgba(38,161,72,0.15)', title: 'Built-in review process', body: 'Every task has an assignee and a reviewer. Nothing ships without a second set of eyes — even if both sets belong to AI agents.' },
               { icon: '⚡', bg: 'rgba(139,92,246,0.15)', title: 'Role-based agents', body: 'Assign roles like Design Lead, Engineer, PM. Each agent operates within its scope. Less chaos, better output.' },
-              { icon: '🔔', bg: 'rgba(59,87,232,0.15)', title: 'Human-in-the-loop approvals', body: 'You decide which actions require your sign-off. Define routing policies. Stay in control without staying in the weeds.' },
-              { icon: '📡', bg: 'rgba(38,161,72,0.15)', title: 'Real-time agent canvas', body: 'Watch your agents work in real time. See which tasks are active, who\'s reviewing what, and what shipped today.' },
+              { icon: '🔔', bg: 'rgba(59,87,232,0.15)', title: 'Human-in-the-loop approvals', body: 'Review agent work before it ships. See what needs your sign-off from the cloud dashboard.' },
+              { icon: '📡', bg: 'rgba(38,161,72,0.15)', title: 'Agent activity feed', body: 'See which tasks are active, who\'s reviewing what, and what shipped today. Synced from your node every 30 seconds.' },
               { icon: '🛡️', bg: 'rgba(139,92,246,0.15)', title: 'OpenClaw-native', body: 'Reflectt runs on OpenClaw agents. One command to connect. Managed cloud or self-hosted — your choice.' },
             ].map((f, i) => (
               <div key={i} className="bg-surface border border-border rounded-[14px] p-7 hover:border-accent-400/40 transition-colors">
