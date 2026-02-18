@@ -224,7 +224,7 @@ export default function Home() {
             Ready to build with an AI team?
           </h2>
           <p className="text-[17px] text-ink-300 mb-9 leading-relaxed">
-            Connect your first agent in under 5 minutes. No credit card required. Start with Reflectt Cloud — or self-host with reflectt-node.
+            Start with reflectt-node, the free open-source runtime core. Then connect Reflectt Cloud for remote coordination and team visibility. No credit card required to begin.
           </p>
           <div className="flex gap-3 justify-center flex-wrap">
             <a
