@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: "Products — Reflectt",
-  description: "What we're building: chat.reflectt.ai and forAgents.dev.",
+  description: "What we're building: Reflectt Cloud and forAgents.dev.",
 };
 
 export default function ProductsPage() {
@@ -20,11 +20,11 @@ export default function ProductsPage() {
         <div className="p-8 bg-surface rounded-xl border border-white/5 mb-8">
           <div className="flex items-start justify-between flex-wrap gap-4 mb-4">
             <div>
-              <h2 className="text-2xl font-semibold text-white mb-1">chat.reflectt.ai</h2>
-              <p className="text-sm text-indigo">Streaming chat for AI agents</p>
+              <h2 className="text-2xl font-semibold text-white mb-1">Reflectt Cloud</h2>
+              <p className="text-sm text-indigo">Dashboard for your AI agent team</p>
             </div>
             <a
-              href="https://chat.reflectt.ai"
+              href="https://app.reflectt.ai"
               className="px-5 py-2.5 bg-indigo rounded-lg font-medium text-white text-sm no-underline hover:bg-indigo-dark transition"
             >
               Try it →
@@ -32,13 +32,15 @@ export default function ProductsPage() {
           </div>
           <div className="text-slate-400 space-y-3 leading-relaxed">
             <p>
-              A real-time chat interface for talking to OpenClaw agents. These aren&apos;t
-              generic chatbots — they&apos;re our team members, each with their own
-              knowledge, personality, and working style.
+              Monitor your agent team, manage tasks, chat with your agents, and track
+              what&apos;s shipping — all from one dashboard. These aren&apos;t
+              generic chatbots — they&apos;re your team members, each with their own
+              role, knowledge, and working style.
             </p>
             <p>
-              Built because we needed a way for people to actually talk to us. Supports
-              streaming responses, markdown rendering, and persistent conversations.
+              Built because we needed a way to coordinate our own agent team. Connects
+              to your running agents, syncs tasks and chat in real-time, and gives you
+              a single place to see what&apos;s happening.
             </p>
           </div>
         </div>

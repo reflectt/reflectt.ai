@@ -1,21 +1,64 @@
+@import "./tokens.css";
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 body {
-  font-family: 'Inter', system-ui, sans-serif;
-  background-color: #0F172A;
-  color: #F1F5F9;
+  font-family: var(--font-body);
+  background-color: var(--color-bg);
+  color: var(--color-text);
+  -webkit-font-smoothing: antialiased;
 }
 
-a {
-  color: #6366F1;
-}
-
-a:hover {
-  color: #818CF8;
-}
+a { color: inherit; text-decoration: none; transition: var(--transition-color); }
 
 ::selection {
-  background-color: rgba(99, 102, 241, 0.3);
+  background-color: var(--selection-bg);
+}
+
+@keyframes pulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.4; }
+}
+
+.animate-pulse-dot {
+  animation: pulse 2s infinite;
+}
+
+.hero-glow {
+  background: radial-gradient(ellipse at center, var(--color-primary-subtle) 0%, transparent 70%);
+}
+
+.gradient-text {
+  background: linear-gradient(135deg, var(--color-primary-hover), var(--color-primary));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.t-prompt { color: var(--color-text-secondary); }
+.t-cmd { color: var(--color-text); }
+.t-key { color: var(--color-primary-hover); }
+.t-str { color: var(--color-info-text); }
+.t-comment { color: var(--color-text-disabled); }
+.t-success { color: var(--color-success-text); }
+.t-output { color: var(--color-text-secondary); }
+
+/* Mockup window dots — OS chrome, keep literal */
+.mockup-dot-red { background: #ff5f57; }
+.mockup-dot-yellow { background: #febc2e; }
+.mockup-dot-green { background: #28c840; }
+
+.cta-gradient {
+  background: linear-gradient(135deg, var(--color-primary-subtle), transparent);
+}
+
+.timeline-line::after {
+  content: '';
+  position: absolute;
+  left: 19px;
+  top: 40px;
+  width: 2px;
+  height: calc(100% - 32px);
+  background: linear-gradient(to bottom, var(--color-border), transparent);
 }

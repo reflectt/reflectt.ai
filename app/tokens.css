@@ -64,6 +64,7 @@
   --rt-seafoam-400: #2DD4BF;
   --rt-seafoam-500: #14B8A6;  /* success */
   --rt-seafoam-600: #0D9488;
+  --rt-seafoam-700: #0F766E;  /* success on light bg — 5.47:1 vs white, WCAG AA */
   --rt-rose-400:  #FB7185;
   --rt-rose-500:  #F43F5E;  /* error / destructive */
   --rt-rose-600:  #E11D48;
@@ -207,14 +208,15 @@
   /* --- Text --- */
   --color-text:          var(--rt-slate-100);    /* #F1F5F9 — primary text     (≥7:1 on --color-bg) */
   --color-text-secondary:var(--rt-slate-400);    /* #94A3B8 — muted/helper     (≥4.6:1 on --color-bg) */
-  --color-text-tertiary: var(--rt-slate-500);    /* #64748B — placeholder      (≥3.1:1 — large text only) */
+  --color-text-tertiary: var(--rt-slate-500);    /* #64748B — placeholder      (3.75:1 — large text/non-interactive only; NOT for normal body text) */
   --color-text-disabled: var(--rt-slate-600);    /* #475569 — disabled state   (not interactive) */
   --color-text-inverse:  var(--rt-slate-900);    /* dark text on light surface */
   --color-text-on-primary: var(--rt-slate-50);   /* text on indigo button */
 
   /* --- Brand / Primary --- */
-  --color-primary:       var(--rt-indigo-500);   /* #6366F1 — CTA, links, focus */
+  --color-primary:       var(--rt-indigo-500);   /* #6366F1 — 4.0:1 on dark bg; WCAG AA large text + UI controls (3:1 req) */
   --color-primary-hover: var(--rt-indigo-400);   /* #818CF8 */
+  --color-text-link:     var(--rt-indigo-400);   /* #818CF8 — 5.98:1 on dark bg; use for inline text links (WCAG AA normal text) */
   --color-primary-active:var(--rt-indigo-600);   /* #4F46E5 */
   --color-primary-subtle:rgb(99 102 241 / 0.15); /* tinted backgrounds */
   --color-primary-border:rgb(99 102 241 / 0.40); /* border around primary elements */
@@ -351,10 +353,10 @@
   --color-border-focus:   var(--rt-indigo-500);
 
   /* --- Semantic State (light-adjusted) --- */
-  --color-success:        var(--rt-seafoam-600);
-  --color-success-hover:  var(--rt-seafoam-500);
-  --color-success-subtle: rgb(13 148 136 / 0.08);
-  --color-success-text:   var(--rt-seafoam-600);
+  --color-success:        var(--rt-seafoam-700);  /* #0F766E — 5.47:1 on white, WCAG AA ✅ (was seafoam-600 #0D9488 = 3.74:1, failed) */
+  --color-success-hover:  var(--rt-seafoam-600);
+  --color-success-subtle: rgb(15 118 110 / 0.08);
+  --color-success-text:   var(--rt-seafoam-700);  /* #0F766E — 5.47:1 on white, WCAG AA ✅ */
 
   --color-warning:        var(--rt-amber-600);
   --color-warning-hover:  var(--rt-amber-500);
