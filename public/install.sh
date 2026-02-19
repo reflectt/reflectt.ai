@@ -38,6 +38,19 @@ wait_for_health() {
   return 1
 }
 
+verify_team_endpoints() {
+  local base="http://127.0.0.1:${REFLECTT_NODE_PORT}"
+
+  if command -v jq >/dev/null 2>&1; then
+    curl -fsS "$base/health" | jq -e '.status=="ok"' >/dev/null || return 1
+  else
+    curl -fsS "$base/health" | grep -q '"status":"ok"' || return 1
+  fi
+
+  curl -fsS "$base/health/agents" >/dev/null || return 1
+  curl -fsS "$base/tasks?limit=1" >/dev/null || return 1
+}
+
 info "Starting Reflectt node bootstrap installer."
 
 for dep in bash curl git node npm; do
@@ -92,6 +105,15 @@ if ! wait_for_health; then
   fail "reflectt-node health check failed at http://127.0.0.1:${REFLECTT_NODE_PORT}/health"
 fi
 
-ok "reflectt-node is configured and healthy."
-ok "Health: http://127.0.0.1:${REFLECTT_NODE_PORT}/health"
-ok "Next: curl -s http://127.0.0.1:${REFLECTT_NODE_PORT}/health | jq"
+if ! verify_team_endpoints; then
+  tail -n 40 /tmp/reflectt-node-install.log || true
+  fail "reflectt-node API checks failed (/health, /health/agents, /tasks?limit=1)"
+fi
+
+ok "reflectt-node is running"
+ok "API reachable on :${REFLECTT_NODE_PORT}"
+ok "team endpoints responding"
+ok "Verify manually:"
+ok "  curl -fsS http://127.0.0.1:${REFLECTT_NODE_PORT}/health | jq -e '.status==\"ok\"'"
+ok "  curl -fsS http://127.0.0.1:${REFLECTT_NODE_PORT}/health/agents >/dev/null"
+ok "  curl -fsS http://127.0.0.1:${REFLECTT_NODE_PORT}/tasks?limit=1 >/dev/null"

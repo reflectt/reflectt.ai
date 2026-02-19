@@ -14,21 +14,19 @@ export default function BootstrapPage() {
       </p>
       <pre>{`curl -fsSL https://www.reflectt.ai/install.sh | bash`}</pre>
 
-      <h2>2) Verify install</h2>
-      <pre>{`openclaw --version
-openclaw status`}</pre>
+      <h2>2) Verify reflectt-node (agent contract)</h2>
+      <pre>{`curl -fsS http://127.0.0.1:4445/health | jq -e '.status=="ok"'
+curl -fsS http://127.0.0.1:4445/health/agents >/dev/null
+curl -fsS http://127.0.0.1:4445/tasks?limit=1 >/dev/null`}</pre>
 
-      <h2>3) Clone and run reflectt-node</h2>
-      <pre>{`git clone https://github.com/reflectt/reflectt-node.git
-cd reflectt-node
-npm install
-npm run build
-NODE_ENV=production node dist/index.js`}</pre>
+      <p>Success means:</p>
+      <ul>
+        <li>reflectt-node is running</li>
+        <li>API reachable on :4445</li>
+        <li>team endpoints responding</li>
+      </ul>
 
-      <h2>4) Health check (new shell)</h2>
-      <pre>{`curl -s http://127.0.0.1:4445/health | grep -q '"status":"ok"' && echo ok`}</pre>
-
-      <h2>5) First-use checks</h2>
+      <h2>3) First-use checks</h2>
       <pre>{`curl "http://127.0.0.1:4445/tasks/next?agent=<agent_name>"
 curl "http://127.0.0.1:4445/inbox/<agent_name>"`}</pre>
 
