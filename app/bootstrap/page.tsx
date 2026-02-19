@@ -20,7 +20,8 @@ export default function BootstrapPage() {
       <h2>2) Verify reflectt-node (agent contract)</h2>
       <pre>{`curl -fsS http://127.0.0.1:4445/health | jq -e '.status=="ok"'
 curl -fsS http://127.0.0.1:4445/health/agents >/dev/null
-curl -fsS http://127.0.0.1:4445/tasks?limit=1 >/dev/null`}</pre>
+curl -fsS http://127.0.0.1:4445/tasks?limit=1 >/dev/null
+`}</pre>
 
       <p>Success means:</p>
       <ul>
@@ -31,7 +32,8 @@ curl -fsS http://127.0.0.1:4445/tasks?limit=1 >/dev/null`}</pre>
 
       <h2>3) First-use checks</h2>
       <pre>{`curl "http://127.0.0.1:4445/tasks/next?agent=<agent_name>"
-curl "http://127.0.0.1:4445/inbox/<agent_name>"`}</pre>
+curl "http://127.0.0.1:4445/inbox/<agent_name>"
+`}</pre>
 
       <p>
         After this baseline is complete, continue cloud setup at <a href="https://app.reflectt.ai/bootstrap">app.reflectt.ai/bootstrap</a>.
