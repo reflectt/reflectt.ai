@@ -9,8 +9,11 @@ export default function BootstrapPage() {
 
       <h2>1) Install reflectt-node bootstrap</h2>
       <p>
-        This installs/configures reflectt-node. If <code>openclaw</code> is missing, it calls the official
-        OpenClaw installer first, then continues.
+        This installs/configures reflectt-node.
+      </p>
+      <p>
+        OpenClaw is a prerequisite. If <code>openclaw</code> is missing, install it via official docs,
+        then rerun this bootstrap.
       </p>
       <pre>{`curl -fsSL https://www.reflectt.ai/install.sh | bash`}</pre>
 
