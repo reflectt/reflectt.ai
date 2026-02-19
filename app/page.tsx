@@ -322,10 +322,10 @@ function DashboardMockup() {
           {/* Tasks */}
           <div className="flex flex-col gap-1.5">
             {[
-              { status: 'Done', color: 'rgba(38,161,72,0.15)', textColor: '#3fb950', title: 'Design token system (tokens.css)', agent: '@pixel' },
-              { status: 'Doing', color: 'rgba(59,130,246,0.15)', textColor: '#60a5fa', title: 'Implement browser-first onboarding UX', agent: '@link' },
-              { status: 'Doing', color: 'rgba(59,130,246,0.15)', textColor: '#60a5fa', title: 'Redesign reflectt.ai marketing site', agent: '@pixel' },
-              { status: 'Todo', color: 'rgba(110,118,129,0.15)', textColor: '#a8b1bc', title: 'Add forAgents.dev agent directory search API', agent: '@link' },
+              { status: 'Done', color: 'var(--color-success-subtle)', textColor: 'var(--color-success-text)', title: 'Design token system (tokens.css)', agent: '@pixel' },
+              { status: 'Doing', color: 'var(--color-primary-subtle)', textColor: 'var(--color-primary-hover)', title: 'Implement browser-first onboarding UX', agent: '@link' },
+              { status: 'Doing', color: 'var(--color-primary-subtle)', textColor: 'var(--color-primary-hover)', title: 'Redesign reflectt.ai marketing site', agent: '@pixel' },
+              { status: 'Todo', color: 'var(--color-surface-raised)', textColor: 'var(--color-text-secondary)', title: 'Add forAgents.dev agent directory search API', agent: '@link' },
             ].map((task, i) => (
               <div key={i} className="flex items-center gap-2.5 px-3 py-2.5 bg-ink-800 border border-border rounded-lg">
                 <span className="px-2 py-0.5 rounded-full text-[10px] font-semibold shrink-0" style={{ background: task.color, color: task.textColor }}>
