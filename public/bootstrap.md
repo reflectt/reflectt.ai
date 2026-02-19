@@ -2,7 +2,9 @@
 
 Canonical first-run flow.
 
-## 1) Install runtime
+## 1) Install reflectt-node bootstrap
+(If `openclaw` is missing, this script calls the official OpenClaw installer first, then continues.)
+
 ```bash
 curl -fsSL https://www.reflectt.ai/install.sh | bash
 ```

@@ -1,151 +1,97 @@
 #!/usr/bin/env bash
-set -u
+set -euo pipefail
 
-# Reflectt v1 installer (fresh-install only)
-# Source of truth: scripts/install.sh
-# Published artifact: public/install.sh
+# reflectt.ai/install.sh
+# Contract: install/bootstrap reflectt-node (NOT OpenClaw runtime implementation)
+# If OpenClaw is missing, call official OpenClaw installer path.
 
-INSTALL_VERSION="v1"
-INSTALL_ROOT="${REFLECTT_INSTALL_ROOT:-$HOME/.reflectt}"
-INSTALL_BIN_DIR="${REFLECTT_INSTALL_BIN_DIR:-$HOME/.local/bin}"
-INSTALL_BIN_PATH="${INSTALL_BIN_DIR}/openclaw"
-STATE_DIR="${INSTALL_ROOT}/install-state"
-TMP_DIR="${STATE_DIR}/tmp"
-PARTIAL_MARKER="${STATE_DIR}/partial"
-TELEMETRY_OUT="${REFLECTT_INSTALL_TELEMETRY_OUT:-}"
-TEST_SCENARIO="${REFLECTT_INSTALL_TEST_SCENARIO:-}"
+OPENCLAW_INSTALL_URL="${OPENCLAW_INSTALL_URL:-https://openclaw.ai/install.sh}"
+REFLECTT_NODE_REPO="${REFLECTT_NODE_REPO:-https://github.com/reflectt/reflectt-node.git}"
+REFLECTT_NODE_DIR="${REFLECTT_NODE_DIR:-$HOME/.reflectt/reflectt-node}"
+REFLECTT_NODE_BRANCH="${REFLECTT_NODE_BRANCH:-main}"
+REFLECTT_NODE_PORT="${REFLECTT_NODE_PORT:-4445}"
+REFLECTT_NODE_PID_FILE="${REFLECTT_NODE_PID_FILE:-$HOME/.reflectt/reflectt-node.pid}"
 
-CAUSE=""
-DETAIL=""
-ACTION=""
+info() { echo "INFO: $*"; }
+ok() { echo "OK: $*"; }
+warn() { echo "WARN: $*"; }
+err() { echo "ERROR: $*" >&2; }
 
-emit_telemetry_success() {
-  if [[ -n "$TELEMETRY_OUT" ]]; then
-    printf '{"class":"success"}\n' > "$TELEMETRY_OUT"
-  fi
-}
-
-emit_telemetry_fail() {
-  if [[ -n "$TELEMETRY_OUT" ]]; then
-    printf '{"class":"fail","cause":"%s"}\n' "$1" > "$TELEMETRY_OUT"
-  fi
-}
-
-fail_with() {
-  local cause="$1"
-  local detail="$2"
-  local action="$3"
-
-  # Canonical fail shape (stderr only)
-  {
-    echo "ERROR: Reflectt install failed."
-    echo "CAUSE: ${cause}"
-    echo "DETAIL: ${detail}"
-    echo "ACTION: ${action}"
-    echo "EXIT: non-zero"
-  } >&2
-
-  emit_telemetry_fail "$cause"
+fail() {
+  err "$1"
   exit 1
 }
 
-require_cmd() {
-  command -v "$1" >/dev/null 2>&1
+need_cmd() {
+  command -v "$1" >/dev/null 2>&1 || fail "Missing required dependency: $1"
 }
 
-force_or_real_fail() {
-  local requested="$1"
-  local detail="$2"
-  local action="$3"
-  if [[ -n "$TEST_SCENARIO" && "$TEST_SCENARIO" == "$requested" ]]; then
-    fail_with "$requested" "$detail" "$action"
-  fi
+wait_for_health() {
+  local tries=20
+  local url="http://127.0.0.1:${REFLECTT_NODE_PORT}/health"
+  for _ in $(seq 1 "$tries"); do
+    if curl -fsS "$url" | grep -q '"status":"ok"'; then
+      return 0
+    fi
+    sleep 1
+  done
+  return 1
 }
 
-# Test-only scenario triggers
-force_or_real_fail "dependency" "Missing required dependency: jq." "Install jq, then rerun this command."
-force_or_real_fail "network" "Download failed (network timeout)." "Check internet connectivity, then rerun: curl -fsSL https://reflectt.ai/install.sh | bash"
-force_or_real_fail "permissions" "Current user does not have write access to the target install directory." "Re-run with appropriate permissions or choose a writable install location."
-force_or_real_fail "unknown" "Existing install or partial state detected; fresh install aborted." "Remove existing install state per docs, then re-run fresh install."
+info "Starting Reflectt node bootstrap installer."
 
-# Fresh-install guards
-if [[ "${REFLECTT_INSTALL_ALLOW_EXISTING_CMD:-0}" != "1" ]]; then
-  if require_cmd openclaw || [[ -e "$INSTALL_BIN_PATH" ]]; then
-    fail_with "unknown" "Existing install or partial state detected; fresh install aborted." "Remove existing install state per docs, then re-run fresh install."
-  fi
-fi
-
-if [[ -e "$PARTIAL_MARKER" ]]; then
-  fail_with "unknown" "Existing install or partial state detected; fresh install aborted." "Remove existing install state per docs, then re-run fresh install."
-fi
-
-# Required dependencies
-for dep in curl bash tar jq; do
-  if ! require_cmd "$dep"; then
-    fail_with "dependency" "Missing required dependency: ${dep}." "Install ${dep}, then rerun this command."
-  fi
+for dep in bash curl git node npm; do
+  need_cmd "$dep"
 done
 
-if ! require_cmd node; then
-  fail_with "dependency" "Missing required dependency: node." "Install Node.js, then rerun this command."
+# OpenClaw prerequisite: do NOT reimplement install logic here
+if ! command -v openclaw >/dev/null 2>&1; then
+  warn "openclaw not found. Calling official OpenClaw installer: ${OPENCLAW_INSTALL_URL}"
+  curl -fsSL "$OPENCLAW_INSTALL_URL" | bash || fail "Official OpenClaw install command failed"
+  command -v openclaw >/dev/null 2>&1 || fail "OpenClaw still missing after official installer ran"
 fi
 
-mkdir -p "$TMP_DIR" 2>/dev/null || fail_with "permissions" "Current user does not have write access to the target install directory." "Re-run with appropriate permissions or choose a writable install location."
+ok "OpenClaw prerequisite satisfied: $(command -v openclaw)"
 
-touch "$PARTIAL_MARKER" 2>/dev/null || fail_with "permissions" "Current user does not have write access to the target install directory." "Re-run with appropriate permissions or choose a writable install location."
+mkdir -p "$(dirname "$REFLECTT_NODE_DIR")"
 
-echo "INFO: Starting Reflectt fresh install (v1)."
-echo "INFO: Validating environment preconditions..."
-echo "INFO: Checking dependencies: curl, bash, tar."
-
-NPM_VERSION_URL="https://registry.npmjs.org/openclaw/latest"
-VERSION_JSON="${TMP_DIR}/openclaw-latest.json"
-
-if ! curl -fsSL "$NPM_VERSION_URL" -o "$VERSION_JSON"; then
-  fail_with "network" "Download failed (network timeout)." "Check internet connectivity, then rerun: curl -fsSL https://reflectt.ai/install.sh | bash"
+if [ -d "$REFLECTT_NODE_DIR/.git" ]; then
+  info "Updating existing reflectt-node checkout at $REFLECTT_NODE_DIR"
+  git -C "$REFLECTT_NODE_DIR" fetch origin
+  git -C "$REFLECTT_NODE_DIR" checkout "$REFLECTT_NODE_BRANCH"
+  git -C "$REFLECTT_NODE_DIR" pull --ff-only origin "$REFLECTT_NODE_BRANCH"
+else
+  info "Cloning reflectt-node into $REFLECTT_NODE_DIR"
+  rm -rf "$REFLECTT_NODE_DIR"
+  git clone --branch "$REFLECTT_NODE_BRANCH" "$REFLECTT_NODE_REPO" "$REFLECTT_NODE_DIR"
 fi
 
-OPENCLAW_VERSION="$(jq -r '.version // empty' "$VERSION_JSON" 2>/dev/null || true)"
-if [[ -z "$OPENCLAW_VERSION" ]]; then
-  fail_with "unknown" "Could not resolve OpenClaw version metadata." "Retry later or check docs at https://reflectt.ai/install"
+info "Installing dependencies"
+npm --prefix "$REFLECTT_NODE_DIR" install
+
+info "Building reflectt-node"
+npm --prefix "$REFLECTT_NODE_DIR" run build
+
+# Start (or restart) runtime for health verification
+if [ -f "$REFLECTT_NODE_PID_FILE" ]; then
+  old_pid="$(cat "$REFLECTT_NODE_PID_FILE" || true)"
+  if [ -n "${old_pid}" ] && kill -0 "$old_pid" 2>/dev/null; then
+    info "Stopping previous reflectt-node process: $old_pid"
+    kill "$old_pid" || true
+    sleep 1
+  fi
 fi
 
-echo "INFO: Downloading installer payload..."
-TARBALL_URL="https://registry.npmjs.org/openclaw/-/openclaw-${OPENCLAW_VERSION}.tgz"
-TARBALL_PATH="${TMP_DIR}/openclaw.tgz"
+info "Starting reflectt-node on port ${REFLECTT_NODE_PORT}"
+nohup env PORT="$REFLECTT_NODE_PORT" NODE_ENV=production node "$REFLECTT_NODE_DIR/dist/index.js" >/tmp/reflectt-node-install.log 2>&1 &
+new_pid=$!
+echo "$new_pid" > "$REFLECTT_NODE_PID_FILE"
 
-if ! curl -fsSL "$TARBALL_URL" -o "$TARBALL_PATH"; then
-  fail_with "network" "Download failed (network timeout)." "Check internet connectivity, then rerun: curl -fsSL https://reflectt.ai/install.sh | bash"
+if ! wait_for_health; then
+  tail -n 40 /tmp/reflectt-node-install.log || true
+  fail "reflectt-node health check failed at http://127.0.0.1:${REFLECTT_NODE_PORT}/health"
 fi
 
-EXTRACT_DIR="${TMP_DIR}/extract"
-rm -rf "$EXTRACT_DIR"
-mkdir -p "$EXTRACT_DIR" || fail_with "permissions" "Current user does not have write access to the target install directory." "Re-run with appropriate permissions or choose a writable install location."
-
-if ! tar -xzf "$TARBALL_PATH" -C "$EXTRACT_DIR"; then
-  fail_with "unknown" "Installer payload could not be extracted." "Retry later or check docs at https://reflectt.ai/install"
-fi
-
-echo "INFO: Installing Reflectt components..."
-mkdir -p "$INSTALL_BIN_DIR" || fail_with "permissions" "Current user does not have write access to the target install directory." "Re-run with appropriate permissions or choose a writable install location."
-
-SRC_BIN="${EXTRACT_DIR}/package/openclaw.mjs"
-if [[ ! -f "$SRC_BIN" ]]; then
-  fail_with "unknown" "Installer payload is missing expected binary entrypoint." "Retry later or check docs at https://reflectt.ai/install"
-fi
-
-if ! cp "$SRC_BIN" "$INSTALL_BIN_PATH"; then
-  fail_with "permissions" "Current user does not have write access to the target install directory." "Re-run with appropriate permissions or choose a writable install location."
-fi
-
-chmod +x "$INSTALL_BIN_PATH" || fail_with "permissions" "Current user does not have write access to the target install directory." "Re-run with appropriate permissions or choose a writable install location."
-
-# Cleanup state marker on success
-rm -f "$PARTIAL_MARKER"
-
-echo "INFO: Starting Reflectt gateway service..."
-echo "OK: Reflectt install completed successfully."
-echo "NEXT: Run 'openclaw status' to verify, then open your Reflectt chat link."
-
-emit_telemetry_success
-exit 0
+ok "reflectt-node is configured and healthy."
+ok "Health: http://127.0.0.1:${REFLECTT_NODE_PORT}/health"
+ok "Next: curl -s http://127.0.0.1:${REFLECTT_NODE_PORT}/health | jq"
