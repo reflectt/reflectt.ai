@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Inter, JetBrains_Mono } from "next/font/google";
 import { Analytics } from "@vercel/analytics/react";
 import Link from "next/link";
+import { UtmLink } from "./components/UtmLink";
 import "./globals.css";
 
 const inter = Inter({ subsets: ["latin"], variable: "--font-inter" });
@@ -46,12 +47,12 @@ function Nav() {
             </Link>
           </li>
           <li>
-            <a href="https://forAgents.dev" className="text-sm font-medium text-ink-300 hover:text-ink-100 transition-colors no-underline">
-              forAgents.dev
+            <a href="https://github.com/reflectt/reflectt-node" className="text-sm font-medium text-ink-300 hover:text-ink-100 transition-colors no-underline">
+              GitHub
             </a>
           </li>
         </ul>
-        <a
+        <UtmLink
           href="https://app.reflectt.ai"
           className="inline-flex items-center gap-1.5 px-[18px] py-2 bg-brand text-white rounded-lg text-sm font-semibold hover:bg-brand-hover transition-colors no-underline"
         >
@@ -59,7 +60,7 @@ function Nav() {
           <svg width="12" height="12" viewBox="0 0 12 12" fill="none">
             <path d="M2 6h8M6 2l4 4-4 4" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
           </svg>
-        </a>
+        </UtmLink>
       </div>
     </nav>
   );
@@ -102,7 +103,32 @@ function Footer() {
             </div>
           </div>
         </div>
-        <div className="mt-8 pt-6 border-t border-border flex flex-wrap justify-between items-center gap-3">
+        {/* UTM Guidance */}
+        <div className="mt-8 pt-6 border-t border-border">
+          <details className="group">
+            <summary className="text-[11px] font-semibold uppercase tracking-wider text-ink-500 cursor-pointer hover:text-ink-300 transition-colors">
+              Share &amp; attribution
+            </summary>
+            <div className="mt-3 text-[12px] text-ink-500 leading-relaxed max-w-[560px]">
+              <p className="mb-2">
+                Share link: <code className="text-ink-300 bg-ink-800 px-1.5 py-0.5 rounded text-[11px]">https://reflectt.ai</code>
+              </p>
+              <p className="mb-1">Supported UTM parameters (automatically forwarded to app):</p>
+              <ul className="list-none flex flex-wrap gap-1.5 mt-1.5">
+                {['utm_source', 'utm_medium', 'utm_campaign', 'utm_term', 'utm_content'].map(k => (
+                  <li key={k}>
+                    <code className="text-ink-300 bg-ink-800 px-1.5 py-0.5 rounded text-[11px]">{k}</code>
+                  </li>
+                ))}
+              </ul>
+              <p className="mt-2 text-ink-600">
+                Example: <code className="text-ink-400 text-[11px]">reflectt.ai?utm_source=twitter&amp;utm_medium=social&amp;utm_campaign=launch</code>
+              </p>
+            </div>
+          </details>
+        </div>
+
+        <div className="mt-6 flex flex-wrap justify-between items-center gap-3">
           <span className="text-xs text-ink-500">&copy; 2026 Reflectt. Built on Vancouver Island.</span>
           <span className="text-[11px] text-ink-500">
             Built by agents &middot; Design by <a href="/team" className="text-accent-400">pixel 🎨</a>
