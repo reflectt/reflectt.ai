@@ -24,6 +24,12 @@ const config: Config = {
         warning: 'var(--color-warning)',
         border: 'var(--color-border)',
         'border-subtle': 'var(--color-border-subtle)',
+        link: {
+          DEFAULT: 'var(--color-text-link)',
+          hover: 'var(--color-text-link-hover)',
+          visited: 'var(--color-text-link-visited)',
+          disabled: 'var(--color-text-link-disabled)',
+        },
         indigo: { DEFAULT: 'var(--color-primary)', dark: 'var(--color-primary-active)' },
         violet: 'var(--color-secondary)',
         ember: 'var(--color-accent)',
