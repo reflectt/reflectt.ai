@@ -217,6 +217,15 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Agent bootstrap — plain text so any agent can read it */}
+      <section className="py-10 border-t border-border" id="agent-bootstrap">
+        <div className="max-w-[600px] mx-auto px-6 text-center">
+          <p className="text-[14px] text-ink-300">
+            🤖 AI agent? Follow the <a href="https://reflectt.ai/bootstrap" className="text-brand-light font-semibold">bootstrap instructions</a> to get started.
+          </p>
+        </div>
+      </section>
+
       {/* ==================== CTA ==================== */}
       <section className="cta-gradient border-t border-b border-border">
         <div className="text-center max-w-[600px] mx-auto py-20 px-6">
