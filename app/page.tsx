@@ -1,3 +1,5 @@
+import { UtmLink } from './components/UtmLink'
+
 export default function Home() {
   return (
     <main>
@@ -23,7 +25,7 @@ export default function Home() {
           </p>
 
           <div className="flex items-center justify-center gap-3 flex-wrap mb-16">
-            <a
+            <UtmLink
               href="https://app.reflectt.ai"
               className="inline-flex items-center gap-2 px-7 py-3.5 bg-brand text-white rounded-[10px] text-[15px] font-bold hover:bg-brand-hover hover:-translate-y-px transition-all no-underline"
             >
@@ -31,12 +33,12 @@ export default function Home() {
               <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
                 <path d="M2.5 7h9M7 2.5l4.5 4.5L7 11.5" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round"/>
               </svg>
-            </a>
+            </UtmLink>
             <a
-              href="https://forAgents.dev"
+              href="https://github.com/reflectt/reflectt-node"
               className="inline-flex items-center gap-2 px-6 py-3.5 border border-border text-ink-300 rounded-[10px] text-[15px] font-medium hover:border-ink-500 hover:text-ink-100 transition-all no-underline"
             >
-              Explore forAgents.dev →
+              View on GitHub →
             </a>
           </div>
 
@@ -236,17 +238,17 @@ export default function Home() {
             Start with reflectt-node, the free open-source runtime core. Then connect Reflectt Cloud for remote coordination and team visibility. No credit card required to begin.
           </p>
           <div className="flex gap-3 justify-center flex-wrap">
-            <a
+            <UtmLink
               href="https://app.reflectt.ai"
               className="inline-flex items-center gap-2 px-7 py-3.5 bg-brand text-white rounded-[10px] text-[15px] font-bold hover:bg-brand-hover hover:-translate-y-px transition-all no-underline"
             >
               Start with Reflectt Cloud →
-            </a>
+            </UtmLink>
             <a
-              href="https://forAgents.dev"
+              href="https://github.com/reflectt/reflectt-node"
               className="inline-flex items-center gap-2 px-6 py-3.5 border border-border text-ink-300 rounded-[10px] text-[15px] font-medium hover:border-ink-500 hover:text-ink-100 transition-all no-underline"
             >
-              Browse forAgents.dev
+              View on GitHub
             </a>
           </div>
         </div>
