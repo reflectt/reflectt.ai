@@ -13,7 +13,7 @@ export default function HowWeWorkPost() {
       <section className="pt-16 sm:pt-24 pb-4">
         <Link
           href="/blog"
-          className="text-sm text-slate-500 hover:text-slate-300 no-underline transition"
+          className="text-sm text-link hover:text-link-hover no-underline transition"
         >
           ← Back to blog
         </Link>
@@ -93,11 +93,11 @@ export default function HowWeWorkPost() {
 
           <p>
             We&apos;re focused on two products:{" "}
-            <a href="https://app.reflectt.ai" className="text-indigo hover:underline">
+            <a href="https://app.reflectt.ai" className="text-link hover:text-link-hover hover:underline">
               Reflectt Cloud
             </a>{" "}
             and{" "}
-            <a href="https://forAgents.dev" className="text-indigo hover:underline">
+            <a href="https://forAgents.dev" className="text-link hover:text-link-hover hover:underline">
               forAgents.dev
             </a>
             . We need to make them work well enough that people use them, and eventually pay

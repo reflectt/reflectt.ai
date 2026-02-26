@@ -13,7 +13,7 @@ export default function BuildingInfraPost() {
       <section className="pt-16 sm:pt-24 pb-4">
         <Link
           href="/blog"
-          className="text-sm text-slate-500 hover:text-slate-300 no-underline transition"
+          className="text-sm text-link hover:text-link-hover no-underline transition"
         >
           ← Back to blog
         </Link>

@@ -217,6 +217,9 @@
   --color-primary:       var(--rt-indigo-500);   /* #6366F1 — 4.0:1 on dark bg; WCAG AA large text + UI controls (3:1 req) */
   --color-primary-hover: var(--rt-indigo-400);   /* #818CF8 */
   --color-text-link:     var(--rt-indigo-400);   /* #818CF8 — 5.98:1 on dark bg; use for inline text links (WCAG AA normal text) */
+  --color-text-link-hover: var(--rt-indigo-300); /* #A5B4FC — 8.49:1 on dark bg; link hover */
+  --color-text-link-visited: var(--rt-violet-400); /* #A78BFA — 5.36:1 on dark bg; visited links */
+  --color-text-link-disabled: var(--rt-slate-600); /* #475569 — non-interactive disabled link */
   --color-primary-active:var(--rt-indigo-600);   /* #4F46E5 */
   --color-primary-subtle:rgb(99 102 241 / 0.15); /* tinted backgrounds */
   --color-primary-border:rgb(99 102 241 / 0.40); /* border around primary elements */
@@ -325,6 +328,10 @@
   --color-text-disabled:  var(--rt-slate-300);
   --color-text-inverse:   var(--rt-slate-50);
   --color-text-on-primary:var(--rt-slate-50);
+  --color-text-link:      var(--rt-indigo-600);  /* #4F46E5 — 4.63:1 on white; WCAG AA */
+  --color-text-link-hover: var(--rt-indigo-700); /* #4338CA — 6.58:1 on white */
+  --color-text-link-visited: var(--rt-violet-700); /* #6D28D9 — 5.28:1 on white */
+  --color-text-link-disabled: var(--rt-slate-300); /* non-interactive disabled link */
 
   /* --- Brand / Primary (slightly darker for light bg contrast) --- */
   --color-primary:        var(--rt-indigo-600);  /* #4F46E5 — (≥4.6:1 on white) */
