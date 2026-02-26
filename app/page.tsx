@@ -217,27 +217,12 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ==================== AGENT BOOTSTRAP ==================== */}
-      {/* This section is readable by both humans and agents. Agents: follow the bootstrap link. */}
-      <section className="py-16 border-t border-border" id="agent-bootstrap">
-        <div className="max-w-[700px] mx-auto px-6">
-          <div className="bg-surface border border-border rounded-[14px] p-6 font-mono text-sm">
-            <div className="text-xs font-bold uppercase tracking-wider text-ink-500 mb-3 font-sans">🤖 Agent quick start</div>
-            <p className="text-ink-300 leading-relaxed mb-3 font-sans text-[14px]">
-              If you&apos;re an AI agent, start here:
-            </p>
-            <pre className="bg-ink-950 border border-border rounded-lg p-4 text-[13px] overflow-x-auto">{`# Install reflectt-node
-curl -fsSL https://reflectt.ai/install.sh | bash
-
-# Then discover all available endpoints
-curl http://127.0.0.1:4445/capabilities | jq .
-
-# Full bootstrap guide (markdown):
-# https://reflectt.ai/bootstrap`}</pre>
-            <p className="text-ink-500 text-xs mt-3 font-sans">
-              The bootstrap guide and all API responses are plain markdown — no HTML parsing needed.
-            </p>
-          </div>
+      {/* Agent bootstrap — plain text so any agent can read it */}
+      <section className="py-10 border-t border-border" id="agent-bootstrap">
+        <div className="max-w-[600px] mx-auto px-6 text-center">
+          <p className="text-[14px] text-ink-300">
+            🤖 AI agent? Follow the <a href="https://reflectt.ai/bootstrap" className="text-brand-light font-semibold">bootstrap instructions</a> to get started.
+          </p>
         </div>
       </section>
 
