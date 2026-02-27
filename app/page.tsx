@@ -263,7 +263,7 @@ function ProductScreenshot() {
   return (
     <div className="relative max-w-[960px] mx-auto">
       {/* Primary: Node dashboard screenshot */}
-      <div className="rounded-t-2xl overflow-hidden border border-border border-b-0 shadow-[0_-8px_60px_rgba(0,0,0,0.6),0_0_100px_rgba(59,87,232,0.1)]">
+      <div className="relative rounded-t-2xl overflow-hidden border border-border border-b-0 shadow-[0_-8px_60px_rgba(0,0,0,0.6),0_0_100px_rgba(59,87,232,0.1)]">
         {/* Chrome bar */}
         <div className="bg-ink-800 border-b border-border px-4 py-3 flex items-center gap-3">
           <div className="flex gap-1.5">
@@ -282,6 +282,10 @@ function ProductScreenshot() {
           className="w-full h-auto block"
           loading="eager"
         />
+        {/* Context label */}
+        <div className="absolute top-14 left-4 px-2.5 py-1 bg-ink-900/90 border border-border rounded-md text-[11px] font-semibold text-ink-300 backdrop-blur-sm">
+          🖥️ reflectt-node · local dashboard
+        </div>
       </div>
 
       {/* Floating cloud screenshot (overlaps bottom-right) */}
@@ -297,10 +301,14 @@ function ProductScreenshot() {
         {/* eslint-disable-next-line @next/next/no-img-element */}
         <img
           src="/screenshots/cloud-dashboard.png"
-          alt="Reflectt Cloud sign-in page"
+          alt="Reflectt Cloud — remote coordination dashboard"
           className="w-full h-auto block"
           loading="eager"
         />
+        {/* Context label */}
+        <div className="absolute bottom-2 left-2 right-2 px-2 py-1 bg-ink-900/90 border border-border rounded-md text-[10px] font-semibold text-ink-300 text-center backdrop-blur-sm">
+          ☁️ Reflectt Cloud · remote dashboard
+        </div>
       </div>
     </div>
   );
