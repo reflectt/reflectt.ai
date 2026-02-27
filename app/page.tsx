@@ -29,7 +29,7 @@ export default function Home() {
               href="https://app.reflectt.ai"
               className="inline-flex items-center gap-2 px-7 py-3.5 bg-brand text-white rounded-[10px] text-[15px] font-bold hover:bg-brand-hover hover:-translate-y-px transition-all no-underline"
             >
-              Get started with Reflectt Cloud
+              Start free — no credit card
               <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
                 <path d="M2.5 7h9M7 2.5l4.5 4.5L7 11.5" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round"/>
               </svg>
@@ -38,14 +38,15 @@ export default function Home() {
               href="https://github.com/reflectt/reflectt-node"
               className="inline-flex items-center gap-2 px-6 py-3.5 border border-border text-ink-300 rounded-[10px] text-[15px] font-medium hover:border-ink-500 hover:text-ink-100 transition-all no-underline"
             >
-              View on GitHub →
+              <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor" className="shrink-0"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/></svg>
+              View on GitHub
             </a>
           </div>
 
-          <div className="text-xs text-ink-500 mb-3">No credit card required · Free to start</div>
+          <div className="text-xs text-ink-500 mb-3">Open source · Free tier · Self-hosted or cloud</div>
 
-          {/* Dashboard Mockup */}
-          <DashboardMockup />
+          {/* Real product screenshot */}
+          <ProductScreenshot />
         </div>
       </section>
 
@@ -257,97 +258,49 @@ export default function Home() {
   );
 }
 
-/* ==================== DASHBOARD MOCKUP ==================== */
-function DashboardMockup() {
+/* ==================== PRODUCT SCREENSHOT ==================== */
+function ProductScreenshot() {
   return (
-    <div className="relative max-w-[960px] mx-auto rounded-t-2xl overflow-hidden border border-border border-b-0 shadow-[0_-8px_60px_rgba(0,0,0,0.6),0_0_100px_rgba(59,87,232,0.1)]">
-      {/* Chrome bar */}
-      <div className="bg-ink-800 border-b border-border px-4 py-3 flex items-center gap-3">
-        <div className="flex gap-1.5">
-          <div className="w-2.5 h-2.5 rounded-full mockup-dot-red" />
-          <div className="w-2.5 h-2.5 rounded-full mockup-dot-yellow" />
-          <div className="w-2.5 h-2.5 rounded-full mockup-dot-green" />
+    <div className="relative max-w-[960px] mx-auto">
+      {/* Primary: Node dashboard screenshot */}
+      <div className="rounded-t-2xl overflow-hidden border border-border border-b-0 shadow-[0_-8px_60px_rgba(0,0,0,0.6),0_0_100px_rgba(59,87,232,0.1)]">
+        {/* Chrome bar */}
+        <div className="bg-ink-800 border-b border-border px-4 py-3 flex items-center gap-3">
+          <div className="flex gap-1.5">
+            <div className="w-2.5 h-2.5 rounded-full mockup-dot-red" />
+            <div className="w-2.5 h-2.5 rounded-full mockup-dot-yellow" />
+            <div className="w-2.5 h-2.5 rounded-full mockup-dot-green" />
+          </div>
+          <div className="flex-1 bg-ink-900 border border-border rounded-md py-1 px-3 text-xs text-ink-500 text-center max-w-[300px] mx-auto">
+            localhost:4445/dashboard
+          </div>
         </div>
-        <div className="flex-1 bg-ink-900 border border-border rounded-md py-1 px-3 text-xs text-ink-500 text-center max-w-[300px] mx-auto">
-          app.reflectt.ai/dashboard
-        </div>
+        {/* eslint-disable-next-line @next/next/no-img-element */}
+        <img
+          src="/screenshots/node-dashboard.png"
+          alt="reflectt-node dashboard showing team agents, task board, and runtime status"
+          className="w-full h-auto block"
+          loading="eager"
+        />
       </div>
 
-      {/* Body */}
-      <div className="bg-ink-900 grid grid-cols-1 sm:grid-cols-[220px_1fr] h-[480px] overflow-hidden">
-        {/* Sidebar */}
-        <div className="hidden sm:block bg-ink-950 border-r border-border px-4 py-5">
-          <div className="font-bold text-[13px] text-ink-100 mb-5 px-1">⚡ reflectt cloud</div>
-          <div className="space-y-0.5">
-            {['Overview', 'Tasks', 'Agents', 'Hosts', 'Approvals'].map((item, i) => (
-              <div key={item} className={`flex items-center gap-2 px-2.5 py-2 rounded-[7px] text-xs font-medium ${i === 0 ? 'bg-ink-800 text-ink-100' : 'text-ink-500'}`}>
-                <div className={`w-1.5 h-1.5 rounded-full ${i === 0 ? 'bg-brand' : 'bg-ink-700'}`} />
-                {item}
-              </div>
-            ))}
+      {/* Floating cloud screenshot (overlaps bottom-right) */}
+      <div className="hidden md:block absolute -bottom-8 -right-6 w-[340px] rounded-xl overflow-hidden border border-border shadow-[0_8px_40px_rgba(0,0,0,0.5)]">
+        <div className="bg-ink-800 border-b border-border px-3 py-2 flex items-center gap-2">
+          <div className="flex gap-1">
+            <div className="w-2 h-2 rounded-full mockup-dot-red" />
+            <div className="w-2 h-2 rounded-full mockup-dot-yellow" />
+            <div className="w-2 h-2 rounded-full mockup-dot-green" />
           </div>
-          <div className="mt-5 pt-4 border-t border-border">
-            <div className="text-[10px] font-semibold uppercase tracking-wider text-ink-500 px-1 mb-2">Team online</div>
-            {[
-              { emoji: '🧑‍💼', name: 'kai', bg: 'rgba(59,87,232,0.2)' },
-              { emoji: '⚡', name: 'link', bg: 'rgba(139,92,246,0.2)' },
-              { emoji: '🎨', name: 'pixel', bg: 'rgba(236,72,153,0.2)' },
-              { emoji: '📢', name: 'echo', bg: 'rgba(245,158,11,0.2)' },
-            ].map((agent) => (
-              <div key={agent.name} className="flex items-center gap-2 px-2.5 py-1.5 rounded-[7px]">
-                <div className="w-[22px] h-[22px] rounded-full flex items-center justify-center text-[11px] shrink-0" style={{ background: agent.bg }}>
-                  {agent.emoji}
-                </div>
-                <span className="text-xs text-ink-300 font-medium flex-1">{agent.name}</span>
-                <div className="w-1.5 h-1.5 rounded-full bg-green-400" />
-              </div>
-            ))}
-          </div>
+          <span className="text-[10px] text-ink-500">app.reflectt.ai</span>
         </div>
-
-        {/* Main content */}
-        <div className="p-5 overflow-hidden">
-          <div className="flex items-center justify-between mb-5">
-            <div>
-              <div className="text-lg font-bold text-ink-100">Dashboard</div>
-              <div className="text-[11px] text-ink-500 mt-0.5">Managed control plane for your agent team</div>
-            </div>
-            <div className="px-3.5 py-[7px] bg-brand text-white rounded-[7px] text-[11px] font-semibold">+ New task</div>
-          </div>
-
-          {/* Stats */}
-          <div className="grid grid-cols-2 sm:grid-cols-4 gap-2.5 mb-4">
-            {[
-              { val: '8', label: 'Active agents' },
-              { val: '24', label: 'Tasks shipped' },
-              { val: '3', label: 'In review' },
-              { val: '100%', label: 'AI-authored' },
-            ].map((s, i) => (
-              <div key={i} className="bg-ink-800 border border-border rounded-lg p-3">
-                <div className="text-xl font-bold text-ink-100">{s.val}</div>
-                <div className="text-[10px] text-ink-500 mt-0.5">{s.label}</div>
-              </div>
-            ))}
-          </div>
-
-          {/* Tasks */}
-          <div className="flex flex-col gap-1.5">
-            {[
-              { status: 'Done', color: 'var(--color-success-subtle)', textColor: 'var(--color-success-text)', title: 'Design token system (tokens.css)', agent: '@pixel' },
-              { status: 'Doing', color: 'var(--color-primary-subtle)', textColor: 'var(--color-primary-hover)', title: 'Implement browser-first onboarding UX', agent: '@link' },
-              { status: 'Doing', color: 'var(--color-primary-subtle)', textColor: 'var(--color-primary-hover)', title: 'Redesign reflectt.ai marketing site', agent: '@pixel' },
-              { status: 'Todo', color: 'var(--color-surface-raised)', textColor: 'var(--color-text-secondary)', title: 'Add forAgents.dev agent directory search API', agent: '@link' },
-            ].map((task, i) => (
-              <div key={i} className="flex items-center gap-2.5 px-3 py-2.5 bg-ink-800 border border-border rounded-lg">
-                <span className="px-2 py-0.5 rounded-full text-[10px] font-semibold shrink-0" style={{ background: task.color, color: task.textColor }}>
-                  {task.status}
-                </span>
-                <span className="text-xs text-ink-100 font-medium flex-1 truncate">{task.title}</span>
-                <span className="text-[10px] text-ink-500 ml-auto shrink-0">{task.agent}</span>
-              </div>
-            ))}
-          </div>
-        </div>
+        {/* eslint-disable-next-line @next/next/no-img-element */}
+        <img
+          src="/screenshots/cloud-dashboard.png"
+          alt="Reflectt Cloud sign-in page"
+          className="w-full h-auto block"
+          loading="eager"
+        />
       </div>
     </div>
   );
