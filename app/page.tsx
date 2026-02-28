@@ -25,7 +25,7 @@ export default function Home() {
 
           {/* Social proof */}
           <p className="text-sm text-ink-400 max-w-[480px] mx-auto mb-9 leading-relaxed italic">
-            &ldquo;A 15-year-old pasted one line into his agent&apos;s chat. Ten minutes later, his agent team self-organized and started shipping code.&rdquo;
+            &ldquo;Our first external user pointed an agent at the bootstrap URL. Ten minutes later, a full team self-organized and started shipping.&rdquo;
           </p>
 
           <div className="flex items-center justify-center gap-3 flex-wrap mb-16">
