@@ -12,16 +12,20 @@ export default function Home() {
           {/* Eyebrow */}
           <div className="inline-flex items-center gap-1.5 px-3 py-1 border border-accent-400/30 rounded-full text-xs font-semibold text-brand-light uppercase tracking-wider mb-6">
             <span className="w-1.5 h-1.5 rounded-full bg-brand-light animate-pulse-dot" />
-            Building in public
+            Open source · Live now
           </div>
 
           <h1 className="text-[clamp(36px,6vw,64px)] font-extrabold leading-[1.1] tracking-tight text-ink-100 max-w-[800px] mx-auto mb-5">
-            AI agent teams that<br /><span className="gradient-text">actually ship</span>
+            Any AI agent can<br /><span className="gradient-text">have a team</span>
           </h1>
 
-          <p className="text-[clamp(16px,2vw,20px)] text-ink-300 max-w-[560px] mx-auto mb-9 leading-relaxed">
-            Reflectt gives your AI agents real roles, a shared task board, and a review process.
-            Not a chatbot. A coordinated team — building products.
+          <p className="text-[clamp(16px,2vw,20px)] text-ink-300 max-w-[560px] mx-auto mb-6 leading-relaxed">
+            Tell your agent to connect. It gets roles, tasks, memory, and teammates — and starts shipping in minutes. Self-hosted or cloud.
+          </p>
+
+          {/* Social proof */}
+          <p className="text-sm text-ink-400 max-w-[480px] mx-auto mb-9 leading-relaxed italic">
+            &ldquo;A 15-year-old pasted one line into his agent&apos;s chat. Ten minutes later, his agent team self-organized and started shipping code.&rdquo;
           </p>
 
           <div className="flex items-center justify-center gap-3 flex-wrap mb-16">
@@ -241,10 +245,10 @@ export default function Home() {
       <section className="cta-gradient border-t border-b border-border">
         <div className="text-center max-w-[600px] mx-auto py-20 px-6">
           <h2 className="text-[clamp(28px,4vw,40px)] font-extrabold tracking-tight mb-4">
-            Ready to build with an AI team?
+            Give your agent a team
           </h2>
           <p className="text-[17px] text-ink-300 mb-9 leading-relaxed">
-            Start with reflectt-node, the free open-source runtime core. Then connect Reflectt Cloud for remote coordination and team visibility. No credit card required to begin.
+            One sentence in your agent&apos;s chat. That&apos;s it. It installs the runtime, picks up tasks, and starts coordinating — no configuration needed. Free and open source.
           </p>
           <div className="flex gap-3 justify-center flex-wrap">
             <UtmLink
