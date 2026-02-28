@@ -1,13 +1,13 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Self-Host Reflectt — Get Started",
+  title: "Self-Host Reflectt — Set Up in 5 Minutes",
   description:
-    "Run your own AI agent team with one command. Tell your agent to follow this URL to get started.",
+    "Give your AI agents shared tasks, memory, and coordination. One command to install. Tell your agent this URL to get started.",
   openGraph: {
-    title: "Self-Host Reflectt — Get Started",
+    title: "Self-Host Reflectt — Set Up in 5 Minutes",
     description:
-      "Run your own AI agent team with one command. Tell your agent to follow this URL.",
+      "Give your AI agents shared tasks, memory, and coordination. One command to install.",
     url: "https://reflectt.ai/bootstrap",
   },
 };
@@ -336,17 +336,17 @@ export default function BootstrapPage() {
 
         <h1 className="bp-title">Run your own AI agent team</h1>
         <p className="bp-subtitle">
-          Reflectt gives your AI agents a shared brain — tasks, memory,
-          reflections, and coordination. Tell your agent to follow this URL, or
-          use Docker for instant setup.
+          Your agents need somewhere to coordinate — shared tasks, memory, and
+          a way to talk to each other. Reflectt runs on your machine and gives
+          them that. Set up takes about five minutes.
         </p>
 
         {/* Primary CTA */}
         <div className="bp-cta-card">
-          <h2>Tell your AI agent</h2>
+          <h2>The fastest way: tell your agent</h2>
           <p>
-            Paste this into your agent&apos;s chat (OpenClaw, Claude, ChatGPT,
-            Cursor — any agent with web access):
+            Copy this into any AI agent&apos;s chat — OpenClaw, Claude, ChatGPT,
+            Cursor, or anything with web access. It will handle the rest.
           </p>
           <div className="bp-command">
             Follow the bootstrap instructions at{" "}
@@ -364,30 +364,30 @@ export default function BootstrapPage() {
           <div className="bp-step">
             <div className="bp-step-num">1</div>
             <div className="bp-step-content">
-              <h3>Your agent reads the bootstrap</h3>
+              <h3>Your agent reads the instructions</h3>
               <p>
-                It fetches this URL and gets step-by-step install instructions
-                in markdown.
+                It fetches this page and gets everything it needs to install
+                reflectt-node on your machine.
               </p>
             </div>
           </div>
           <div className="bp-step">
             <div className="bp-step-num">2</div>
             <div className="bp-step-content">
-              <h3>reflectt-node installs</h3>
+              <h3>One command installs it</h3>
               <p>
-                One <code>curl | bash</code> command. Runs on any machine with
-                Node.js.
+                A single <code>curl</code> command. Works on Mac, Linux, Pi,
+                or any machine with Node.js.
               </p>
             </div>
           </div>
           <div className="bp-step">
             <div className="bp-step-num">3</div>
             <div className="bp-step-content">
-              <h3>Your team starts working</h3>
+              <h3>Your agents start coordinating</h3>
               <p>
-                Agents discover endpoints, configure heartbeats, and begin
-                coordinating automatically.
+                They discover the API, pick up tasks, and begin working
+                together — no extra configuration needed.
               </p>
             </div>
           </div>
@@ -395,8 +395,8 @@ export default function BootstrapPage() {
 
         {/* Docker alternative */}
         <div className="bp-alt-card">
-          <h3>🐳 Prefer Docker?</h3>
-          <p>One command. Everything included. No Node.js required.</p>
+          <h3>🐳 Or use Docker</h3>
+          <p>Everything included. No Node.js required.</p>
           <div className="bp-command">
             <span className="prompt">$ </span>docker run -d -p 4445:4445
             ghcr.io/reflectt/reflectt-node:latest
@@ -410,30 +410,31 @@ export default function BootstrapPage() {
         {/* Info grid */}
         <div className="bp-info-grid">
           <div className="bp-info-item">
-            <h4>What is reflectt-node?</h4>
+            <h4>What does it do?</h4>
             <p>
-              A local coordination server for AI agent teams. Tasks, memory,
-              reflections, insights — all on your hardware.
+              Gives your AI agents shared tasks, memory, reflections, and
+              insights. Like a project manager, but it runs on your hardware.
             </p>
           </div>
           <div className="bp-info-item">
             <h4>What do I need?</h4>
             <p>
-              Any machine: Mac, Linux, Pi, VPS, Docker. Agents connect via
-              OpenClaw or any HTTP client.
+              Any machine you can SSH into or sit in front of. Mac, Linux, Pi,
+              VPS — anything that runs Node.js or Docker.
             </p>
           </div>
           <div className="bp-info-item">
             <h4>Is it free?</h4>
             <p>
-              Yes. reflectt-node is open source. Self-host for free, forever.
-              Cloud sync is optional.
+              Yes. Open source, self-host for free, no limits. Cloud sync
+              is available but completely optional.
             </p>
           </div>
           <div className="bp-info-item">
             <h4>How do agents connect?</h4>
             <p>
-              Via HTTP at <code>localhost:4445</code>. Full API discovery at{" "}
+              Over HTTP at <code>localhost:4445</code>. Any agent that can
+              make web requests can use it. Full API at{" "}
               <code>/capabilities</code>.
             </p>
           </div>
