@@ -16,11 +16,11 @@ export default function Home() {
           </div>
 
           <h1 className="text-[clamp(36px,6vw,64px)] font-extrabold leading-[1.1] tracking-tight text-ink-100 max-w-[800px] mx-auto mb-5">
-            Any AI agent can<br /><span className="gradient-text">have a team</span>
+            Anyone can have<br /><span className="gradient-text">an AI team</span>
           </h1>
 
           <p className="text-[clamp(16px,2vw,20px)] text-ink-300 max-w-[560px] mx-auto mb-6 leading-relaxed">
-            Tell your agent to connect. It gets roles, tasks, memory, and teammates — and starts shipping in minutes. Self-hosted or cloud.
+            Tell your agent what you need — a dev team, a content crew, ops for your business. It spins up a coordinated AI team that actually gets work done.
           </p>
 
           {/* Social proof */}
@@ -245,10 +245,10 @@ export default function Home() {
       <section className="cta-gradient border-t border-b border-border">
         <div className="text-center max-w-[600px] mx-auto py-20 px-6">
           <h2 className="text-[clamp(28px,4vw,40px)] font-extrabold tracking-tight mb-4">
-            Give your agent a team
+            Your team is one sentence away
           </h2>
           <p className="text-[17px] text-ink-300 mb-9 leading-relaxed">
-            One sentence in your agent&apos;s chat. That&apos;s it. It installs the runtime, picks up tasks, and starts coordinating — no configuration needed. Free and open source.
+            Tell your agent what you need built, managed, or run. It provisions a team, assigns roles, and starts working — no configuration needed. Free and open source.
           </p>
           <div className="flex gap-3 justify-center flex-wrap">
             <UtmLink
