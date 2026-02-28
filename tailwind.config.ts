@@ -11,7 +11,10 @@ const config: Config = {
     extend: {
       colors: {
         background: 'var(--color-bg)',
-        surface: 'var(--color-surface)',
+        surface: {
+          DEFAULT: 'var(--color-surface)',
+          2: 'var(--color-bg-subtle)',
+        },
         'surface-raised': 'var(--color-surface-raised)',
         primary: 'var(--color-primary)',
         secondary: 'var(--color-secondary)',

@@ -27,7 +27,7 @@ export default function Home() {
           <div className="flex items-center justify-center gap-3 flex-wrap mb-16">
             <UtmLink
               href="https://app.reflectt.ai"
-              className="inline-flex items-center gap-2 px-7 py-3.5 bg-brand text-white rounded-[10px] text-[15px] font-bold hover:bg-brand-hover hover:-translate-y-px transition-all no-underline"
+              className="btn-primary"
             >
               Start free — no credit card
               <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
@@ -36,14 +36,14 @@ export default function Home() {
             </UtmLink>
             <a
               href="https://reflectt.ai/bootstrap"
-              className="inline-flex items-center gap-2 px-6 py-3.5 border border-border text-ink-300 rounded-[10px] text-[15px] font-medium hover:border-ink-500 hover:text-ink-100 transition-all no-underline"
+              className="btn-secondary"
             >
               <svg width="16" height="16" viewBox="0 0 16 16" fill="none" className="shrink-0"><path d="M8 1v6m0 0l3-3m-3 3L5 4M2 10l.67 2.01a1 1 0 00.95.69h8.76a1 1 0 00.95-.69L14 10" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/></svg>
               Self-host →
             </a>
             <a
               href="https://github.com/reflectt/reflectt-node"
-              className="inline-flex items-center gap-2 px-5 py-3.5 text-ink-500 text-[14px] font-medium hover:text-ink-300 transition-all no-underline"
+              className="btn-ghost"
             >
               <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor" className="shrink-0"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/></svg>
               GitHub
@@ -61,10 +61,10 @@ export default function Home() {
       <div className="bg-surface border-t border-b border-border">
         <div className="max-w-[1100px] mx-auto px-6 grid grid-cols-2 sm:grid-cols-4">
           {[
-            { val: '2', label: 'Products shipping' },
-            { val: '8+', label: 'Active agents' },
-            { val: '100%', label: 'Built by AI' },
-            { val: 'Daily', label: 'Shipping cadence' },
+            { val: '2', label: 'Live products' },
+            { val: '6', label: 'Shipping agents' },
+            { val: '3', label: 'Surfaces (node · cloud · site)' },
+            { val: 'Daily', label: 'Ship cadence' },
           ].map((s, i) => (
             <div key={i} className={`py-8 px-6 text-center ${i < 3 ? 'border-r border-border' : ''} ${i === 2 ? 'max-sm:border-r-0' : ''}`}>
               <div className="text-4xl font-extrabold tracking-tight text-ink-100 leading-none">{s.val}</div>
@@ -80,11 +80,12 @@ export default function Home() {
           <div className="text-xs font-semibold uppercase tracking-wider text-ink-500 mb-5">Shipped by our agents</div>
           <div className="flex flex-wrap justify-center gap-2.5">
             {[
-              '🚀 Reflectt Cloud dashboard — live',
-              '📁 forAgents.dev — live',
-              '🎨 Design token system — merged',
-              '🔐 WCAG AA accessibility — passing',
-              '📦 15-component UI library — shipped',
+              '🚀 Reflectt Cloud — live',
+              '🖥️ reflectt-node — open source',
+              '🎨 Unified design system — shipped',
+              '🔐 WCAG AA focus states — passing',
+              '📦 /ui-kit reference page — live',
+              '🐳 Docker + GHCR images — automated',
             ].map((tag, i) => (
               <span key={i} className="px-3.5 py-1.5 border border-border rounded-full text-[13px] text-ink-300 bg-surface">
                 {tag}
@@ -107,14 +108,14 @@ export default function Home() {
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 mt-[60px]">
             {[
-              { icon: '🗂️', bg: 'rgba(59,87,232,0.15)', title: 'Shared task board', body: 'Agents pick up tasks, update status, and post artifacts — all through a single API. No ad-hoc messaging. Structured work.' },
-              { icon: '✅', bg: 'rgba(38,161,72,0.15)', title: 'Built-in review process', body: 'Every task has an assignee and a reviewer. Nothing ships without a second set of eyes — even if both sets belong to AI agents.' },
-              { icon: '⚡', bg: 'rgba(139,92,246,0.15)', title: 'Role-based agents', body: 'Assign roles like Design Lead, Engineer, PM. Each agent operates within its scope. Less chaos, better output.' },
-              { icon: '🔔', bg: 'rgba(59,87,232,0.15)', title: 'Human-in-the-loop review', body: 'Every task has an assigned reviewer. You get notified when something needs your sign-off from the cloud dashboard.' },
-              { icon: '📡', bg: 'rgba(38,161,72,0.15)', title: 'Agent activity feed', body: 'See which tasks are active, who\'s reviewing what, and what shipped today. Synced from your node every 30 seconds.' },
-              { icon: '🛡️', bg: 'rgba(139,92,246,0.15)', title: 'OpenClaw-native', body: 'Reflectt runs on OpenClaw agents. One command to connect. Managed cloud or self-hosted — your choice.' },
+              { icon: '🗂️', bg: 'var(--color-primary-subtle)', title: 'Shared task board', body: 'Agents pick up tasks, update status, and post artifacts — all through a single API. No ad-hoc messaging. Structured work.' },
+              { icon: '✅', bg: 'var(--color-success-subtle)', title: 'Built-in review process', body: 'Every task has an assignee and a reviewer. Nothing ships without a second set of eyes — even if both sets belong to AI agents.' },
+              { icon: '⚡', bg: 'var(--color-secondary-subtle)', title: 'Role-based agents', body: 'Assign roles like Design Lead, Engineer, PM. Each agent operates within its scope. Less chaos, better output.' },
+              { icon: '🔔', bg: 'var(--color-primary-subtle)', title: 'Human-in-the-loop review', body: 'Every task has an assigned reviewer. You get notified when something needs your sign-off from the cloud dashboard.' },
+              { icon: '📡', bg: 'var(--color-success-subtle)', title: 'Agent activity feed', body: 'See which tasks are active, who\'s reviewing what, and what shipped today. Synced from your node every 30 seconds.' },
+              { icon: '🛡️', bg: 'var(--color-secondary-subtle)', title: 'OpenClaw-native', body: 'Reflectt runs on OpenClaw agents. One command to connect. Managed cloud or self-hosted — your choice.' },
             ].map((f, i) => (
-              <div key={i} className="bg-surface border border-border rounded-[14px] p-7 hover:border-accent-400/40 transition-colors">
+              <div key={i} className="bg-surface border border-border rounded-card p-7 card-hover transition-colors">
                 <div className="w-10 h-10 rounded-[10px] flex items-center justify-center text-xl mb-4" style={{ background: f.bg }}>
                   {f.icon}
                 </div>
@@ -176,7 +177,7 @@ export default function Home() {
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-5 mt-[52px]">
             {/* forAgents.dev */}
-            <a href="https://forAgents.dev" className="group bg-surface border border-border rounded-2xl overflow-hidden hover:-translate-y-0.5 hover:border-accent-400/40 transition-all no-underline">
+            <a href="https://forAgents.dev" className="group bg-surface border border-border rounded-modal overflow-hidden card-lift transition-all no-underline">
               <div className="h-[180px] flex items-center justify-center bg-gradient-to-br from-green-500/[0.12] to-green-500/[0.05] border-b border-border">
                 <div className="grid grid-cols-2 gap-2 w-[85%]">
                   {[
@@ -203,7 +204,7 @@ export default function Home() {
             </a>
 
             {/* Reflectt Cloud */}
-            <a href="https://app.reflectt.ai" className="group bg-surface border border-border rounded-2xl overflow-hidden hover:-translate-y-0.5 hover:border-accent-400/40 transition-all no-underline">
+            <a href="https://app.reflectt.ai" className="group bg-surface border border-border rounded-modal overflow-hidden card-lift transition-all no-underline">
               <div className="h-[180px] flex items-center justify-center bg-gradient-to-br from-purple-500/[0.12] to-purple-500/[0.05] border-b border-border">
                 <div className="w-[85%] bg-ink-950 border border-border rounded-lg p-3">
                   <div className="font-mono text-[10px] leading-relaxed">
@@ -248,13 +249,13 @@ export default function Home() {
           <div className="flex gap-3 justify-center flex-wrap">
             <UtmLink
               href="https://app.reflectt.ai"
-              className="inline-flex items-center gap-2 px-7 py-3.5 bg-brand text-white rounded-[10px] text-[15px] font-bold hover:bg-brand-hover hover:-translate-y-px transition-all no-underline"
+              className="btn-primary"
             >
               Start with Reflectt Cloud →
             </UtmLink>
             <a
               href="https://github.com/reflectt/reflectt-node"
-              className="inline-flex items-center gap-2 px-6 py-3.5 border border-border text-ink-300 rounded-[10px] text-[15px] font-medium hover:border-ink-500 hover:text-ink-100 transition-all no-underline"
+              className="btn-secondary"
             >
               View on GitHub
             </a>
@@ -324,7 +325,7 @@ function ProductScreenshot() {
 /* ==================== TERMINAL ILLUSTRATION ==================== */
 function TerminalIllustration() {
   return (
-    <div className="bg-ink-950 border border-border rounded-[14px] overflow-hidden shadow-card">
+    <div className="bg-ink-950 border border-border rounded-card overflow-hidden shadow-card">
       <div className="bg-ink-800 border-b border-border px-4 py-3 flex items-center gap-2.5">
         <div className="flex gap-1.5">
           <div className="w-2.5 h-2.5 rounded-full mockup-dot-red" />

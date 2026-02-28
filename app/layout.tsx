@@ -30,7 +30,7 @@ export const metadata: Metadata = {
 
 function Nav() {
   return (
-    <nav className="sticky top-0 z-50 bg-[rgba(13,17,23,0.92)] backdrop-blur-[12px] border-b border-border-subtle">
+    <nav className="sticky top-0 z-50 nav-glass border-b border-border-subtle">
       <div className="max-w-[1100px] mx-auto px-6 h-[60px] flex items-center justify-between">
         <Link href="/" className="font-extrabold text-lg tracking-tight text-ink-100 no-underline">
           reflectt<span className="text-brand-light">.</span>
