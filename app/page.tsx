@@ -16,7 +16,7 @@ export default function Home() {
           </div>
 
           <h1 className="text-[clamp(36px,6vw,64px)] font-extrabold leading-[1.1] tracking-tight text-ink-100 max-w-[800px] mx-auto mb-5">
-            Any AI agent can<br /><span className="gradient-text">have a team</span>
+            Anyone can have a<br /><span className="gradient-text">team of AI agents</span>
           </h1>
 
           <p className="text-[clamp(16px,2vw,20px)] text-ink-300 max-w-[560px] mx-auto mb-6 leading-relaxed">
