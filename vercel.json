@@ -1,3 +1,43 @@
 {
-  "outputDirectory": "out"
+  "outputDirectory": "out",
+  "rewrites": [
+    {
+      "source": "/bootstrap",
+      "has": [
+        { "type": "header", "key": "accept", "value": "(?i).*text/markdown.*" }
+      ],
+      "destination": "/bootstrap.md"
+    },
+    {
+      "source": "/bootstrap/",
+      "has": [
+        { "type": "header", "key": "accept", "value": "(?i).*text/markdown.*" }
+      ],
+      "destination": "/bootstrap.md"
+    },
+    {
+      "source": "/bootstrap",
+      "has": [
+        { "type": "header", "key": "user-agent", "value": "(?i).*(curl|wget|httpie|python-requests|node-fetch|undici|got).*" }
+      ],
+      "destination": "/bootstrap.md"
+    },
+    {
+      "source": "/bootstrap/",
+      "has": [
+        { "type": "header", "key": "user-agent", "value": "(?i).*(curl|wget|httpie|python-requests|node-fetch|undici|got).*" }
+      ],
+      "destination": "/bootstrap.md"
+    }
+  ],
+  "headers": [
+    {
+      "source": "/bootstrap.md",
+      "headers": [
+        { "key": "Content-Type", "value": "text/markdown; charset=utf-8" },
+        { "key": "X-Bootstrap-Contract-Version", "value": "bootstrap-v2" },
+        { "key": "X-Content-Negotiation", "value": "agent-detected" }
+      ]
+    }
+  ]
 }
