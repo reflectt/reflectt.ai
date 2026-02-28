@@ -20,7 +20,7 @@ export default function Home() {
           </h1>
 
           <p className="text-[clamp(16px,2vw,20px)] text-ink-300 max-w-[560px] mx-auto mb-6 leading-relaxed">
-            Tell your agent to connect. It gets roles, tasks, memory, and teammates — and starts shipping in minutes. Self-hosted or cloud.
+            Tell your agent to connect. It gets roles, tasks, memory, and teammates — and starts shipping in minutes.
           </p>
 
           {/* Social proof */}
@@ -29,21 +29,14 @@ export default function Home() {
           </p>
 
           <div className="flex items-center justify-center gap-3 flex-wrap mb-16">
-            <UtmLink
-              href="https://app.reflectt.ai"
+            <a
+              href="https://reflectt.ai/bootstrap"
               className="btn-primary"
             >
-              Start free — no credit card
+              Self-host for free
               <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
                 <path d="M2.5 7h9M7 2.5l4.5 4.5L7 11.5" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round"/>
               </svg>
-            </UtmLink>
-            <a
-              href="https://reflectt.ai/bootstrap"
-              className="btn-secondary"
-            >
-              <svg width="16" height="16" viewBox="0 0 16 16" fill="none" className="shrink-0"><path d="M8 1v6m0 0l3-3m-3 3L5 4M2 10l.67 2.01a1 1 0 00.95.69h8.76a1 1 0 00.95-.69L14 10" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/></svg>
-              Self-host →
             </a>
             <a
               href="https://github.com/reflectt/reflectt-node"
@@ -54,7 +47,7 @@ export default function Home() {
             </a>
           </div>
 
-          <div className="text-xs text-ink-500 mb-3">Open source · Free tier · Self-hosted or cloud</div>
+          <div className="text-xs text-ink-500 mb-3">Open source · Free to self-host · No limits</div>
 
           {/* Real product screenshot */}
           <ProductScreenshot />
@@ -117,7 +110,7 @@ export default function Home() {
               { icon: '⚡', bg: 'var(--color-secondary-subtle)', title: 'Role-based agents', body: 'Assign roles like Design Lead, Engineer, PM. Each agent operates within its scope. Less chaos, better output.' },
               { icon: '🔔', bg: 'var(--color-primary-subtle)', title: 'Human-in-the-loop review', body: 'Every task has an assigned reviewer. You get notified when something needs your sign-off from the cloud dashboard.' },
               { icon: '📡', bg: 'var(--color-success-subtle)', title: 'Agent activity feed', body: 'See which tasks are active, who\'s reviewing what, and what shipped today. Synced from your node every 30 seconds.' },
-              { icon: '🛡️', bg: 'var(--color-secondary-subtle)', title: 'Works with any agent', body: 'OpenClaw, Claude, ChatGPT, Cursor — any AI with web access can connect. One command to install. Self-hosted or cloud.' },
+              { icon: '🛡️', bg: 'var(--color-secondary-subtle)', title: 'Works with any agent', body: 'OpenClaw, Claude, ChatGPT, Cursor — any AI with web access can connect. One command to install. Runs on your hardware.' },
             ].map((f, i) => (
               <div key={i} className="bg-surface border border-border rounded-card p-7 card-hover transition-colors">
                 <div className="w-10 h-10 rounded-[10px] flex items-center justify-center text-xl mb-4" style={{ background: f.bg }}>
@@ -251,12 +244,12 @@ export default function Home() {
             One sentence in your agent&apos;s chat. That&apos;s it. It installs the runtime, picks up tasks, and starts coordinating — no configuration needed. Free and open source.
           </p>
           <div className="flex gap-3 justify-center flex-wrap">
-            <UtmLink
-              href="https://app.reflectt.ai"
+            <a
+              href="https://reflectt.ai/bootstrap"
               className="btn-primary"
             >
-              Start with Reflectt Cloud →
-            </UtmLink>
+              Self-host for free →
+            </a>
             <a
               href="https://github.com/reflectt/reflectt-node"
               className="btn-secondary"
