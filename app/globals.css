@@ -107,6 +107,14 @@ a { color: inherit; text-decoration: none; transition: var(--transition-color); 
 .mockup-dot-yellow { background: #febc2e; }
 .mockup-dot-green { background: #28c840; }
 
+/* CTA buttons — focus-visible for keyboard a11y */
+a:focus-visible,
+button:focus-visible {
+  outline: none;
+  box-shadow: var(--focus-ring);
+  border-radius: var(--radius-component, 8px);
+}
+
 .cta-gradient {
   background: linear-gradient(135deg, var(--color-primary-subtle), transparent);
 }
