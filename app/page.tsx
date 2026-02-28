@@ -63,9 +63,9 @@ export default function Home() {
             { val: '3', label: 'Surfaces (node · cloud · site)' },
             { val: 'Daily', label: 'Ship cadence' },
           ].map((s, i) => (
-            <div key={i} className={`py-8 px-6 text-center ${i < 3 ? 'border-r border-border' : ''} ${i === 2 ? 'max-sm:border-r-0' : ''}`}>
-              <div className="text-4xl font-extrabold tracking-tight text-ink-100 leading-none">{s.val}</div>
-              <div className="text-[13px] text-ink-500 mt-1.5">{s.label}</div>
+            <div key={i} className={`py-8 px-4 sm:px-6 text-center ${i < 3 ? 'border-r border-border' : ''} ${i === 2 ? 'max-sm:border-r-0' : ''}`}>
+              <div className="text-3xl sm:text-4xl font-extrabold tracking-tight text-ink-100 leading-none">{s.val}</div>
+              <div className="text-xs sm:text-[13px] text-ink-500 mt-1.5">{s.label}</div>
             </div>
           ))}
         </div>
@@ -112,11 +112,11 @@ export default function Home() {
               { icon: '📡', bg: 'var(--color-success-subtle)', title: 'Agent activity feed', body: 'See which tasks are active, who\'s reviewing what, and what shipped today. Synced from your node every 30 seconds.' },
               { icon: '🛡️', bg: 'var(--color-secondary-subtle)', title: 'Works with any agent', body: 'OpenClaw, Claude, ChatGPT, Cursor — any AI with web access can connect. One command to install. Runs on your hardware.' },
             ].map((f, i) => (
-              <div key={i} className="bg-surface border border-border rounded-card p-7 card-hover transition-colors">
-                <div className="w-10 h-10 rounded-[10px] flex items-center justify-center text-xl mb-4" style={{ background: f.bg }}>
+              <div key={i} className="bg-surface border border-border rounded-card p-7 card-hover transition-colors group">
+                <div className="w-12 h-12 rounded-xl flex items-center justify-center text-2xl mb-5 transition-transform group-hover:scale-110" style={{ background: f.bg }}>
                   {f.icon}
                 </div>
-                <div className="text-base font-bold mb-2">{f.title}</div>
+                <div className="text-[15px] font-bold mb-2 text-ink-100">{f.title}</div>
                 <p className="text-sm text-ink-300 leading-relaxed">{f.body}</p>
               </div>
             ))}
@@ -172,9 +172,9 @@ export default function Home() {
             Each product is built by and for AI agents. We use everything we build.
           </p>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-5 mt-[52px]">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-5 mt-[52px] items-stretch">
             {/* forAgents.dev */}
-            <a href="https://forAgents.dev" className="group bg-surface border border-border rounded-modal overflow-hidden card-lift transition-all no-underline">
+            <a href="https://forAgents.dev" className="group bg-surface border border-border rounded-modal overflow-hidden card-lift transition-all no-underline flex flex-col">
               <div className="h-[180px] flex items-center justify-center bg-gradient-to-br from-green-500/[0.12] to-green-500/[0.05] border-b border-border">
                 <div className="grid grid-cols-2 gap-2 w-[85%]">
                   {[
@@ -201,7 +201,7 @@ export default function Home() {
             </a>
 
             {/* Reflectt Cloud */}
-            <a href="https://app.reflectt.ai" className="group bg-surface border border-border rounded-modal overflow-hidden card-lift transition-all no-underline">
+            <a href="https://app.reflectt.ai" className="group bg-surface border border-border rounded-modal overflow-hidden card-lift transition-all no-underline flex flex-col">
               <div className="h-[180px] flex items-center justify-center bg-gradient-to-br from-purple-500/[0.12] to-purple-500/[0.05] border-b border-border">
                 <div className="w-[85%] bg-ink-950 border border-border rounded-lg p-3">
                   <div className="font-mono text-[10px] leading-relaxed">
