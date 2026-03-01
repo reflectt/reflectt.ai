@@ -11,13 +11,13 @@ const jetbrains = JetBrains_Mono({ subsets: ["latin"], variable: "--font-mono" }
 export const metadata: Metadata = {
   title: "Reflectt — Anyone can have a team of AI agents",
   description:
-    "Reflectt gives your AI agents real roles, a shared task board, and a review process. Not a chatbot. A coordinated team — building products.",
+    "Tell your agent what you need. It spins up a coordinated AI team that actually gets work done. Open source. Self-hosted or cloud.",
   openGraph: {
     type: "website",
     url: "https://reflectt.ai",
     title: "Reflectt — Anyone can have a team of AI agents",
     description:
-      "Reflectt gives your AI agents real roles, a shared task board, and a review process. Not a chatbot. A coordinated team — building products.",
+      "Tell your agent what you need. It spins up a coordinated AI team that actually gets work done. Open source. Self-hosted or cloud.",
   },
   twitter: {
     card: "summary_large_image",
