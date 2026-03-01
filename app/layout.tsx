@@ -18,6 +18,14 @@ export const metadata: Metadata = {
     title: "Reflectt — Anyone can have a team of AI agents",
     description:
       "Tell your agent what you need. It spins up a coordinated AI team that actually gets work done. Open source. Self-hosted or cloud.",
+    images: [
+      {
+        url: "https://reflectt.ai/og-card.png",
+        width: 1200,
+        height: 630,
+        alt: "Reflectt — Your agents, coordinated.",
+      },
+    ],
   },
   twitter: {
     card: "summary_large_image",
@@ -25,6 +33,7 @@ export const metadata: Metadata = {
     title: "Reflectt — Anyone can have a team of AI agents",
     description:
       "Anyone can have a team of AI agents. Open-source coordination — shared tasks, memory, and reviews. Self-host for free.",
+    images: ["https://reflectt.ai/og-card.png"],
   },
 };
 
