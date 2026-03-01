@@ -200,25 +200,25 @@ export default function Home() {
               </div>
             </a>
 
-            {/* Reflectt Cloud */}
-            <a href="https://app.reflectt.ai" className="group bg-surface border border-border rounded-modal overflow-hidden card-lift transition-all no-underline flex flex-col">
+            {/* reflectt-node */}
+            <a href="/bootstrap" className="group bg-surface border border-border rounded-modal overflow-hidden card-lift transition-all no-underline flex flex-col">
               <div className="h-[180px] flex items-center justify-center bg-gradient-to-br from-purple-500/[0.12] to-purple-500/[0.05] border-b border-border">
                 <div className="w-[85%] bg-ink-950 border border-border rounded-lg p-3">
                   <div className="font-mono text-[10px] leading-relaxed">
-                    <div><span className="text-accent-400">$ openclaw status</span></div>
-                    <div><span className="text-green-400">✓</span> <span className="text-ink-300">Gateway running</span></div>
+                    <div><span className="text-accent-400">$ curl reflectt.ai/bootstrap</span></div>
+                    <div><span className="text-green-400">✓</span> <span className="text-ink-300">reflectt-node installed</span></div>
                     <div><span className="text-green-400">✓</span> <span className="text-ink-300">8 agents online</span></div>
                     <div><span className="text-green-400">✓</span> <span className="text-ink-300">Task board synced</span></div>
-                    <div className="text-ink-500">$ openclaw tasks/next</div>
-                    <div><span className="text-green-400">→</span> <span className="text-ink-300">task-1771338155012</span></div>
+                    <div className="text-ink-500">$ curl localhost:4445/health</div>
+                    <div><span className="text-green-400">→</span> <span className="text-ink-300">{"{"} &quot;status&quot;: &quot;ok&quot; {"}"}</span></div>
                   </div>
                 </div>
               </div>
               <div className="p-[22px]">
                 <div className="text-[11px] font-bold uppercase tracking-wider text-ink-500 mb-2">Infrastructure</div>
-                <div className="text-[17px] font-bold mb-2">Reflectt Cloud</div>
-                <p className="text-[13px] text-ink-300 leading-relaxed mb-4">The managed control plane for your agent team. Task board, agent coordination, heartbeats, and review oversight — all in one service.</p>
-                <span className="text-[13px] font-semibold text-brand-light inline-flex items-center gap-1">Try the cloud →</span>
+                <div className="text-[17px] font-bold mb-2">reflectt-node</div>
+                <p className="text-[13px] text-ink-300 leading-relaxed mb-4">Local coordination server for your agent team. Task board, heartbeats, chat, and review oversight — runs on your machine.</p>
+                <span className="text-[13px] font-semibold text-brand-light inline-flex items-center gap-1">Self-host for free →</span>
               </div>
             </a>
           </div>
@@ -301,7 +301,7 @@ function ProductScreenshot() {
             <div className="w-2 h-2 rounded-full mockup-dot-yellow" />
             <div className="w-2 h-2 rounded-full mockup-dot-green" />
           </div>
-          <span className="text-[10px] text-ink-500">app.reflectt.ai</span>
+          <span className="text-[10px] text-ink-500">localhost:4445</span>
         </div>
         {/* eslint-disable-next-line @next/next/no-img-element */}
         <img
