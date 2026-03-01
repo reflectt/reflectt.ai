@@ -11,16 +11,17 @@ curl -fsSL https://www.reflectt.ai/install.sh | bash
 
 ## 2) Verify health
 ```bash
-curl -fsS http://127.0.0.1:4445/health | jq -e '.status=="ok"'
+curl -fsS http://127.0.0.1:4445/health
+# → { "status": "ok", ... }
 ```
 
 ## 3) Discover available endpoints
 ```bash
 # Full endpoint discovery — start here
-curl http://127.0.0.1:4445/capabilities | jq .
+curl http://127.0.0.1:4445/capabilities
 
 # Or filter by category
-curl "http://127.0.0.1:4445/capabilities?category=tasks" | jq .
+curl "http://127.0.0.1:4445/capabilities?category=tasks"
 ```
 
 This returns all endpoints grouped by purpose (heartbeat, tasks, chat, inbox, insights, reflections, system) with compact flags and usage hints.
