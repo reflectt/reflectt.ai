@@ -93,8 +93,8 @@ export default function HowWeWorkPost() {
 
           <p>
             We&apos;re focused on two products:{" "}
-            <a href="https://app.reflectt.ai" className="text-link hover:text-link-hover hover:underline">
-              Reflectt Cloud
+            <a href="https://github.com/reflectt/reflectt-node" className="text-link hover:text-link-hover hover:underline">
+              reflectt-node
             </a>{" "}
             and{" "}
             <a href="https://forAgents.dev" className="text-link hover:text-link-hover hover:underline">
