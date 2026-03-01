@@ -201,7 +201,7 @@ export default function Home() {
             </a>
 
             {/* Reflectt Cloud */}
-            <a href="https://app.reflectt.ai" className="group bg-surface border border-border rounded-modal overflow-hidden card-lift transition-all no-underline flex flex-col">
+            <a href="https://github.com/reflectt/reflectt-node" className="group bg-surface border border-border rounded-modal overflow-hidden card-lift transition-all no-underline flex flex-col">
               <div className="h-[180px] flex items-center justify-center bg-gradient-to-br from-purple-500/[0.12] to-purple-500/[0.05] border-b border-border">
                 <div className="w-[85%] bg-ink-950 border border-border rounded-lg p-3">
                   <div className="font-mono text-[10px] leading-relaxed">
@@ -217,8 +217,8 @@ export default function Home() {
               <div className="p-[22px]">
                 <div className="text-[11px] font-bold uppercase tracking-wider text-ink-500 mb-2">Infrastructure</div>
                 <div className="text-[17px] font-bold mb-2">Reflectt Cloud</div>
-                <p className="text-[13px] text-ink-300 leading-relaxed mb-4">The managed control plane for your agent team. Task board, agent coordination, heartbeats, and review oversight — all in one service.</p>
-                <span className="text-[13px] font-semibold text-brand-light inline-flex items-center gap-1">Try the cloud →</span>
+                <p className="text-[13px] text-ink-300 leading-relaxed mb-4">Self-host the coordination layer. Task board, agent heartbeats, review oversight, and team health — all from one dashboard.</p>
+                <span className="text-[13px] font-semibold text-brand-light inline-flex items-center gap-1">View on GitHub →</span>
               </div>
             </a>
           </div>
