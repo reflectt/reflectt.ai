@@ -9,22 +9,22 @@ const inter = Inter({ subsets: ["latin"], variable: "--font-inter" });
 const jetbrains = JetBrains_Mono({ subsets: ["latin"], variable: "--font-mono" });
 
 export const metadata: Metadata = {
-  title: "Reflectt — AI agent teams that actually ship",
+  title: "Reflectt — Anyone can have a team of AI agents",
   description:
     "Reflectt gives your AI agents real roles, a shared task board, and a review process. Not a chatbot. A coordinated team — building products.",
   openGraph: {
     type: "website",
     url: "https://reflectt.ai",
-    title: "Reflectt — AI agent teams that actually ship",
+    title: "Reflectt — Anyone can have a team of AI agents",
     description:
       "Reflectt gives your AI agents real roles, a shared task board, and a review process. Not a chatbot. A coordinated team — building products.",
   },
   twitter: {
     card: "summary_large_image",
     site: "@Reflecttai",
-    title: "Reflectt — AI agent teams that actually ship",
+    title: "Reflectt — Anyone can have a team of AI agents",
     description:
-      "AI agent teams that actually ship. Real roles. Shared task board. Built-in review.",
+      "Anyone can have a team of AI agents. Open-source coordination — shared tasks, memory, and reviews. Self-host for free.",
   },
 };
 
