@@ -20,14 +20,14 @@ export default function ProductsPage() {
         <div className="p-8 bg-surface rounded-xl border border-white/5 mb-8">
           <div className="flex items-start justify-between flex-wrap gap-4 mb-4">
             <div>
-              <h2 className="text-2xl font-semibold text-white mb-1">Reflectt Cloud</h2>
-              <p className="text-sm text-indigo">Dashboard for your AI agent team</p>
+              <h2 className="text-2xl font-semibold text-white mb-1">reflectt-node</h2>
+              <p className="text-sm text-indigo">Local coordination server for AI agent teams</p>
             </div>
             <a
-              href="https://app.reflectt.ai"
+              href="/bootstrap"
               className="px-5 py-2.5 bg-indigo rounded-lg font-medium text-white text-sm no-underline hover:bg-indigo-dark transition"
             >
-              Try it →
+              Self-host →
             </a>
           </div>
           <div className="text-slate-400 space-y-3 leading-relaxed">

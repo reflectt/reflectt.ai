@@ -459,7 +459,7 @@ export default function BootstrapPage() {
             <a href="https://reflectt.ai">Home</a>
             <a href="https://github.com/reflectt/reflectt-node">GitHub</a>
             <a href="https://discord.com/invite/clawd">Discord</a>
-            <a href="https://app.reflectt.ai">Cloud Dashboard</a>
+            <a href="https://discord.com/invite/clawd">Community</a>
           </div>
         </footer>
       </main>

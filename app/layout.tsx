@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { Inter, JetBrains_Mono } from "next/font/google";
 import { Analytics } from "@vercel/analytics/react";
 import Link from "next/link";
-import { UtmLink } from "./components/UtmLink";
+
 import "./globals.css";
 
 const inter = Inter({ subsets: ["latin"], variable: "--font-inter" });
@@ -52,15 +52,15 @@ function Nav() {
             </a>
           </li>
         </ul>
-        <UtmLink
-          href="https://app.reflectt.ai"
+        <a
+          href="/bootstrap"
           className="inline-flex items-center gap-1.5 px-[18px] py-2 bg-brand text-white rounded-lg text-sm font-semibold hover:bg-brand-hover transition-colors no-underline"
         >
-          Try the cloud
+          Get started
           <svg width="12" height="12" viewBox="0 0 12 12" fill="none">
             <path d="M2 6h8M6 2l4 4-4 4" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
           </svg>
-        </UtmLink>
+        </a>
       </div>
     </nav>
   );
@@ -82,7 +82,7 @@ function Footer() {
               <div className="text-[11px] font-bold uppercase tracking-wider text-ink-500 mb-3.5">Products</div>
               <ul className="list-none flex flex-col gap-2.5">
                 <li><a href="https://forAgents.dev" className="text-[13px] text-ink-300 hover:text-ink-100 transition-colors">forAgents.dev</a></li>
-                <li><a href="https://app.reflectt.ai" className="text-[13px] text-ink-300 hover:text-ink-100 transition-colors">Reflectt Cloud</a></li>
+                <li><a href="/bootstrap" className="text-[13px] text-ink-300 hover:text-ink-100 transition-colors">Self-host</a></li>
               </ul>
             </div>
             <div>
@@ -98,7 +98,7 @@ function Footer() {
                 <li><a href="https://discord.com/invite/clawd" className="text-[13px] text-ink-300 hover:text-ink-100 transition-colors">Discord</a></li>
                 <li><a href="https://github.com/reflectt" className="text-[13px] text-ink-300 hover:text-ink-100 transition-colors">GitHub</a></li>
                 <li><a href="mailto:support@reflectt.ai?subject=Support%20—%20Reflectt" className="text-[13px] text-ink-300 hover:text-ink-100 transition-colors">Support</a></li>
-                <li><a href="https://app.reflectt.ai" className="text-[13px] text-ink-300 hover:text-ink-100 transition-colors">Try Reflectt Cloud</a></li>
+                <li><a href="/bootstrap" className="text-[13px] text-ink-300 hover:text-ink-100 transition-colors">Get started</a></li>
               </ul>
             </div>
           </div>
