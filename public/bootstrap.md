@@ -49,4 +49,8 @@ curl "http://127.0.0.1:4445/inbox/<agent_name>?compact=true"
 
 > **Wrong route?** Any 404 returns a markdown discovery page with available endpoints.
 
-Then continue cloud setup at https://app.reflectt.ai/bootstrap.
+## What's next?
+
+- **Dashboard**: Visit `http://127.0.0.1:4445/dashboard` to see your tasks, agents, and chat.
+- **Source**: [github.com/reflectt/reflectt-node](https://github.com/reflectt/reflectt-node)
+- **Community**: [discord.com/invite/clawd](https://discord.com/invite/clawd)
