@@ -3,7 +3,7 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "Self-Host Reflectt — Set Up in 5 Minutes",
   description:
-    "Give your AI agents shared tasks, memory, and coordination. One command to install. Tell your agent this URL to get started.",
+    "Give your AI agents shared tasks, memory, and coordination. One command to install. Works with Claude, ChatGPT, Cursor, or any AI assistant.",
   openGraph: {
     title: "Self-Host Reflectt — Set Up in 5 Minutes",
     description:
@@ -343,10 +343,10 @@ export default function BootstrapPage() {
 
         {/* Primary CTA */}
         <div className="bp-cta-card">
-          <h2>The fastest way: tell your agent</h2>
+          <h2>Paste this into any AI assistant</h2>
           <p>
-            Copy this into any AI agent&apos;s chat — OpenClaw, Claude, ChatGPT,
-            Cursor, or anything with web access. It will handle the rest.
+            Works with Claude, ChatGPT, Cursor, OpenClaw, or anything with web
+            access. Your assistant will handle the install.
           </p>
           <div className="bp-command">
             Follow the bootstrap instructions at{" "}
@@ -390,6 +390,19 @@ export default function BootstrapPage() {
                 together — no extra configuration needed.
               </p>
             </div>
+          </div>
+        </div>
+
+        {/* npm alternative */}
+        <div className="bp-alt-card">
+          <h3>📦 Or install with npm</h3>
+          <p>If you have Node.js 20+ installed, three commands is all it takes.</p>
+          <div className="bp-command">
+            <span className="prompt">$ </span>npm install -g reflectt-node && reflectt init && reflectt start
+            <CopyButton
+              text="npm install -g reflectt-node && reflectt init && reflectt start"
+              label="Copy npm install command"
+            />
           </div>
         </div>
 
