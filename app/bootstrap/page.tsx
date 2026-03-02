@@ -471,8 +471,9 @@ export default function BootstrapPage() {
           <div className="bp-footer-links">
             <a href="https://reflectt.ai">Home</a>
             <a href="https://github.com/reflectt/reflectt-node">GitHub</a>
-            <a href="https://discord.com/invite/clawd">Discord</a>
-            <a href="https://discord.com/invite/clawd">Community</a>
+            <a href="https://discord.gg/gMbWskMkbT">Discord</a>
+            <a href="https://discord.gg/gMbWskMkbT">Community</a>
+            <a href="https://app.reflectt.ai">Cloud Dashboard</a>
           </div>
         </footer>
       </main>
