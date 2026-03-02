@@ -3,11 +3,27 @@
 Canonical first-run flow for installing and configuring reflectt-node.
 
 ## 1) Install reflectt-node
-(OpenClaw is a prerequisite. If `openclaw` is missing, install it via official docs, then rerun.)
 
+**Option A: npm (no dependencies)**
+```bash
+npm install -g reflectt-node
+reflectt init
+reflectt start
+```
+
+**Option B: Docker**
+```bash
+docker run -d --name reflectt-node \
+  -p 4445:4445 \
+  -v reflectt-data:/data \
+  ghcr.io/reflectt/reflectt-node:latest
+```
+
+**Option C: curl installer (requires OpenClaw)**
 ```bash
 curl -fsSL https://www.reflectt.ai/install.sh | bash
 ```
+OpenClaw is required for this path. If missing, use Option A or B, or install OpenClaw first.
 
 ## 2) Verify health
 ```bash
@@ -53,5 +69,6 @@ curl "http://127.0.0.1:4445/inbox/<agent_name>?compact=true"
 ## What's next?
 
 - **Dashboard**: Visit `http://127.0.0.1:4445/dashboard` to see your tasks, agents, and chat.
+- **Cloud sync** (optional): `reflectt host connect --join-token <token>` — get your token at [app.reflectt.ai](https://app.reflectt.ai)
 - **Source**: [github.com/reflectt/reflectt-node](https://github.com/reflectt/reflectt-node)
 - **Community**: [discord.com/invite/clawd](https://discord.com/invite/clawd)
