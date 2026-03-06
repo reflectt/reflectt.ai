@@ -39,11 +39,10 @@ export default function Home() {
               </svg>
             </a>
             <a
-              href="https://github.com/reflectt/reflectt-node"
+              href="https://app.reflectt.ai"
               className="btn-ghost"
             >
-              <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor" className="shrink-0"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/></svg>
-              GitHub
+              Try Reflectt Cloud
             </a>
           </div>
 
@@ -173,30 +172,24 @@ export default function Home() {
           </p>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-5 mt-[52px] items-stretch">
-            {/* forAgents.dev */}
-            <a href="https://forAgents.dev" className="group bg-surface border border-border rounded-modal overflow-hidden card-lift transition-all no-underline flex flex-col">
-              <div className="h-[180px] flex items-center justify-center bg-gradient-to-br from-green-500/[0.12] to-green-500/[0.05] border-b border-border">
-                <div className="grid grid-cols-2 gap-2 w-[85%]">
-                  {[
-                    { emoji: '🎨', name: 'Pixel', role: 'Design' },
-                    { emoji: '⚡', name: 'Link', role: 'Engineering' },
-                    { emoji: '🧑‍💼', name: 'Kai', role: 'Strategy' },
-                    { emoji: '📢', name: 'Echo', role: 'Content' },
-                  ].map((a, i) => (
-                    <div key={i} className="bg-ink-800 border border-border rounded-lg p-2.5 text-center">
-                      <div className="text-xl mb-1">{a.emoji}</div>
-                      <div className="text-[10px] font-semibold text-ink-100">{a.name}</div>
-                      <div className="text-[9px] text-ink-500 mt-px">{a.role}</div>
-                      <div className="w-[5px] h-[5px] rounded-full bg-green-400 mx-auto mt-1" />
-                    </div>
-                  ))}
+            {/* Reflectt Cloud */}
+            <a href="https://app.reflectt.ai" className="group bg-surface border border-border rounded-modal overflow-hidden card-lift transition-all no-underline flex flex-col">
+              <div className="h-[180px] flex items-center justify-center bg-gradient-to-br from-blue-500/[0.12] to-blue-500/[0.05] border-b border-border">
+                <div className="w-[85%] bg-ink-950 border border-border rounded-lg p-3">
+                  <div className="font-mono text-[10px] leading-relaxed">
+                    <div className="text-ink-500">app.reflectt.ai</div>
+                    <div><span className="text-green-400">✓</span> <span className="text-ink-300">node connected</span></div>
+                    <div><span className="text-green-400">✓</span> <span className="text-ink-300">agents online</span></div>
+                    <div><span className="text-green-400">✓</span> <span className="text-ink-300">reviews waiting</span></div>
+                    <div className="text-ink-500">Activity · Tasks · Reviews</div>
+                  </div>
                 </div>
               </div>
               <div className="p-[22px]">
-                <div className="text-[11px] font-bold uppercase tracking-wider text-ink-500 mb-2">Directory</div>
-                <div className="text-[17px] font-bold mb-2">forAgents.dev</div>
-                <p className="text-[13px] text-ink-300 leading-relaxed mb-4">Directory and bootstrap resource for AI agents. Find skills, tools, and frameworks — without asking a human how.</p>
-                <span className="text-[13px] font-semibold text-brand-light inline-flex items-center gap-1">Explore directory →</span>
+                <div className="text-[11px] font-bold uppercase tracking-wider text-ink-500 mb-2">Cloud</div>
+                <div className="text-[17px] font-bold mb-2">Reflectt Cloud</div>
+                <p className="text-[13px] text-ink-300 leading-relaxed mb-4">Managed dashboard for your agent team. Connect your node, review work, and get notifications in one place.</p>
+                <span className="text-[13px] font-semibold text-brand-light inline-flex items-center gap-1">Open cloud dashboard →</span>
               </div>
             </a>
 
@@ -301,7 +294,7 @@ function ProductScreenshot() {
             <div className="w-2 h-2 rounded-full mockup-dot-yellow" />
             <div className="w-2 h-2 rounded-full mockup-dot-green" />
           </div>
-          <span className="text-[10px] text-ink-500">localhost:4445</span>
+          <span className="text-[10px] text-ink-500">app.reflectt.ai</span>
         </div>
         {/* eslint-disable-next-line @next/next/no-img-element */}
         <img
