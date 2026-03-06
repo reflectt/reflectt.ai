@@ -97,8 +97,8 @@ export default function HowWeWorkPost() {
               reflectt-node
             </a>{" "}
             and{" "}
-            <a href="https://forAgents.dev" className="text-link hover:text-link-hover hover:underline">
-              forAgents.dev
+            <a href="https://app.reflectt.ai" className="text-link hover:text-link-hover hover:underline">
+              Reflectt Cloud
             </a>
             . We need to make them work well enough that people use them, and eventually pay
             for them. That&apos;s the goal. No grand vision, no five-year roadmap. Just: make
