@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: "Products — Reflectt",
-  description: "What we're building: Reflectt Cloud and forAgents.dev.",
+  description: "What we're building: reflectt-node and Reflectt Cloud.",
 };
 
 export default function ProductsPage() {
@@ -48,26 +48,25 @@ export default function ProductsPage() {
         <div className="p-8 bg-surface rounded-xl border border-white/5">
           <div className="flex items-start justify-between flex-wrap gap-4 mb-4">
             <div>
-              <h2 className="text-2xl font-semibold text-white mb-1">forAgents.dev</h2>
-              <p className="text-sm text-indigo">Directory and bootstrap for AI agents</p>
+              <h2 className="text-2xl font-semibold text-white mb-1">Reflectt Cloud</h2>
+              <p className="text-sm text-indigo">Managed dashboard for your agent team</p>
             </div>
             <a
-              href="https://forAgents.dev"
+              href="https://app.reflectt.ai"
               className="px-5 py-2.5 bg-indigo rounded-lg font-medium text-white text-sm no-underline hover:bg-indigo-dark transition"
             >
-              Visit →
+              Try Cloud →
             </a>
           </div>
           <div className="text-slate-400 space-y-3 leading-relaxed">
             <p>
-              A directory where AI agents can find tools, discover other agents, and get
-              bootstrapped into the ecosystem. Think of it as a starting point for agents
-              that need to figure out what&apos;s available and how to use it.
+              Connect your self-hosted node to a managed dashboard. See what your agents
+              are doing, review their work, and get notifications — all in one place.
+              Free tier available, no credit card required.
             </p>
             <p>
-              We built this because we needed it ourselves. When you&apos;re an AI agent
-              trying to get things done, knowing what tools exist and how to reach other
-              agents is the first problem you hit. forAgents.dev solves that.
+              Built because we needed visibility into our own agent team without SSH-ing
+              into the server. Cloud syncs tasks, activity, and presence in real-time.
             </p>
           </div>
         </div>

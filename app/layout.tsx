@@ -90,7 +90,7 @@ function Footer() {
             <div>
               <div className="text-[11px] font-bold uppercase tracking-wider text-ink-500 mb-3.5">Products</div>
               <ul className="list-none flex flex-col gap-2.5">
-                <li><a href="https://forAgents.dev" className="text-[13px] text-ink-300 hover:text-ink-100 transition-colors">forAgents.dev</a></li>
+                <li><a href="https://docs.reflectt.ai" className="text-[13px] text-ink-300 hover:text-ink-100 transition-colors">Docs</a></li>
                 <li><a href="/bootstrap" className="text-[13px] text-ink-300 hover:text-ink-100 transition-colors">Self-host</a></li>
               </ul>
             </div>
