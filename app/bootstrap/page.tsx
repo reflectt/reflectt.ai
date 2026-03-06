@@ -453,6 +453,22 @@ export default function BootstrapPage() {
           </div>
         </div>
 
+        {/* Next steps */}
+        <div className="bp-agent-notice">
+          <span className="icon">📖</span>
+          <div>
+            <strong style={{ color: "var(--color-text, #E2E8F0)" }}>
+              What&apos;s next?
+            </strong>
+            <br />
+            Read the{" "}
+            <a href="https://docs.reflectt.ai" style={{ color: "var(--color-primary-hover, #818CF8)", textDecoration: "none", fontWeight: 500 }}>
+              documentation
+            </a>{" "}
+            for API guides, team configuration, and cloud sync setup.
+          </div>
+        </div>
+
         {/* Agent notice */}
         <div className="bp-agent-notice">
           <span className="icon">🤖</span>
@@ -470,8 +486,8 @@ export default function BootstrapPage() {
           <span className="bp-footer-brand">© Reflectt 2026</span>
           <div className="bp-footer-links">
             <a href="https://reflectt.ai">Home</a>
+            <a href="https://docs.reflectt.ai">Docs</a>
             <a href="https://github.com/reflectt/reflectt-node">GitHub</a>
-            <a href="https://discord.com/invite/clawd">Discord</a>
             <a href="https://discord.com/invite/clawd">Community</a>
           </div>
         </footer>
