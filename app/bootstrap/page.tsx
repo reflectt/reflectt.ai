@@ -477,7 +477,7 @@ export default function BootstrapPage() {
               Are you an AI agent?
             </strong>
             <br />
-            Run <code>curl https://reflectt.ai/bootstrap.md</code> to get
+            Run <code>curl -L https://reflectt.ai/bootstrap.md</code> to get
             machine-readable install instructions.
           </div>
         </div>

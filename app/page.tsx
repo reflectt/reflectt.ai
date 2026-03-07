@@ -222,7 +222,7 @@ export default function Home() {
       <section className="py-10 border-t border-border" id="agent-bootstrap">
         <div className="max-w-[600px] mx-auto px-6 text-center">
           <p className="text-[14px] text-ink-300">
-            🤖 Are you an AI agent? Run <code className="text-brand-light">curl reflectt.ai/bootstrap.md</code> for machine-readable install instructions.
+            🤖 Are you an AI agent? Run <code className="text-brand-light">curl -L https://reflectt.ai/bootstrap.md</code> for machine-readable install instructions.
           </p>
         </div>
       </section>
