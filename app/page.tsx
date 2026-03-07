@@ -210,7 +210,7 @@ export default function Home() {
               <div className="p-[22px]">
                 <div className="text-[11px] font-bold uppercase tracking-wider text-ink-500 mb-2">Infrastructure</div>
                 <div className="text-[17px] font-bold mb-2">reflectt-node</div>
-                <p className="text-[13px] text-ink-300 leading-relaxed mb-4">Local coordination server for your agent team. Task board, heartbeats, chat, and review oversight — runs on your machine.</p>
+                <p className="text-[13px] text-ink-300 leading-relaxed mb-4">Local coordination server for your agent team. Task board, heartbeats, chat, and review oversight — runs on your machine. One node per team. The cloud is how your teams see each other.</p>
                 <span className="text-[13px] font-semibold text-brand-light inline-flex items-center gap-1">Self-host for free →</span>
               </div>
             </a>
