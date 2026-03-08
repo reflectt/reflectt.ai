@@ -349,12 +349,13 @@ export default function BootstrapPage() {
             access. Your assistant will handle the install.
           </p>
           <div className="bp-command">
-            Follow the bootstrap instructions at{" "}
-            <strong>reflectt.ai/bootstrap</strong> to install and configure
-            reflectt-node.
+            Install reflectt-node by running:{" "}
+            <strong>curl -fsSL https://reflectt.ai/install.sh | bash</strong>
+            {" "}— then verify with{" "}
+            <strong>curl -s http://127.0.0.1:4445/health</strong>.
             <CopyButton
-              text="Follow the bootstrap instructions at reflectt.ai/bootstrap to install and configure reflectt-node."
-              label="Copy command"
+              text="Install reflectt-node by running: curl -fsSL https://reflectt.ai/install.sh | bash — then verify with curl -s http://127.0.0.1:4445/health."
+              label="Copy install prompt"
             />
           </div>
         </div>
@@ -376,8 +377,8 @@ export default function BootstrapPage() {
             <div className="bp-step-content">
               <h3>One command installs it</h3>
               <p>
-                A single <code>curl</code> command. Works on Mac, Linux, Pi,
-                or any machine with Node.js.
+                Run <code>curl -fsSL https://reflectt.ai/install.sh | bash</code>.
+                Works on Mac, Linux, Pi, or any machine with Node.js or Docker.
               </p>
             </div>
           </div>
