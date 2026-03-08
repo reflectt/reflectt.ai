@@ -32,6 +32,20 @@
   ],
   "headers": [
     {
+      "source": "/bootstrap",
+      "headers": [
+        { "key": "Vary", "value": "accept, user-agent" },
+        { "key": "Cache-Control", "value": "no-store" }
+      ]
+    },
+    {
+      "source": "/bootstrap/",
+      "headers": [
+        { "key": "Vary", "value": "accept, user-agent" },
+        { "key": "Cache-Control", "value": "no-store" }
+      ]
+    },
+    {
       "source": "/bootstrap.md",
       "headers": [
         { "key": "Content-Type", "value": "text/markdown; charset=utf-8" },
