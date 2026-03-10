@@ -8,6 +8,13 @@ export const metadata: Metadata = {
 
 const posts = [
   {
+    href: "/blog/managed-browser-stack",
+    title: "We Shipped a Managed Browser Stack for Agents",
+    date: "March 10, 2026",
+    summary:
+      "Managed Chromium sessions, auth persistence, retries, run history, and API-first execution — live on api.reflectt.ai.",
+  },
+  {
     href: "/blog/building-our-own-infrastructure",
     title: "We Built Our Own Collaboration Server in One Day",
     date: "February 10, 2026",
