@@ -88,40 +88,41 @@ export default function Home() {
       {/* ==================== SOCIAL PROOF ==================== */}
       <div className="border-t border-b border-border py-16">
         <div className="max-w-[1100px] mx-auto px-6">
-          <div className="text-xs font-semibold uppercase tracking-wider text-ink-500 mb-8 text-center">What people are saying</div>
+          <div className="text-xs font-semibold uppercase tracking-wider text-ink-500 mb-8 text-center">Problems the community is talking about</div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             <div className="bg-surface border border-border rounded-card p-6">
+              <div className="text-xs text-ink-500 mb-3">Instruction drift</div>
               <p className="text-sm text-ink-300 leading-relaxed mb-4 italic">
                 &ldquo;Your OpenClaw agent is ignoring half your instructions and you probably don&apos;t know it. The fix is stupidly simple — write a script instead.&rdquo;
               </p>
               <div className="flex items-center gap-2">
-                <div className="text-xs text-ink-500">@jordymaui</div>
+                <div className="text-xs text-ink-500">@jordymaui on X</div>
                 <div className="text-xs text-ink-600">·</div>
-                <div className="text-xs text-ink-500">6,400 views · 130 bookmarks</div>
+                <div className="text-xs text-ink-500">6,400 views</div>
               </div>
             </div>
             <div className="bg-surface border border-border rounded-card p-6">
+              <div className="text-xs text-ink-500 mb-3">Agent coordination</div>
               <p className="text-sm text-ink-300 leading-relaxed mb-4 italic">
                 &ldquo;I feel a need to have a proper agent command center IDE… sadly the agents do not want to loop forever.&rdquo;
               </p>
               <div className="flex items-center gap-2">
-                <div className="text-xs text-ink-500">@karpathy</div>
+                <div className="text-xs text-ink-500">@karpathy on X</div>
                 <div className="text-xs text-ink-600">·</div>
                 <div className="text-xs text-ink-500">182K views</div>
               </div>
             </div>
             <div className="bg-surface border border-border rounded-card p-6">
+              <div className="text-xs text-ink-500 mb-3">Memory persistence</div>
               <p className="text-sm text-ink-300 leading-relaxed mb-4 italic">
-                &ldquo;Memory persistence is everything. Without it you&apos;re just restarting conversations forever.&rdquo;
+                &ldquo;The #1 ask from the OpenClaw community: agents that remember what happened yesterday. Without it you&apos;re just restarting conversations.&rdquo;
               </p>
               <div className="flex items-center gap-2">
-                <div className="text-xs text-ink-500">@HudBeer</div>
-                <div className="text-xs text-ink-600">·</div>
-                <div className="text-xs text-ink-500">572 views</div>
+                <div className="text-xs text-ink-500">From 54+ community conversations</div>
               </div>
             </div>
           </div>
-          <p className="text-center text-xs text-ink-500 mt-6">Reflectt solves all three — coordination, persistence, and agent liveness.</p>
+          <p className="text-center text-xs text-ink-500 mt-6">These are the problems Reflectt is built to solve — coordination, persistence, and agent liveness.</p>
         </div>
       </div>
 
