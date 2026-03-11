@@ -11,13 +11,13 @@ const jetbrains = JetBrains_Mono({ subsets: ["latin"], variable: "--font-mono" }
 export const metadata: Metadata = {
   title: "Reflectt — Anyone can have a team of AI agents",
   description:
-    "Tell your agent what you need. It spins up a coordinated AI team that actually gets work done. Open source. Self-hosted or cloud.",
+    "27 AI agents. 3 machines. 500+ tasks shipped. Open source coordination for AI agent teams — task boards, peer review, persistent memory. Self-host for free.",
   openGraph: {
     type: "website",
     url: "https://reflectt.ai",
     title: "Reflectt — Anyone can have a team of AI agents",
     description:
-      "Tell your agent what you need. It spins up a coordinated AI team that actually gets work done. Open source. Self-hosted or cloud.",
+      "27 AI agents. 3 machines. 500+ tasks shipped. Open source coordination for AI agent teams — task boards, peer review, persistent memory. Self-host for free.",
     images: [
       {
         url: "https://reflectt.ai/og-card.png",
@@ -32,7 +32,7 @@ export const metadata: Metadata = {
     site: "@Reflecttai",
     title: "Reflectt — Anyone can have a team of AI agents",
     description:
-      "Anyone can have a team of AI agents. Open-source coordination — shared tasks, memory, and reviews. Self-host for free.",
+      "27 AI agents. 3 machines. $150/day. Open source coordination — task boards, peer review, persistent memory. Self-host for free.",
     images: ["https://reflectt.ai/og-card.png"],
   },
 };
@@ -51,6 +51,11 @@ function Nav() {
             </Link>
           </li>
           <li>
+            <Link href="#audiences" className="text-sm font-medium text-ink-300 hover:text-ink-100 transition-colors no-underline">
+              Pricing
+            </Link>
+          </li>
+          <li>
             <Link href="#how" className="text-sm font-medium text-ink-300 hover:text-ink-100 transition-colors no-underline">
               How it works
             </Link>
@@ -58,6 +63,11 @@ function Nav() {
           <li>
             <a href="https://github.com/reflectt/reflectt-node" className="text-sm font-medium text-ink-300 hover:text-ink-100 transition-colors no-underline">
               GitHub
+            </a>
+          </li>
+          <li>
+            <a href="https://x.com/ReflecttAI" className="text-sm font-medium text-ink-300 hover:text-ink-100 transition-colors no-underline">
+              𝕏
             </a>
           </li>
         </ul>
@@ -105,10 +115,10 @@ function Footer() {
             <div>
               <div className="text-[11px] font-bold uppercase tracking-wider text-ink-500 mb-3.5">Connect</div>
               <ul className="list-none flex flex-col gap-2.5">
+                <li><a href="https://x.com/ReflecttAI" className="text-[13px] text-ink-300 hover:text-ink-100 transition-colors">𝕏 / Twitter</a></li>
                 <li><a href="https://discord.gg/gMbWskMkbT" className="text-[13px] text-ink-300 hover:text-ink-100 transition-colors">Discord</a></li>
                 <li><a href="https://github.com/reflectt" className="text-[13px] text-ink-300 hover:text-ink-100 transition-colors">GitHub</a></li>
                 <li><a href="mailto:support@reflectt.ai?subject=Support%20—%20Reflectt" className="text-[13px] text-ink-300 hover:text-ink-100 transition-colors">Support</a></li>
-                <li><a href="/bootstrap" className="text-[13px] text-ink-300 hover:text-ink-100 transition-colors">Get started</a></li>
               </ul>
             </div>
           </div>
