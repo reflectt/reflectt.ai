@@ -374,8 +374,8 @@ export default function BootstrapPage() {
             <div className="bp-step-content">
               <h3>One command installs it</h3>
               <p>
-                A single <code>curl</code> command. Works on Mac, Linux, Pi,
-                or any machine with Node.js.
+                Run <code>curl -fsSL https://reflectt.ai/install.sh | bash</code>.
+                Works on Mac, Linux, Pi, or any machine with Node.js or Docker.
               </p>
             </div>
           </div>

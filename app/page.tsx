@@ -425,8 +425,8 @@ export default function Home() {
 function ProductScreenshot() {
   return (
     <div className="relative max-w-[960px] mx-auto">
-      {/* Primary: Node dashboard screenshot */}
-      <div className="relative rounded-t-2xl overflow-hidden border border-border border-b-0 shadow-[0_-8px_60px_rgba(0,0,0,0.6),0_0_100px_rgba(59,87,232,0.1)]">
+      {/* Primary: Presence canvas — the room where your team lives */}
+      <div className="relative rounded-t-2xl overflow-hidden border border-border border-b-0 shadow-[0_-8px_60px_rgba(0,0,0,0.6),0_0_120px_rgba(139,92,246,0.15)]">
         {/* Chrome bar */}
         <div className="bg-ink-800 border-b border-border px-4 py-3 flex items-center gap-3">
           <div className="flex gap-1.5">
@@ -435,23 +435,23 @@ function ProductScreenshot() {
             <div className="w-2.5 h-2.5 rounded-full mockup-dot-green" />
           </div>
           <div className="flex-1 bg-ink-900 border border-border rounded-md py-1 px-3 text-xs text-ink-500 text-center max-w-[300px] mx-auto">
-            localhost:4445/dashboard
+            app.reflectt.ai/presence
           </div>
         </div>
         {/* eslint-disable-next-line @next/next/no-img-element */}
         <img
-          src="/screenshots/node-dashboard.png"
-          alt="reflectt-node dashboard showing team agents, task board, and runtime status"
+          src="/screenshots/presence.png"
+          alt="Reflectt presence canvas — your AI agents as a living constellation of glowing orbs"
           className="w-full h-auto block"
           loading="eager"
         />
         {/* Context label */}
         <div className="absolute top-14 left-4 px-2.5 py-1 bg-ink-900/90 border border-border rounded-md text-[11px] font-semibold text-ink-300 backdrop-blur-sm">
-          🖥️ reflectt-node · local dashboard
+          ☁️ Reflectt Cloud · presence
         </div>
       </div>
 
-      {/* Floating cloud screenshot (overlaps bottom-right) */}
+      {/* Floating node dashboard (overlaps bottom-right) */}
       <div className="hidden md:block absolute -bottom-8 -right-6 w-[340px] rounded-xl overflow-hidden border border-border shadow-[0_8px_40px_rgba(0,0,0,0.5)]">
         <div className="bg-ink-800 border-b border-border px-3 py-2 flex items-center gap-2">
           <div className="flex gap-1">
@@ -459,18 +459,18 @@ function ProductScreenshot() {
             <div className="w-2 h-2 rounded-full mockup-dot-yellow" />
             <div className="w-2 h-2 rounded-full mockup-dot-green" />
           </div>
-          <span className="text-[10px] text-ink-500">app.reflectt.ai</span>
+          <span className="text-[10px] text-ink-500">localhost:4445/dashboard</span>
         </div>
         {/* eslint-disable-next-line @next/next/no-img-element */}
         <img
-          src="/screenshots/cloud-dashboard.png"
-          alt="Reflectt Cloud — remote coordination dashboard"
+          src="/screenshots/node-dashboard.png"
+          alt="reflectt-node local dashboard"
           className="w-full h-auto block"
           loading="eager"
         />
         {/* Context label */}
         <div className="absolute bottom-2 left-2 right-2 px-2 py-1 bg-ink-900/90 border border-border rounded-md text-[10px] font-semibold text-ink-300 text-center backdrop-blur-sm">
-          ☁️ Reflectt Cloud · remote dashboard
+          🖥️ reflectt-node · local dashboard
         </div>
       </div>
     </div>
