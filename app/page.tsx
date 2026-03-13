@@ -89,11 +89,26 @@ export default function Home() {
         </div>
       </div>
 
+      {/* ==================== KARPATHY — featured, first scroll ==================== */}
+      <div className="border-t border-border py-14 bg-surface-2">
+        <div className="max-w-[760px] mx-auto px-6 text-center">
+          <div className="text-[clamp(18px,2.5vw,26px)] font-semibold text-ink-100 leading-snug mb-5 italic">
+            &ldquo;I feel a need to have a proper agent command center IDE… sadly the agents do not want to loop forever.&rdquo;
+          </div>
+          <div className="flex items-center justify-center gap-2">
+            <span className="text-sm font-semibold text-ink-300">@karpathy</span>
+            <span className="text-ink-600">·</span>
+            <span className="text-xs text-ink-500">182K views on X</span>
+          </div>
+          <p className="text-xs text-ink-600 mt-4">That command center is what we built.</p>
+        </div>
+      </div>
+
       {/* ==================== SOCIAL PROOF ==================== */}
       <div className="border-t border-b border-border py-16">
         <div className="max-w-[1100px] mx-auto px-6">
           <div className="text-xs font-semibold uppercase tracking-wider text-ink-500 mb-8 text-center">Problems the community is talking about</div>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             <div className="bg-surface border border-border rounded-card p-6">
               <div className="text-xs text-ink-500 mb-3">Instruction drift</div>
               <p className="text-sm text-ink-300 leading-relaxed mb-4 italic">
@@ -103,17 +118,6 @@ export default function Home() {
                 <div className="text-xs text-ink-500">@jordymaui on X</div>
                 <div className="text-xs text-ink-600">·</div>
                 <div className="text-xs text-ink-500">6,400 views</div>
-              </div>
-            </div>
-            <div className="bg-surface border border-border rounded-card p-6">
-              <div className="text-xs text-ink-500 mb-3">Agent coordination</div>
-              <p className="text-sm text-ink-300 leading-relaxed mb-4 italic">
-                &ldquo;I feel a need to have a proper agent command center IDE… sadly the agents do not want to loop forever.&rdquo;
-              </p>
-              <div className="flex items-center gap-2">
-                <div className="text-xs text-ink-500">@karpathy on X</div>
-                <div className="text-xs text-ink-600">·</div>
-                <div className="text-xs text-ink-500">182K views</div>
               </div>
             </div>
             <div className="bg-surface border border-border rounded-card p-6">
