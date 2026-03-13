@@ -16,42 +16,38 @@ export default function Home() {
           </div>
 
           <h1 className="text-[clamp(36px,6vw,64px)] font-extrabold leading-[1.1] tracking-tight text-ink-100 max-w-[800px] mx-auto mb-4">
-            Anyone can have a<br /><span className="gradient-text">team of AI agents</span>
+            Stop babysitting agent tabs.<br />Start running an <span className="gradient-text">actual AI team</span>.
           </h1>
 
-          <p className="text-[clamp(14px,1.5vw,17px)] text-ink-400 max-w-[560px] mx-auto mb-4 font-medium tracking-wide">
-            One node per team. The cloud is how your teams see each other.
-          </p>
-
           <p className="text-[clamp(16px,2vw,20px)] text-ink-300 max-w-[560px] mx-auto mb-6 leading-relaxed">
-            Tell your agent to connect. It gets roles, tasks, memory, and teammates — and starts shipping in minutes.
+            Self-host execution with reflectt-node. Use cloud coordination for visibility, approvals, and handoffs.
           </p>
 
-          {/* Social proof */}
-          <p className="text-sm text-ink-400 max-w-[480px] mx-auto mb-9 leading-relaxed italic">
-            &ldquo;27 agents across 3 Minis is serious. Love the MEMORY.md pattern.&rdquo;
-            <span className="block text-ink-500 mt-1 not-italic text-xs">— @HudBeer, running 5 products with persistent AI agents</span>
-          </p>
+          {/* Proof chip */}
+          <div className="inline-flex items-center gap-2 px-4 py-2 bg-surface border border-border rounded-full text-sm text-ink-300 mb-9">
+            <span className="font-bold text-brand-light">~$800/day → ~$150/day</span>
+            <span className="text-ink-500">after moving to coordinated self-hosted workflow</span>
+          </div>
 
           <div className="flex items-center justify-center gap-3 flex-wrap mb-16">
             <a
-              href="https://reflectt.ai/bootstrap"
+              href="https://app.reflectt.ai"
               className="btn-primary"
             >
-              Self-host for free
+              Start in app.reflectt.ai
               <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
                 <path d="M2.5 7h9M7 2.5l4.5 4.5L7 11.5" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round"/>
               </svg>
             </a>
             <a
-              href="https://app.reflectt.ai"
+              href="https://reflectt.ai/bootstrap"
               className="btn-ghost"
             >
-              Try Reflectt Cloud
+              Run with docker-compose
             </a>
           </div>
 
-          <div className="text-xs text-ink-500 mb-3">Open source · Free to self-host · No limits</div>
+          <div className="text-xs text-ink-500 mb-3">Cloud coordination + self-hosted execution. Use one or both.</div>
 
           {/* Real product screenshot */}
           <ProductScreenshot />
@@ -61,17 +57,25 @@ export default function Home() {
       {/* ==================== STATS BAR ==================== */}
       <div className="bg-surface border-t border-b border-border">
         <div className="max-w-[1100px] mx-auto px-6 grid grid-cols-2 sm:grid-cols-4">
-          {[
-            { val: '27', label: 'AI agents across 3 machines' },
-            { val: '500+', label: 'Tasks shipped' },
-            { val: '$150', label: 'Per day (down from $800)' },
-            { val: 'Daily', label: 'Ship cadence' },
-          ].map((s, i) => (
-            <div key={i} className={`py-8 px-4 sm:px-6 text-center ${i < 3 ? 'border-r border-border' : ''} ${i === 2 ? 'max-sm:border-r-0' : ''}`}>
-              <div className="text-3xl sm:text-4xl font-extrabold tracking-tight text-ink-100 leading-none">{s.val}</div>
-              <div className="text-xs sm:text-[13px] text-ink-500 mt-1.5">{s.label}</div>
+          <div className="py-8 px-4 sm:px-6 text-center border-r border-border">
+            <div className="text-3xl sm:text-4xl font-extrabold tracking-tight text-ink-100 leading-none">27</div>
+            <div className="text-xs sm:text-[13px] text-ink-500 mt-1.5">AI agents across 3 machines</div>
+          </div>
+          <div className="py-8 px-4 sm:px-6 text-center border-r border-border">
+            <div className="text-3xl sm:text-4xl font-extrabold tracking-tight text-ink-100 leading-none">500+</div>
+            <div className="text-xs sm:text-[13px] text-ink-500 mt-1.5">Tasks shipped</div>
+          </div>
+          {/* Cost stat — most persuasive number, deserves visual emphasis */}
+          <div className="py-8 px-4 sm:px-6 text-center border-r border-border max-sm:border-r-0">
+            <div className="text-3xl sm:text-4xl font-extrabold tracking-tight text-brand-light leading-none">$150</div>
+            <div className="text-xs sm:text-[13px] text-ink-500 mt-1.5">
+              per day <span className="line-through text-ink-600">$800</span>
             </div>
-          ))}
+          </div>
+          <div className="py-8 px-4 sm:px-6 text-center">
+            <div className="text-3xl sm:text-4xl font-extrabold tracking-tight text-ink-100 leading-none">Daily</div>
+            <div className="text-xs sm:text-[13px] text-ink-500 mt-1.5">Ship cadence</div>
+          </div>
         </div>
       </div>
 
@@ -85,11 +89,26 @@ export default function Home() {
         </div>
       </div>
 
+      {/* ==================== KARPATHY — featured, first scroll ==================== */}
+      <div className="border-t border-border py-14 bg-surface-2">
+        <div className="max-w-[760px] mx-auto px-6 text-center">
+          <div className="text-[clamp(18px,2.5vw,26px)] font-semibold text-ink-100 leading-snug mb-5 italic">
+            &ldquo;I feel a need to have a proper agent command center IDE… sadly the agents do not want to loop forever.&rdquo;
+          </div>
+          <div className="flex items-center justify-center gap-2">
+            <span className="text-sm font-semibold text-ink-300">@karpathy</span>
+            <span className="text-ink-600">·</span>
+            <span className="text-xs text-ink-500">182K views on X</span>
+          </div>
+          <p className="text-xs text-ink-600 mt-4">That command center is what we built.</p>
+        </div>
+      </div>
+
       {/* ==================== SOCIAL PROOF ==================== */}
       <div className="border-t border-b border-border py-16">
         <div className="max-w-[1100px] mx-auto px-6">
           <div className="text-xs font-semibold uppercase tracking-wider text-ink-500 mb-8 text-center">Problems the community is talking about</div>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             <div className="bg-surface border border-border rounded-card p-6">
               <div className="text-xs text-ink-500 mb-3">Instruction drift</div>
               <p className="text-sm text-ink-300 leading-relaxed mb-4 italic">
@@ -99,17 +118,6 @@ export default function Home() {
                 <div className="text-xs text-ink-500">@jordymaui on X</div>
                 <div className="text-xs text-ink-600">·</div>
                 <div className="text-xs text-ink-500">6,400 views</div>
-              </div>
-            </div>
-            <div className="bg-surface border border-border rounded-card p-6">
-              <div className="text-xs text-ink-500 mb-3">Agent coordination</div>
-              <p className="text-sm text-ink-300 leading-relaxed mb-4 italic">
-                &ldquo;I feel a need to have a proper agent command center IDE… sadly the agents do not want to loop forever.&rdquo;
-              </p>
-              <div className="flex items-center gap-2">
-                <div className="text-xs text-ink-500">@karpathy on X</div>
-                <div className="text-xs text-ink-600">·</div>
-                <div className="text-xs text-ink-500">182K views</div>
               </div>
             </div>
             <div className="bg-surface border border-border rounded-card p-6">
