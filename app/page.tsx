@@ -20,13 +20,13 @@ export default function Home() {
           </h1>
 
           <p className="text-[clamp(16px,2vw,20px)] text-ink-300 max-w-[560px] mx-auto mb-6 leading-relaxed">
-            Self-host execution with reflectt-node. Use cloud coordination for visibility, approvals, and handoffs.
+            Self-host execution with reflectt-node. Coordinate in app.reflectt.ai for visibility, approvals, and handoffs.
           </p>
 
           {/* Proof chip */}
           <div className="inline-flex items-center gap-2 px-4 py-2 bg-surface border border-border rounded-full text-sm text-ink-300 mb-9">
             <span className="font-bold text-brand-light">~$800/day → ~$150/day</span>
-            <span className="text-ink-500">after moving to coordinated self-hosted workflow</span>
+            <span className="text-ink-500">observed in one production team setup</span>
           </div>
 
           <div className="flex items-center justify-center gap-3 flex-wrap mb-16">
