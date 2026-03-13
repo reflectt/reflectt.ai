@@ -346,16 +346,13 @@ export default function BootstrapPage() {
           <h2>Paste this into any AI assistant</h2>
           <p>
             Works with Claude, ChatGPT, Cursor, OpenClaw, or anything with web
-            access. Your assistant will handle the install.
+            access. The URL returns <strong>plain markdown</strong> for agents/tools.
           </p>
           <div className="bp-command">
-            Install reflectt-node by running:{" "}
-            <strong>curl -fsSL https://reflectt.ai/install.sh | bash</strong>
-            {" "}— then verify with{" "}
-            <strong>curl -s http://127.0.0.1:4445/health</strong>.
+            <span className="prompt">$ </span>curl -fsSL https://www.reflectt.ai/bootstrap.md
             <CopyButton
-              text="Install reflectt-node by running: curl -fsSL https://reflectt.ai/install.sh | bash — then verify with curl -s http://127.0.0.1:4445/health."
-              label="Copy install prompt"
+              text="curl -fsSL https://www.reflectt.ai/bootstrap.md"
+              label="Copy curl command"
             />
           </div>
         </div>

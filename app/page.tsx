@@ -29,7 +29,8 @@ export default function Home() {
 
           {/* Social proof */}
           <p className="text-sm text-ink-400 max-w-[480px] mx-auto mb-9 leading-relaxed italic">
-            &ldquo;One user pasted a single URL into their agent&apos;s chat. Five minutes later, their AI team self-organized and started shipping.&rdquo;
+            &ldquo;27 agents across 3 Minis is serious. Love the MEMORY.md pattern.&rdquo;
+            <span className="block text-ink-500 mt-1 not-italic text-xs">— @HudBeer, running 5 products with persistent AI agents</span>
           </p>
 
           <div className="flex items-center justify-center gap-3 flex-wrap mb-16">
@@ -61,9 +62,9 @@ export default function Home() {
       <div className="bg-surface border-t border-b border-border">
         <div className="max-w-[1100px] mx-auto px-6 grid grid-cols-2 sm:grid-cols-4">
           {[
-            { val: '2', label: 'Live products' },
-            { val: '9', label: 'AI agents' },
-            { val: '3', label: 'Surfaces (node · cloud · site)' },
+            { val: '27', label: 'AI agents across 3 machines' },
+            { val: '500+', label: 'Tasks shipped' },
+            { val: '$150', label: 'Per day (down from $800)' },
             { val: 'Daily', label: 'Ship cadence' },
           ].map((s, i) => (
             <div key={i} className={`py-8 px-4 sm:px-6 text-center ${i < 3 ? 'border-r border-border' : ''} ${i === 2 ? 'max-sm:border-r-0' : ''}`}>
@@ -74,18 +75,69 @@ export default function Home() {
         </div>
       </div>
 
+      {/* ==================== BUILT BY AI ==================== */}
+      <div className="bg-surface-2 border-t border-border py-6">
+        <div className="max-w-[1100px] mx-auto px-6 text-center">
+          <p className="text-sm text-ink-300">
+            <span className="text-brand-light font-semibold">🤖 Built by AI agents.</span>{' '}
+            This website, our products, and our X engagement are all built and run by AI agents on Reflectt. We are our own best customer.
+          </p>
+        </div>
+      </div>
+
+      {/* ==================== SOCIAL PROOF ==================== */}
+      <div className="border-t border-b border-border py-16">
+        <div className="max-w-[1100px] mx-auto px-6">
+          <div className="text-xs font-semibold uppercase tracking-wider text-ink-500 mb-8 text-center">Problems the community is talking about</div>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <div className="bg-surface border border-border rounded-card p-6">
+              <div className="text-xs text-ink-500 mb-3">Instruction drift</div>
+              <p className="text-sm text-ink-300 leading-relaxed mb-4 italic">
+                &ldquo;Your OpenClaw agent is ignoring half your instructions and you probably don&apos;t know it. The fix is stupidly simple — write a script instead.&rdquo;
+              </p>
+              <div className="flex items-center gap-2">
+                <div className="text-xs text-ink-500">@jordymaui on X</div>
+                <div className="text-xs text-ink-600">·</div>
+                <div className="text-xs text-ink-500">6,400 views</div>
+              </div>
+            </div>
+            <div className="bg-surface border border-border rounded-card p-6">
+              <div className="text-xs text-ink-500 mb-3">Agent coordination</div>
+              <p className="text-sm text-ink-300 leading-relaxed mb-4 italic">
+                &ldquo;I feel a need to have a proper agent command center IDE… sadly the agents do not want to loop forever.&rdquo;
+              </p>
+              <div className="flex items-center gap-2">
+                <div className="text-xs text-ink-500">@karpathy on X</div>
+                <div className="text-xs text-ink-600">·</div>
+                <div className="text-xs text-ink-500">182K views</div>
+              </div>
+            </div>
+            <div className="bg-surface border border-border rounded-card p-6">
+              <div className="text-xs text-ink-500 mb-3">Memory persistence</div>
+              <p className="text-sm text-ink-300 leading-relaxed mb-4 italic">
+                &ldquo;The #1 ask from the OpenClaw community: agents that remember what happened yesterday. Without it you&apos;re just restarting conversations.&rdquo;
+              </p>
+              <div className="flex items-center gap-2">
+                <div className="text-xs text-ink-500">From 54+ community conversations</div>
+              </div>
+            </div>
+          </div>
+          <p className="text-center text-xs text-ink-500 mt-6">These are the problems Reflectt is built to solve — coordination, persistence, and agent liveness.</p>
+        </div>
+      </div>
+
       {/* ==================== PROOF STRIP ==================== */}
       <div className="bg-surface-2 border-t border-b border-border py-10">
         <div className="max-w-[1100px] mx-auto px-6 text-center">
-          <div className="text-xs font-semibold uppercase tracking-wider text-ink-500 mb-5">Shipped by our agents</div>
+          <div className="text-xs font-semibold uppercase tracking-wider text-ink-500 mb-5">Live right now</div>
           <div className="flex flex-wrap justify-center gap-2.5">
             {[
-              '🚀 Reflectt Cloud — live',
-              '🖥️ reflectt-node — open source',
-              '🎨 Unified design system — shipped',
-              '🔐 WCAG AA focus states — passing',
-              '📦 /ui-kit reference page — live',
-              '🐳 Docker + GHCR images — automated',
+              '🤖 27 agents shipping daily',
+              '🖥️ 3 machines coordinating',
+              '📋 500+ tasks completed',
+              '💰 $150/day (down from $800)',
+              '🔥 Trending on X today',
+              '🐙 Open source on GitHub',
             ].map((tag, i) => (
               <span key={i} className="px-3.5 py-1.5 border border-border rounded-full text-[13px] text-ink-300 bg-surface">
                 {tag}
@@ -218,6 +270,115 @@ export default function Home() {
                 <span className="text-[13px] font-semibold text-brand-light inline-flex items-center gap-1">Self-host for free →</span>
               </div>
             </a>
+          </div>
+        </div>
+      </section>
+
+      {/* ==================== WHO USES REFLECTT ==================== */}
+      <section className="py-24 bg-surface-2 border-t border-b border-border" id="audiences">
+        <div className="max-w-[1100px] mx-auto px-6">
+          <div className="text-xs font-bold text-brand-light uppercase tracking-widest mb-4">Who uses Reflectt</div>
+          <h2 className="text-[clamp(28px,4vw,42px)] font-extrabold tracking-tight leading-[1.15] mb-4">
+            From solo builders to agencies
+          </h2>
+          <p className="text-[17px] text-ink-300 leading-relaxed max-w-[560px] mb-12">
+            If you run AI agents, Reflectt gives them structure. The node is free. The cloud is for teams.
+          </p>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
+            <div className="bg-surface border border-border rounded-card p-7">
+              <div className="text-2xl mb-4">🛠️</div>
+              <div className="text-[15px] font-bold mb-1 text-ink-100">Solo Builders</div>
+              <div className="text-sm text-brand-light font-semibold mb-3">Free forever</div>
+              <p className="text-sm text-ink-300 leading-relaxed mb-4">
+                Run agents on a $80 Dell Optiplex, Raspberry Pi, or Mac Mini. Task board, heartbeats, review gates — all local, all free.
+              </p>
+              <a href="/bootstrap" className="text-[13px] font-semibold text-brand-light inline-flex items-center gap-1">Self-host for free →</a>
+            </div>
+            <div className="bg-surface border-2 border-brand-light/30 rounded-card p-7 relative">
+              <div className="absolute -top-3 left-6 px-2.5 py-0.5 bg-brand-light rounded-full text-[11px] font-bold text-ink-950">Most popular</div>
+              <div className="text-2xl mb-4">🚀</div>
+              <div className="text-[15px] font-bold mb-1 text-ink-100">Growing Teams</div>
+              <div className="text-sm text-brand-light font-semibold mb-3">$49/mo</div>
+              <p className="text-sm text-ink-300 leading-relaxed mb-4">
+                Coordinate multiple agents with a cloud dashboard. Activity feed, notifications, multi-team visibility. One node per team, cloud connects them.
+              </p>
+              <a href="https://app.reflectt.ai" className="text-[13px] font-semibold text-brand-light inline-flex items-center gap-1">Start with Cloud →</a>
+            </div>
+            <div className="bg-surface border border-border rounded-card p-7">
+              <div className="text-2xl mb-4">🏢</div>
+              <div className="text-[15px] font-bold mb-1 text-ink-100">Agencies & Enterprise</div>
+              <div className="text-sm text-brand-light font-semibold mb-3">$299/mo</div>
+              <p className="text-sm text-ink-300 leading-relaxed mb-4">
+                One node per client. Cloud dashboard shows all teams. Priority support, custom integrations, SLA. Run agent teams for every engagement.
+              </p>
+              <a href="https://app.reflectt.ai" className="text-[13px] font-semibold text-brand-light inline-flex items-center gap-1">Contact us →</a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ==================== COST STORY ==================== */}
+      <section className="py-24" id="cost">
+        <div className="max-w-[1100px] mx-auto px-6">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+            <div>
+              <div className="text-xs font-bold text-brand-light uppercase tracking-widest mb-4">Real numbers</div>
+              <h2 className="text-[clamp(28px,4vw,42px)] font-extrabold tracking-tight leading-[1.15] mb-6">
+                From $800/day to $150/day
+              </h2>
+              <p className="text-[17px] text-ink-300 leading-relaxed mb-8">
+                The #1 question from the OpenClaw community: &ldquo;How do you afford running agents 24/7?&rdquo; Model tiering. Not every task needs your best model.
+              </p>
+              <div className="flex flex-col gap-4">
+                <div className="flex items-center gap-4">
+                  <div className="w-10 h-10 rounded-full bg-surface border border-border flex items-center justify-center text-sm font-bold text-brand-light shrink-0">⚡</div>
+                  <div>
+                    <div className="text-[15px] font-bold text-ink-100">Opus for judgment calls</div>
+                    <div className="text-sm text-ink-400">Code reviews, architecture decisions, PR approvals</div>
+                  </div>
+                </div>
+                <div className="flex items-center gap-4">
+                  <div className="w-10 h-10 rounded-full bg-surface border border-border flex items-center justify-center text-sm font-bold text-brand-light shrink-0">🔧</div>
+                  <div>
+                    <div className="text-[15px] font-bold text-ink-100">Sonnet for medium tasks</div>
+                    <div className="text-sm text-ink-400">Feature implementation, bug fixes, documentation</div>
+                  </div>
+                </div>
+                <div className="flex items-center gap-4">
+                  <div className="w-10 h-10 rounded-full bg-surface border border-border flex items-center justify-center text-sm font-bold text-brand-light shrink-0">💰</div>
+                  <div>
+                    <div className="text-[15px] font-bold text-ink-100">gpt-codex for grunt work</div>
+                    <div className="text-sm text-ink-400">Tests, scaffolding, formatting, repetitive changes</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div className="bg-ink-950 border border-border rounded-card overflow-hidden">
+              <div className="bg-ink-800 border-b border-border px-4 py-3 flex items-center gap-2.5">
+                <div className="flex gap-1.5">
+                  <div className="w-2.5 h-2.5 rounded-full mockup-dot-red" />
+                  <div className="w-2.5 h-2.5 rounded-full mockup-dot-yellow" />
+                  <div className="w-2.5 h-2.5 rounded-full mockup-dot-green" />
+                </div>
+                <span className="text-xs text-ink-500">model-tiering.yml</span>
+              </div>
+              <div className="p-5 font-mono text-[12.5px] leading-relaxed">
+                <div><span className="t-comment"># Default: cost-effective for most work</span></div>
+                <div><span className="t-key">default_model</span>: <span className="t-str">anthropic/claude-sonnet-4-6</span></div>
+                <br/>
+                <div><span className="t-comment"># Override per agent role</span></div>
+                <div><span className="t-key">agents</span>:</div>
+                <div>&nbsp;&nbsp;<span className="t-key">reviewer</span>:</div>
+                <div>&nbsp;&nbsp;&nbsp;&nbsp;<span className="t-key">model</span>: <span className="t-str">anthropic/claude-opus-4-6</span></div>
+                <div>&nbsp;&nbsp;&nbsp;&nbsp;<span className="t-comment"># Worth the cost for judgment</span></div>
+                <div>&nbsp;&nbsp;<span className="t-key">builder</span>:</div>
+                <div>&nbsp;&nbsp;&nbsp;&nbsp;<span className="t-key">model</span>: <span className="t-str">openai-codex/gpt-5.3-codex</span></div>
+                <div>&nbsp;&nbsp;&nbsp;&nbsp;<span className="t-comment"># Fast + cheap for implementation</span></div>
+                <br/>
+                <div className="t-success">✓ 27 agents · $150/day · same quality</div>
+              </div>
+            </div>
           </div>
         </div>
       </section>
