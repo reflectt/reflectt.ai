@@ -34,7 +34,7 @@ export default function Home() {
               href="https://app.reflectt.ai"
               className="btn-primary"
             >
-              Start in app.reflectt.ai
+              Try Reflectt Cloud
               <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
                 <path d="M2.5 7h9M7 2.5l4.5 4.5L7 11.5" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round"/>
               </svg>
