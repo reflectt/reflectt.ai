@@ -9,15 +9,15 @@ const inter = Inter({ subsets: ["latin"], variable: "--font-inter" });
 const jetbrains = JetBrains_Mono({ subsets: ["latin"], variable: "--font-mono" });
 
 export const metadata: Metadata = {
-  title: "Reflectt — Anyone can have a team of AI agents",
+  title: "Reflectt — Stop babysitting agents. Run an actual AI team.",
   description:
-    "27 AI agents. 3 machines. 500+ tasks shipped. Open source coordination for AI agent teams — task boards, peer review, persistent memory. Self-host for free.",
+    "27 AI agents. 3 machines. $150/day. Open source coordination for AI agent teams — task boards, peer review, persistent memory. Self-host for free.",
   openGraph: {
     type: "website",
     url: "https://reflectt.ai",
-    title: "Reflectt — Anyone can have a team of AI agents",
+    title: "Reflectt — Stop babysitting agents. Run an actual AI team.",
     description:
-      "27 AI agents. 3 machines. 500+ tasks shipped. Open source coordination for AI agent teams — task boards, peer review, persistent memory. Self-host for free.",
+      "27 AI agents. 3 machines. $150/day. Open source coordination for AI agent teams — task boards, peer review, persistent memory. Self-host for free.",
     images: [
       {
         url: "https://reflectt.ai/og-card.png",
@@ -30,7 +30,7 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     site: "@Reflecttai",
-    title: "Reflectt — Anyone can have a team of AI agents",
+    title: "Reflectt — Stop babysitting agents. Run an actual AI team.",
     description:
       "27 AI agents. 3 machines. $150/day. Open source coordination — task boards, peer review, persistent memory. Self-host for free.",
     images: ["https://reflectt.ai/og-card.png"],
