@@ -4,7 +4,7 @@ export const metadata = {
 }
 
 export default function PrivacyPage() {
-  const lastUpdated = 'March 13, 2026'
+  const lastUpdated = 'March 14, 2026'
 
   return (
     <main className="max-w-[760px] mx-auto px-6 py-20">
@@ -20,7 +20,7 @@ export default function PrivacyPage() {
             <a href="https://reflectt.ai" className="text-brand-light underline">reflectt.ai</a>,{' '}
             <a href="https://app.reflectt.ai" className="text-brand-light underline">app.reflectt.ai</a>, and the{' '}
             <a href="https://github.com/reflectt/reflectt-node" className="text-brand-light underline">reflectt-node</a>{' '}
-            open source project.
+            open source project, and the Reflectt iOS app.
           </p>
         </section>
 
@@ -40,6 +40,39 @@ export default function PrivacyPage() {
               <strong className="text-ink-200">Technical data</strong> — IP address, browser type, and device information collected automatically when you use our services.
             </li>
           </ul>
+        </section>
+
+        <section>
+          <h2 className="text-xl font-semibold text-ink-100 mb-3">Calendar access (iOS app)</h2>
+          <p>
+            The Reflectt iOS app may request access to your device calendar. This access is used solely to surface
+            relevant context to your agents — for example, surfacing upcoming meetings when you&rsquo;re assigning tasks.
+          </p>
+          <ul className="list-disc pl-6 space-y-2 mt-3">
+            <li>Calendar data is read locally on your device and passed to your reflectt-node instance.</li>
+            <li>Calendar data is stored in your local SQLite database. No TTL is set; you control deletion.</li>
+            <li>Calendar data is not transmitted to Reflectt servers unless you have connected your node to app.reflectt.ai.</li>
+            <li>You can revoke calendar access at any time in iOS Settings → Reflectt → Calendar.</li>
+          </ul>
+        </section>
+
+        <section>
+          <h2 className="text-xl font-semibold text-ink-100 mb-3">Conversation and session data</h2>
+          <p>
+            Messages you send to agents and agent responses are stored in your local reflectt-node instance.
+            When using app.reflectt.ai, message history and task data are stored in your
+            organization&rsquo;s Supabase-backed database.
+          </p>
+          <ul className="list-disc pl-6 space-y-2 mt-3">
+            <li>Chat and task data is retained for as long as your account is active.</li>
+            <li>No automatic expiry is applied to conversation history. You can delete data at any time.</li>
+            <li>We do not use your conversation content to train AI models.</li>
+          </ul>
+          <p className="mt-3">
+            To delete your conversation history, email{' '}
+            <a href="mailto:privacy@reflectt.ai" className="text-brand-light underline">privacy@reflectt.ai</a>{' '}
+            or delete your account. Your data will be removed within 30 days.
+          </p>
         </section>
 
         <section>
