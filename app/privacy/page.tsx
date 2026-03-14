@@ -4,7 +4,7 @@ export const metadata = {
 }
 
 export default function PrivacyPage() {
-  const lastUpdated = 'March 9, 2026'
+  const lastUpdated = 'March 13, 2026'
 
   return (
     <main className="max-w-[760px] mx-auto px-6 py-20">
@@ -70,6 +70,9 @@ export default function PrivacyPage() {
             <li><strong className="text-ink-200">Vercel</strong> — hosting</li>
             <li><strong className="text-ink-200">Fly.io</strong> — infrastructure</li>
           </ul>
+          <p>
+            Some of these providers are located outside Canada. By using the Service, you consent to your personal information being transferred to and processed in those countries in accordance with applicable law.
+          </p>
         </section>
 
         <section>
