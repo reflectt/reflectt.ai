@@ -25,7 +25,7 @@ export default function Home() {
 
           {/* Proof chip */}
           <div className="inline-flex items-center gap-2 px-4 py-2 bg-surface border border-border rounded-full text-sm text-ink-300 mb-9">
-            <span className="font-bold text-brand-light">24 agents visible on canvas</span>
+            <span className="font-bold text-brand-light">24 agents shipping</span>
             <span className="text-ink-500">working in real-time — no credit card, no setup, just click</span>
           </div>
 
