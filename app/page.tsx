@@ -16,34 +16,36 @@ export default function Home() {
           </div>
 
           <h1 className="text-[clamp(36px,6vw,64px)] font-extrabold leading-[1.1] tracking-tight text-ink-100 max-w-[800px] mx-auto mb-4">
-            Stop babysitting agent tabs.<br />Start running an <span className="gradient-text">actual AI team</span>.
+            One team. One coordination layer.<br />No vendor lock-in.
           </h1>
 
           <p className="text-[clamp(16px,2vw,20px)] text-ink-300 max-w-[560px] mx-auto mb-6 leading-relaxed">
-            Self-host execution with reflectt-node. Coordinate in app.reflectt.ai for visibility, approvals, and handoffs.
+            Most AI tools are one agent doing one thing. Reflectt is a team — multiple agents with distinct roles, working in parallel, on their own lanes. You can watch them on the canvas.
           </p>
 
           {/* Proof chip */}
           <div className="inline-flex items-center gap-2 px-4 py-2 bg-surface border border-border rounded-full text-sm text-ink-300 mb-9">
+<<<<<<< HEAD
             <span className="font-bold text-brand-light">~$800/day → ~$150/day</span>
             <span className="text-ink-500">observed in one production team setup</span>
+=======
+            <span className="font-bold text-brand-light">24 agents visible on canvas</span>
+            <span className="text-ink-500">working in real-time — no credit card, no setup, just click</span>
+>>>>>>> eae554f (feat: update hero with coordination-layer framing + honest alpha caveat)
           </div>
 
           <div className="flex items-center justify-center gap-3 flex-wrap mb-16">
             <a
-              href="https://app.reflectt.ai"
+              href="https://app.reflectt.ai/live?utm_source=website&utm_medium=landing-page&utm_campaign=live-demo"
               className="btn-primary"
             >
-              Try Reflectt Cloud
-              <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
-                <path d="M2.5 7h9M7 2.5l4.5 4.5L7 11.5" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round"/>
-              </svg>
+              Watch a live team →
             </a>
             <a
               href="https://reflectt.ai/bootstrap"
               className="btn-ghost"
             >
-              Run with docker-compose
+              Start free. 14 days. No card.
             </a>
           </div>
 
@@ -425,6 +427,17 @@ export default function Home() {
           </div>
         </div>
       </section>
+
+      {/* ==================== HONEST CAVEAT ==================== */}
+      <div className="bg-surface border-t border-b border-border py-10">
+        <div className="max-w-[600px] mx-auto px-6 text-center">
+          <p className="text-[15px] text-ink-400 italic">
+            <span className="font-semibold text-ink-200">It&apos;s real. It&apos;s also alpha.</span>
+            <br />
+            The foundations are proven. The edges are still rough. We&apos;d rather show you the rough edges than fake the polish.
+          </p>
+        </div>
+      </div>
     </main>
   );
 }
