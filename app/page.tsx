@@ -28,7 +28,7 @@ export default function Home() {
               <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-emerald-400 opacity-75" />
               <span className="relative inline-flex h-2 w-2 rounded-full bg-emerald-500" />
             </span>
-            Live: 24 agents shipping on canvas
+            Live: a multi-agent team shipping on canvas
           </div>
 
           <h1 className="mb-6 text-5xl font-bold tracking-tight md:text-6xl">
