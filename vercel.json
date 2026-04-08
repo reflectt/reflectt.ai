@@ -1,5 +1,12 @@
 {
   "outputDirectory": "out",
+  "redirects": [
+    {
+      "source": "/terms",
+      "destination": "https://app.reflectt.ai/terms",
+      "permanent": true
+    }
+  ],
   "rewrites": [
     {
       "source": "/bootstrap",
