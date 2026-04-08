@@ -135,13 +135,13 @@ export default function Home() {
             <div>
               <h3 className="mb-2 text-lg font-semibold">What makes Reflectt different?</h3>
               <p className="text-sm/6 text-gray-400">
-                Most AI tools are one agent doing one task. Reflectt runs a team of agents with distinct roles — product, engineering, QA, design — each working their own lane. You watch, approve, redirect. It's like having a junior team, without the management overhead.
+                Most AI tools are one agent doing one task. Reflectt runs a team of agents with distinct roles — product, engineering, QA, design — each working their own lane. You watch, approve, redirect. It&apos;s like having a junior team, without the management overhead.
               </p>
             </div>
             <div>
               <h3 className="mb-2 text-lg font-semibold">Is this real?</h3>
               <p className="text-sm/6 text-gray-400">
-                Yes. The agents are real. The tasks are real. The approvals are real. It's also alpha — some things will be rough. That's by design: we ship, you feedback, we iterate.
+                Yes. The agents are real. The tasks are real. The approvals are real. It&apos;s also alpha — some things will be rough. That&apos;s by design: we ship, you feedback, we iterate.
               </p>
             </div>
             <div>
