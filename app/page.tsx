@@ -33,7 +33,7 @@ export default function Home() {
               href="https://app.reflectt.ai"
               className="inline-flex items-center justify-center gap-2 px-7 py-3.5 bg-indigo-600 hover:bg-indigo-500 rounded-xl font-semibold transition text-sm"
             >
-              Start free — 14 days
+              Start — 14 days
             </a>
             <a
               href="https://github.com/reflectt/reflectt-node"
@@ -42,7 +42,7 @@ export default function Home() {
               className="inline-flex items-center justify-center gap-2 px-7 py-3.5 bg-white/8 hover:bg-white/12 border border-white/10 rounded-xl font-medium transition text-sm"
             >
               <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
-              Self-host free
+              Self-host
             </a>
           </div>
 
@@ -178,11 +178,11 @@ export default function Home() {
       <section id="pricing" className="py-20 border-t border-white/5">
         <div className="max-w-[1100px] mx-auto px-6">
           <h2 className="text-3xl font-bold text-center mb-4">Simple pricing</h2>
-          <p className="text-gray-400 text-center mb-12 max-w-lg mx-auto">Free to self-host. Cloud beta is free during the invite period.</p>
+          <p className="text-gray-400 text-center mb-12 max-w-lg mx-auto">Self-host for free. Cloud beta is free during the invite period.</p>
           <div className="grid sm:grid-cols-2 gap-4 max-w-2xl mx-auto">
             <div className="bg-[#13131f] border border-white/6 rounded-xl p-8">
               <div className="text-sm font-medium text-indigo-400 mb-2">Self-host</div>
-              <div className="text-4xl font-bold mb-1">Free</div>
+              <div className="text-4xl font-bold mb-1">$0</div>
               <div className="text-xs text-gray-400 mb-6">Forever</div>
               <ul className="space-y-2.5 mb-8">
                 {['Unlimited agents', 'Full source code on GitHub', 'Your own infrastructure'].map(item => (
@@ -201,7 +201,7 @@ export default function Home() {
                 <div className="text-sm font-medium text-indigo-400">Cloud</div>
                 <span className="text-[11px] px-2 py-0.5 rounded-full bg-indigo-500/15 border border-indigo-500/25 text-indigo-400">Invite only</span>
               </div>
-              <div className="text-4xl font-bold mb-1">Free</div>
+              <div className="text-4xl font-bold mb-1">$0</div>
               <div className="text-xs text-gray-400 mb-6">During beta</div>
               <ul className="space-y-2.5 mb-8">
                 {['Everything in self-host', 'Managed hosting', 'Zero setup'].map(item => (
@@ -243,13 +243,13 @@ export default function Home() {
       <section className="pb-24 max-w-[1100px] mx-auto px-6">
         <div className="bg-[#13131f] border border-white/6 rounded-xl p-10 text-center">
           <h2 className="text-3xl font-bold mb-3">Ready to coordinate your agents?</h2>
-          <p className="text-gray-400 mb-8 max-w-md mx-auto">Start with a free self-hosted deploy, or request cloud access for zero-setup.</p>
+          <p className="text-gray-400 mb-8 max-w-md mx-auto">Start with a self-hosted deploy, or request cloud access for zero-setup.</p>
           <div className="flex flex-col sm:flex-row gap-3 justify-center">
             <a href="https://app.reflectt.ai" className="inline-flex items-center justify-center gap-2 px-7 py-3.5 bg-indigo-600 hover:bg-indigo-500 rounded-xl font-semibold transition text-sm">
               Request cloud access →
             </a>
             <a href="https://github.com/reflectt/reflectt-node" className="inline-flex items-center justify-center gap-2 px-7 py-3.5 bg-white/8 hover:bg-white/12 border border-white/10 rounded-xl font-medium transition text-sm">
-              Self-host free →
+              Self-host →
             </a>
           </div>
         </div>
