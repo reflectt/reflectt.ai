@@ -3,30 +3,6 @@
 export default function Home() {
   return (
     <div className="min-h-screen bg-[#0c0c14] text-white">
-      {/* Sticky nav */}
-      <nav className="sticky top-0 z-50 nav-glass border-b border-border-subtle">
-        <div className="max-w-[1100px] mx-auto px-6 h-[60px] flex items-center justify-between">
-          <div className="flex items-center gap-2.5">
-            <div className="w-7 h-7 rounded-lg bg-gradient-to-br from-indigo to-purple flex items-center justify-center">
-              <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
-                <rect x="2" y="2" width="4" height="10" rx="1" fill="white"/>
-                <rect x="8" y="2" width="4" height="10" rx="1" fill="white"/>
-              </svg>
-            </div>
-            <span className="font-extrabold text-lg tracking-tight text-ink-100">reflectt<span className="text-brand-light">.</span></span>
-          </div>
-          <div className="hidden sm:flex items-center gap-8">
-            <a href="#features" className="text-sm font-medium text-ink-300 hover:text-ink-100 transition-colors">Features</a>
-            <a href="#how" className="text-sm font-medium text-ink-300 hover:text-ink-100 transition-colors">How it works</a>
-            <a href="#pricing" className="text-sm font-medium text-ink-300 hover:text-ink-100 transition-colors">Pricing</a>
-            <a href="https://github.com/reflectt/reflectt-node" target="_blank" rel="noopener" className="text-sm font-medium text-ink-300 hover:text-ink-100 transition-colors">GitHub</a>
-          </div>
-          <a href="https://app.reflectt.ai" className="inline-flex items-center gap-1.5 px-4 py-2 bg-white/10 hover:bg-white/15 text-sm font-medium rounded-lg transition">
-            Open app →
-          </a>
-        </div>
-      </nav>
-
       {/* Hero */}
       <section className="relative overflow-hidden py-24 md:py-32">
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-indigo-900/20 via-transparent to-transparent" />
